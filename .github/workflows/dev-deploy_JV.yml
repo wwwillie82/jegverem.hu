@@ -24,10 +24,13 @@ jobs:
           local-dir: ./                             # ha csak a public kell: ./public
           exclude: |
             **/.git*
+            .git*/**
             **/.github/**
             **/.vscode/**
-            **/node_modules/**
-            includes/config.php
-            includes/db_connect.php
-            includes/db_connect_user.php
-            includes/cloudflare_access.php
+            config/**
+            backup/**
+            image_cache/**
+            images_uploaded/**
+            stats/**
+            error/**
+            errors/**
