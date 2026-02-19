@@ -1,0 +1,113 @@
+a.btn_tovabb,
+a:hover.btn_tovabb {
+    width: 51px;
+    height: 19px;
+    padding: 3px 0 0 0;
+    display: block;
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+    color: #545454;
+    text-align: center;
+    text-decoration: none;
+    font-family: Georgia, Arial, Tahoma;
+    background: url(../images/buttons/btn_tovabb.gif) left top no-repeat;
+    position: absolute;
+    bottom: 18px;
+    left: 136px;
+}
+a:hover.btn_tovabb {
+    color: #fff;
+    background-position: left bottom;
+}
+
+a.icon_civitas,
+a:hover.icon_civitas {
+    width: 93px;
+    height: 74px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+    background: url(../images/icon_civitas.gif) left top no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 166px;
+}
+a:hover.icon_civitas {
+    background-position: left bottom;
+}
+a.icon_borhaz,
+a:hover.icon_borhaz {
+    width: 148px;
+    height: 74px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+    background: url(../images/icon_borhaz.gif) left top no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 260px;
+}
+a:hover.icon_borhaz {
+    background-position: left bottom;
+}
+a.icon_volt,
+a:hover.icon_volt {
+    width: 142px;
+    height: 74px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+    background: url(../images/icon_volt.gif) left top no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 409px;
+}
+a:hover.icon_volt {
+    background-position: left bottom;
+}
+a.icon_jegverem,
+a:hover.icon_jegverem {
+    width: 146px;
+    height: 74px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+    background: url(../images/icon_jegverem.gif) left top no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 552px;
+}
+a:hover.icon_jegverem {
+    background-position: left bottom;
+}
+a.icon_palatinus,
+a:hover.icon_palatinus {
+    width: 135px;
+    height: 74px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+    background: url(../images/icon_palatinus.gif) left top no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 699px;
+}
+a:hover.icon_palatinus {
+    background-position: left bottom;
+}
+a.icon_group,
+a:hover.icon_group {
+    width: 108px;
+    height: 74px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+    background: url(../images/icon_group.gif) left top no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 835px;
+}
+a:hover.icon_group {
+    background-position: left bottom;
+}

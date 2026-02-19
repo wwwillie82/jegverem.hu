@@ -1,0 +1,17 @@
+#container #middle .box .item input.input,
+#container #subpage .content .sidebar .box .item input.input,
+#container #subpage .content .sidebar .box .item input.input_full,
+#container #subpage .content .main .item input.input_full {
+	height: 23px;
+	padding: 7px 10px 0 10px;
+}
+#container #middle .box .item input.input_mini,
+#container #subpage .content .sidebar .box .item input.input_mini {
+	height: 24px;
+	padding: 6px 0 0 0;
+}
+#container #newsletter input.name,
+#container #newsletter input.email {
+	height: 33px;
+	padding: 7px 10px 0 10px;
+}
