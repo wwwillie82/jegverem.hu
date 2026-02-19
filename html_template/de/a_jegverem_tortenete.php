@@ -26,6 +26,15 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="../js/voov.slideshow.js" type="text/javascript"></script>
     <script src="../js/jegverem.js" type="text/javascript"></script>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-D729CRGYTY"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-D729CRGYTY');
+	</script>
 </head>
 <body>
 

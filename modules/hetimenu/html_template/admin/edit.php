@@ -20,7 +20,7 @@
 
 			<div class="checkboxes">
 				<select name="week">
-					<? for($i=1;$i<=52;$i++): ?>
+					<? for($i=1;$i<=53;$i++): ?>
 						<?= HtmlBuilder::HtmlBuilder("option")->value($i, date("W"))->html($i) ?>
 					<? endfor; ?>
 				</select>

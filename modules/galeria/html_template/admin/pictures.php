@@ -41,7 +41,10 @@
 			
 		</div>
 
-		<script type="text/javascript" src="/plupload/plupload.full.js"></script>
+		<script type="text/javascript" src="/jcrop/jquery.Jcrop.js?v=20210112"></script>
+        <script type="text/javascript" src="/plupload/moxie.min.js?v=20210112"></script>
+		<script type="text/javascript" src="/plupload/plupload.full.js?v=20210112"></script>
+		
 		<script type="text/javascript">
 
 			var uploader = false;
@@ -52,14 +55,14 @@
 
 			$(function() {
 				uploader = new plupload.Uploader({
-					runtimes : 'flash, html5, silverlight, html4',
+					runtimes : 'html5,flash,silverlight,html4',
 					browse_button : 'pickfiles',
 					max_file_size : '100mb',
 					chunk_size: '1mb',
 					unique_names: true,
 					url : '/plupload/upload.php',
-					flash_swf_url : '/plupload/plupload.flash.swf',
-					silverlight_xap_url : '/plupload/plupload.silverlight.xap',
+					flash_swf_url : '/plupload2/Moxie.swf',
+					silverlight_xap_url : '/plupload/Moxie.xap',
 					filters : [
 						{title : "Image files", extensions : "jpg,gif,png"}
 					]

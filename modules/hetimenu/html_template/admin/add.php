@@ -49,9 +49,10 @@
 			<br class="clearfix"/>
 		</div>
 
-		<script type="text/javascript" src="/jcrop/jquery.Jcrop.js"></script>
-		<script type="text/javascript" src="/plupload/plupload.full.js"></script>
-		<script type="text/javascript" src="/js/loadjcrop.js"></script>
+		<script type="text/javascript" src="/jcrop/jquery.Jcrop.js?v=20210112"></script>
+        <script type="text/javascript" src="/plupload/moxie.min.js?v=20210112"></script>
+		<script type="text/javascript" src="/plupload/plupload.full.js?v=20210112"></script>
+		<script type="text/javascript" src="/js/loadjcrop.js?v=20210112"></script>
 		<script type="text/javascript">
 			$(function() {
 				LoadJCrop(16 / 11);
