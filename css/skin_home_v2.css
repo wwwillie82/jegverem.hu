@@ -24,20 +24,30 @@ body {
 /* Header bottom navigation */
 #container #header .holder #menu {
   background: #727272;
+  font-family: "Roboto", "Segoe UI", Tahoma, Arial, sans-serif;
 }
 
 #container #header .holder #menu a,
 #container #header .holder #menu a:hover {
   color: #fefefe;
+  font-family: inherit;
+  text-decoration: none;
 }
 
+#container #header .holder #menu span:hover {
+  background-color: #7d7d7d;
+}
+
+#container #header .holder #menu span:hover a,
 #container #header .holder #menu a:hover {
-  color: #ffffff;
+  color: #fefefe;
+  text-decoration: underline;
 }
 
 #container #header .holder #menu a.on,
 #container #header .holder #menu a:hover.on {
-  color: #dddddd;
+  color: #fefefe;
+  text-decoration: underline;
 }
 
 /* Offers tabs in homepage hero */
