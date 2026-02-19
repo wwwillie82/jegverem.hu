@@ -1,0 +1,33 @@
+name: Deploy to DEV (FTP)
+
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.DEV_FTP_SERVER }}
+          username: ${{ secrets.DEV_FTP_USER }}
+          password: ${{ secrets.DEV_FTP_PASS }}
+          server-dir: ${{ secrets.DEV_FTP_PATH }}   # pl. /public_html/dev/
+          local-dir: ./                             # ha csak a public kell: ./public
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.vscode/**
+            **/node_modules/**
+            includes/config.php
+            includes/db_connect.php
+            includes/db_connect_user.php
+            includes/cloudflare_access.php
