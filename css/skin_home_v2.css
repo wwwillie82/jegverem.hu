@@ -1,0 +1,71 @@
+/* Homepage skin v2 overrides (visual only) */
+
+body {
+  font-family: "Roboto", "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #eeeeee;
+  color: #2c2b2b;
+}
+
+/* Homepage content panels */
+#container #middle .box_two .covers,
+#container #middle .box_two .offers,
+#container #middle .box_three .item {
+  background-color: #c6c6c6;
+  border: none;
+  box-shadow: none;
+}
+
+/* Hero/navigation typography tuning only where needed */
+#container #middle .box_two .covers .item .navigation h2,
+#container #middle .box_three .item h3 {
+  font-family: "Roboto", "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* Header bottom navigation */
+#container #header .holder #menu {
+  background: #727272;
+}
+
+#container #header .holder #menu a,
+#container #header .holder #menu a:hover {
+  color: #fefefe;
+}
+
+#container #header .holder #menu a:hover {
+  color: #ffffff;
+}
+
+#container #header .holder #menu a.on,
+#container #header .holder #menu a:hover.on {
+  color: #dddddd;
+}
+
+/* Offers tabs in homepage hero */
+#container #middle .box_two .offers .head a,
+#container #middle .box_two .offers .head a:hover {
+  background: #727272;
+  color: #fefefe;
+}
+
+#container #middle .box_two .offers .head a:hover {
+  background: #7d7d7d;
+}
+
+#container #middle .box_two .offers .head a.on,
+#container #middle .box_two .offers .head a:hover.on {
+  background: #5f5f5f;
+  color: #fefefe;
+}
+
+/* CTA buttons: keep sprite compatibility by only overriding visual tone */
+a.btn_tovabb,
+a:hover.btn_tovabb {
+  background-color: #c6c6c6;
+  color: #2c2b2b;
+  border-radius: 3px;
+}
+
+a:hover.btn_tovabb {
+  background-color: #b6b6b6;
+  color: #1f1f1f;
+}
