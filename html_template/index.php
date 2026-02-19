@@ -22,6 +22,7 @@
 	<link rel="shortcut icon" href="favicon.ico"/>
 	<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 	<link href="../css/main.css?v=210125" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/skin_home_v2.css" type="text/css" media="screen" />
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/js/jquery.tinyscrollbar.min.js"></script>
