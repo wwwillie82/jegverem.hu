@@ -49,7 +49,7 @@
         <div class="main">
             <div class="top"></div>
             <div class="content">
-                <h2 class="nobg"><span>Heti Menü Ajánlatunk</span></h2>
+                <h2 class="nobg"><span>Heti Menü ajánlatunk</span></h2>
 				<div class="icon_price"></div>
 
 				<? if($menus->length() > 0): ?>
