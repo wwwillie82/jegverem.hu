@@ -978,3 +978,10 @@ body {
 }
 
 
+
+#menu a,
+#menu span a {
+    font-family: 'Roboto', Arial, sans-serif !important;
+    font-weight: 500;
+    font-style: normal;
+}

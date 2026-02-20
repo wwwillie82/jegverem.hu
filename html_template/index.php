@@ -21,6 +21,7 @@
 	
 	<link rel="shortcut icon" href="favicon.ico"/>
 	<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
 	<link href="../css/main.css?v=210125" rel="stylesheet" type="text/css" media="screen" />
 	<link rel="stylesheet" href="../css/skin_home_v2.css" type="text/css" media="screen" />
 	
