@@ -5,9 +5,9 @@
 		<div class="booking"><a href="https://nethotelbooking.net/hotels/jegverem/lang=en">ONLINE BOOKING</a></div>
 		<div class="EFRA"><a href="http://jegverem.hu/projektek"><img src="../images/infoblokk_kedv_final_felso_cmyk_ERFA.jpg"></a></div>
 
-		<? $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'; ?>
-		<? $isHome = in_array($path, ['/en', '/en/', '/en/index', '/en/index/'], true); ?>
-		<? if($isHome): ?>
+		<?php  $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'; ?>
+		<?php  $isHome = in_array($path, ['/en', '/en/', '/en/index', '/en/index/'], true); ?>
+		<?php  if($isHome): ?>
 		<div class="home-v2-topbar">
 			<div class="home-v2-social">
 				<span class="soc tiktok"><img src="../images/skin_v2/tiktok.png" alt="TikTok"></span>
@@ -21,16 +21,16 @@
 				<a class="cta events" href="#" onclick="return false;"><span>Private events</span></a>
 			</div>
 		</div>
-		<? endif; ?>
+		<?php  endif; ?>
 
         <div id="menu">
-            <span><a href="/en/index" <? if($_SERVER["REQUEST_URI"] == "/en/index" || $_SERVER["REQUEST_URI"] == "/en"): ?>class="on"<? endif; ?>>Home</a></span>
-            <span><a href="/en/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/en/heti_menu"): ?>class="on"<? endif; ?>>Weekly menu</a></span>
-            <span><a href="/en/ettermunk_kinalata" <? if($_SERVER["REQUEST_URI"] == "/en/ettermunk_kinalata"): ?>class="on"<? endif; ?>>Restaurant menu</a></span>
-            <span><a href="/en/galeria" <? if($_SERVER["REQUEST_URI"] == "/en/galeria"): ?>class="on"<? endif; ?>>Gallery</a></span>
-            <span><a href="/en/a_panziorol" <? if($_SERVER["REQUEST_URI"] == "/en/a_panziorol"): ?>class="on"<? endif; ?>>About the Inn</a></span>
-            <span><a href="/en/a_jegverem_tortenete" <? if($_SERVER["REQUEST_URI"] == "/en/a_jegverem_tortenete"): ?>class="on"<? endif; ?>>History</a></span>
-            <span class="no"><a href="/en/kapcsolat" <? if($_SERVER["REQUEST_URI"] == "/en/kapcsolat"): ?>class="on"<? endif; ?>>Contact</a></span>
+            <span><a href="/en/index" <?php  if($_SERVER["REQUEST_URI"] == "/en/index" || $_SERVER["REQUEST_URI"] == "/en"): ?>class="on"<?php  endif; ?>>Home</a></span>
+            <span><a href="/en/heti_menu" <?php  if($_SERVER["REQUEST_URI"] == "/en/heti_menu"): ?>class="on"<?php  endif; ?>>Weekly menu</a></span>
+            <span><a href="/en/ettermunk_kinalata" <?php  if($_SERVER["REQUEST_URI"] == "/en/ettermunk_kinalata"): ?>class="on"<?php  endif; ?>>Restaurant menu</a></span>
+            <span><a href="/en/galeria" <?php  if($_SERVER["REQUEST_URI"] == "/en/galeria"): ?>class="on"<?php  endif; ?>>Gallery</a></span>
+            <span><a href="/en/a_panziorol" <?php  if($_SERVER["REQUEST_URI"] == "/en/a_panziorol"): ?>class="on"<?php  endif; ?>>About the Inn</a></span>
+            <span><a href="/en/a_jegverem_tortenete" <?php  if($_SERVER["REQUEST_URI"] == "/en/a_jegverem_tortenete"): ?>class="on"<?php  endif; ?>>History</a></span>
+            <span class="no"><a href="/en/kapcsolat" <?php  if($_SERVER["REQUEST_URI"] == "/en/kapcsolat"): ?>class="on"<?php  endif; ?>>Contact</a></span>
         </div>
 		
 		<div class="languages">
