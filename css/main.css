@@ -1032,20 +1032,30 @@ body.page-ettermunk-kinalata #container #header .holder {
     margin-top: 0;
 }
 
-/* Final overrides: CTA typography parity */
-#container #cta-bar .cta-btn,
-#container #cta-bar .cta-btn:hover {
-    font-family: "Roboto", Arial, sans-serif !important;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 15px;
-    font-style: normal;
-    letter-spacing: 0;
-    text-transform: none;
-}
-
 /* Final overrides: hide homepage center overlay caption */
 #container > #middle > .box_two > .covers > .item.SlideShow > .navigation > h2,
 #container #middle .box_two .covers .item .navigation h2 {
     display: none !important;
+}
+
+/* =========================================================
+   FINAL TYPOGRAPHY LOCK — CTA + MAIN NAV UNIFIED
+   Source of truth: homepage CTA button typography
+   ========================================================= */
+
+#container #cta-bar .cta-btn,
+#container #cta-bar .cta-btn:hover,
+#container #main-nav #menu,
+#container #main-nav #menu span,
+#container #main-nav #menu a,
+#container #main-nav #menu a:hover {
+
+    font-family: "Roboto", Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 15px !important;
+    font-style: normal !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+
 }
