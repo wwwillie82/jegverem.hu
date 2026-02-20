@@ -45,7 +45,7 @@
 <!-- container -->
 <<!-- <script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script> -->
 <div id="container">
-    <?= $header ?>
+    <?php echo $header; ?>
 
     <div id="middle">
 		<div class="tabs">
@@ -59,20 +59,20 @@
 	
         <div class="main_full">
             <div class="content">
-				<h3><?= $products->cat_title ?></h3>
+				<h3><?php echo $products->cat_title; ?></h3>
 				
 				<? foreach($products as $product): ?>
 				<div class="item">
 					<div class="img">
 						<? if($product->pic_path != ""): ?>
-						<img src="/<?= $this->ImageCache($product->pic_path)->Crop($product->pic_data)->ResizeImage(189,189) ?>" alt="<?= $product->name ?>" />
+						<img src="/<?php echo $this->ImageCache($product->pic_path)->Crop($product->pic_data)->ResizeImage(189,189); ?>" alt="<?php echo $product->name; ?>" />
 						<? endif; ?>
 					</div>
 					
 					<div class="txt">
-						<h4><?= $product->name ?></h4>
-						<p><?= $product->description ?></p>
-						<div class="price"><?= $product->price ?>,- <? if($product->price_small > 0): ?>/ <?= $product->price_small ?>,- <? endif; ?></div>
+						<h4><?php echo $product->name; ?></h4>
+						<p><?php echo $product->description; ?></p>
+						<div class="price"><?php echo $product->price; ?>,- <? if($product->price_small > 0): ?>/ <?php echo $product->price_small; ?>,- <? endif; ?></div>
 					</div>
 					<br class="clearfix" />
 				</div>
@@ -85,7 +85,7 @@
         <div class="sidebar_full">
 			<div class="navigation">
 				<? foreach($categories as $cat): ?>
-				<a href="<?= URI::MakeURL("ettermunk_kinalata", array("filter" => $cat->permalink), true) ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?= $cat->title ?></a>
+				<a href="<?php echo URI::MakeURL("ettermunk_kinalata", array("filter" => $cat->permalink), true); ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?php echo $cat->title; ?></a>
 				<? endforeach; ?>
 			</div>
 			<div class="fix"></div>
@@ -110,8 +110,8 @@
         <br class="clearfix" />
     </div>
 
-	<?= $banner ?>
-    <?= $footer ?>
+	<?php echo $banner; ?>
+    <?php echo $footer; ?>
 </div>
 <!-- eof container -->
 

@@ -13,7 +13,7 @@
 		}
 	}
 		
-	var json_obj = eval('<?= $categories ?>');
+	var json_obj = eval('<?php echo $categories; ?>');
 	expandbox.addElements(json_obj);
 	
 	//alert(expandbox.buildChilds(1));
@@ -22,10 +22,10 @@
 
 <div class="data">
 	<div class="form">
-		<?= Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add"), "post", "multipart/form-data") ?>
+		<?php echo Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add"), "post", "multipart/form-data"); ?>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Szülő kategória") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Szülő kategória"); ?></label>
 			<div class="ckeditor">
 				<script type="text/javascript">
 					expandbox.render(true);
@@ -37,44 +37,44 @@
 		</div>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Cím") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Cím"); ?></label>
 			<input type="text" name="title" value="" class="input_long" />
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Rövid leírás") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Rövid leírás"); ?></label>
 			<textarea name="description" class="textfield_small"></textarea>
 			<br class="clearfix"/>
 			<div class="info">Csak az aktuális ajánlatoknál kell kitölteni.</div>
 		</div>
 
         <div class="item">
-			<label><span>*</span> <?= Localization::_("Sorrend") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Sorrend"); ?></label>
 			<input type="text" name="sort_order" value="0" class="input_normal" />
 			<br class="clearfix"/>
             <div class="info">Minél kisebb szám (0 és X) között annál előrébb kerül a sorban!</div>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Kezdet") ?></label>
-			<input type="text" name="from_date" value="<?= date("Y-m-d") ?>" class="input_normal" />
+			<label><span>*</span> <?php echo Localization::_("Kezdet"); ?></label>
+			<input type="text" name="from_date" value="<?php echo date("Y-m-d"); ?>" class="input_normal" />
 			<br class="clearfix"/>
 			<div class="info">Csak az aktuális ajánlatoknál kell kitölteni.</div>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Vég") ?></label>
-			<input type="text" name="to_date" value="<?= date("Y-m-d") ?>" class="input_normal" />
+			<label><span>*</span> <?php echo Localization::_("Vég"); ?></label>
+			<input type="text" name="to_date" value="<?php echo date("Y-m-d"); ?>" class="input_normal" />
 			<br class="clearfix"/>
 			<div class="info">Csak az aktuális ajánlatoknál kell kitölteni.</div>
 		</div>
 
 		<div class="item">
-			<label><span class="required">* <?= Localization::_("Kötelező") ?></span></label>
+			<label><span class="required">* <?php echo Localization::_("Kötelező"); ?></span></label>
 			<input type="submit" name="submit" value="Save" class="submit"/>
 			<br class="clearfix"/>
 		</div>
-		<?= Form::EndForm() ?>
+		<?php echo Form::EndForm(); ?>
 	</div>
 </div>

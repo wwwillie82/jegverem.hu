@@ -29,19 +29,19 @@
 	  
 	  <!-- container -->
       <div id="container">
-         <?= $header ?>    
+         <?php echo $header; ?>    
          <div id="middle">
             <div class="tabs">			<span><a href="/ettermunk_kinalata">Étlap</a></span>			<span><a href="/itallap" class="on">Itallap</a></span>			<? if($aktualis->length() > 0): ?>			<span><a href="/aktualis_ajanlat">Aktuális ajánlat</a></span>			<? endif; ?><span><a href="/elismereseink">Elismeréseink</a></span>		</div>
             <div class="main_full">
                <div class="content">
-                  <h3><?= $products->cat_title ?></h3>
+                  <h3><?php echo $products->cat_title; ?></h3>
                   <? foreach($products as $product): ?>				
                   <div class="item">
                      <div class="txt_full">
-                        <h4><?= $product->name ?></h4>
-                        <p><?= $product->description ?></p>
+                        <h4><?php echo $product->name; ?></h4>
+                        <p><?php echo $product->description; ?></p>
                         <? if($product->price > 0): ?>
-                        <div class="price"><span><?= $product->attribute ?></span> <?= $product->price ?>,-</div>
+                        <div class="price"><span><?php echo $product->attribute; ?></span> <?php echo $product->price; ?>,-</div>
                         <? endif; ?>					
                      </div>
                   </div>
@@ -50,7 +50,7 @@
                <div class="bottom"></div>
             </div>
             <div class="sidebar_full">
-               <div class="navigation">				<? foreach($categories as $cat): ?>				<a href="<?= URI::MakeURL("itallap", array("filter" => $cat->permalink), true) ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?= $cat->title ?></a>				<? endforeach; ?>			</div>
+               <div class="navigation">				<? foreach($categories as $cat): ?>				<a href="<?php echo URI::MakeURL("itallap", array("filter" => $cat->permalink), true); ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?php echo $cat->title; ?></a>				<? endforeach; ?>			</div>
                <div class="fix"></div>
                <div class="item">
                   <div class="img">					<a href="/a_panziorol"><img src="../images/img_2.jpg" alt="" /></a>				</div>
@@ -67,8 +67,8 @@
             </div>
             <br class="clearfix" />    
          </div>
-         <?= $banner ?>
-		 <?= $footer ?>
+         <?php echo $banner; ?>
+		 <?php echo $footer; ?>
       </div>
       <!-- eof container -->
    </body>

@@ -1,36 +1,36 @@
 <div class="data">
-	<?= Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/pictures", array("id" => URI::GetNamedParam("id")))) ?>
+	<?php echo Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/pictures", array("id" => URI::GetNamedParam("id")))); ?>
 	<div class="form">
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Cím") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Cím"); ?></label>
 			<input type="text" name="title" value="" class="input_long"/>
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Cím DE") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Cím DE"); ?></label>
 			<input type="text" name="title_de" value="" class="input_long"/>
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Cím EN") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Cím EN"); ?></label>
 			<input type="text" name="title_en" value="" class="input_long"/>
 			<br class="clearfix"/>
 		</div>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Publikus") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Publikus"); ?></label>
 
 			<div class="checkboxes">
-				<input type="radio" name="active" value="0"/> <span class="check_text"><?= Localization::_("Nem") ?></span>
-				<input type="radio" name="active" value="1" checked="checked"/> <span class="check_text"><?= Localization::_("Igen") ?></span>
+				<input type="radio" name="active" value="0"/> <span class="check_text"><?php echo Localization::_("Nem"); ?></span>
+				<input type="radio" name="active" value="1" checked="checked"/> <span class="check_text"><?php echo Localization::_("Igen"); ?></span>
 			</div>
 			<br class="clearfix"/>
 		</div>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Kép") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Kép"); ?></label>
 			<input type="file" id="pickfiles" />
 			<br class="clearfix"/>
 
@@ -103,11 +103,11 @@
 		</script>
 
 		<div class="item">
-			<label><span class="required">* <?= Localization::_("Kötelező") ?></span></label>
+			<label><span class="required">* <?php echo Localization::_("Kötelező"); ?></span></label>
 			<input type="button" name="submitPictures" value="Mentés" class="submit" onclick="StartUpload();"/>
 			<br class="clearfix"/>
 		</div>
-		<?= Form::EndForm() ?>
+		<?php echo Form::EndForm(); ?>
 	</div>
 
 
@@ -134,36 +134,36 @@
 					<table cellpadding="0" cellspacing="0">
 						<tr>
 							<td align="center" valign="middle">
-								<img src="/<?= $this->ImageCache($picture->pic_path)->Crop($picture->pic_data)->ResizeImage(159, 159) ?>" alt="" />
+								<img src="/<?php echo $this->ImageCache($picture->pic_path)->Crop($picture->pic_data)->ResizeImage(159, 159); ?>" alt="" />
 							</td>
 						</tr>
 					</table>
 					<div class="zoom"></div>
 					<? if($picture->embed_code != ""): ?>
-						<div id="embed_preview" style="display:none;"><?= $picture->embed_code ?></div>
+						<div id="embed_preview" style="display:none;"><?php echo $picture->embed_code; ?></div>
 						<a href="#embed_preview" rel="prettyPhoto[gallery]" title="Ez a kép címe">Zoom</a>
 					<? else: ?>
-						<a href="/<?=  $this->ImageCache($picture->pic_path)->Crop($picture->pic_data) ?>" rel="prettyPhoto[gallery]" title="Ez a kép címe">Zoom</a>
+						<a href="/<?php echo $this->ImageCache($picture->pic_path)->Crop($picture->pic_data); ?>" rel="prettyPhoto[gallery]" title="Ez a kép címe">Zoom</a>
 					<? endif ?>
 				</div>
 
 				<div class="txt">
-					<?= $picture->title ?> <? if($picture->embed_code != ""): ?> VIDEÓ <? endif; ?>
-					<span><?= $picture->entry_date ?></span>
-					<span>Sorszám: <b><?= $picture->sort ?></b></span>
+					<?php echo $picture->title; ?> <? if($picture->embed_code != ""): ?> VIDEÓ <? endif; ?>
+					<span><?php echo $picture->entry_date; ?></span>
+					<span>Sorszám: <b><?php echo $picture->sort; ?></b></span>
 				</div>
 
 				<div class="edit">
 					<div class="check">
-						<input type="checkbox" name="sel_image" value="<?= $picture->id ?>" onclick="SelectImage(this);" />
+						<input type="checkbox" name="sel_image" value="<?php echo $picture->id; ?>" onclick="SelectImage(this);" />
 					</div>
 
 					<img src="/images_admin/icons/icon_image_order.gif" alt="" class="order" />
 
 
 					<div class="buttons">
-						<a href="<?= ModuleHelper::GetFunctionLink("admin/pictures/edit", array("id" => $picture->id)) ?>"><img src="/images_admin/icons/icon_edit.png" alt="Szerkeszt" /></a>
-						<a onclick="return DeleteRow();" href="<?= ModuleHelper::GetFunctionLink("admin/pictures/delete", array("id" => $picture->id)) ?>"><img src="/images_admin/icons/icon_delete.png" alt="Töröl" /></a>
+						<a href="<?php echo ModuleHelper::GetFunctionLink("admin/pictures/edit", array("id" => $picture->id)); ?>"><img src="/images_admin/icons/icon_edit.png" alt="Szerkeszt" /></a>
+						<a onclick="return DeleteRow();" href="<?php echo ModuleHelper::GetFunctionLink("admin/pictures/delete", array("id" => $picture->id)); ?>"><img src="/images_admin/icons/icon_delete.png" alt="Töröl" /></a>
 					</div>
 					<br class="clearfix" />
 				</div>
@@ -209,10 +209,10 @@
 			}
 		</script>
 
-		<?= Form::StartForm("switch_picture", ModuleHelper::GetFunctionLink("admin/pictures", array("id" => $pictures->galleries_id))) ?>
+		<?php echo Form::StartForm("switch_picture", ModuleHelper::GetFunctionLink("admin/pictures", array("id" => $pictures->galleries_id))); ?>
 			<input type="hidden" name="sel_1" value="" />
 			<input type="hidden" name="sel_2" value="" />
-		<?= Form::EndForm() ?>
+		<?php echo Form::EndForm(); ?>
 
 		<div class="operations_bottom">
 			<div class="label">

@@ -48,26 +48,26 @@
 
 <!-- container -->
 <div id="container">
-    <?= $header ?>
+    <?php echo $header; ?>
 <script defer async src='https://cdn.trustindex.io/loader.js?f9074e46542e48ecf4781fac1'></script>
 
 
     <div id="middle">
         <div class="box_two">
             <div class="covers">
-				<? $i=1; foreach($covers as $cover): ?>
-				<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
-                <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
+				<?php  $i=1; foreach($covers as $cover): ?>
+				<?php  $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
+                <div class="item SlideShow" style="background-image: url(http://<?php echo $_SERVER["HTTP_HOST"]; ?>/<?php echo $url; ?>);">
                     <div class="navigation">
-                        <h2><?= nl2br($cover->description) ?></h2>
+                        <h2><?php echo nl2br($cover->description); ?></h2>
 
-                        <div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
+                        <div class="num"><span><?php echo $i; ?></span>/<?php echo $covers->length(); ?></div>
 
                         <a href="" class="prev SlideShowControlPrev">Előző</a>
                         <a href="" class="next SlideShowControlNext">Következő</a>
                     </div>
                 </div>
-				<? $i++; endforeach; ?>
+				<?php  $i++; endforeach; ?>
             </div>
 
             <div class="offers">
@@ -75,9 +75,9 @@
 					<span><a href="#" class="on">Weekly menu</a></span>
 					<span><a href="/en/ettermunk_kinalata">Menu</a></span>
 					<span><a href="/en/itallap">Drinks</a></span>
-					<!--<? if($category->length() > 0): ?>
+					<!--<?php  if($category->length() > 0): ?>
 					<span><a href="/en/aktualis_ajanlat" class="no">Aktuális ajánlat</a></span>
-					<? endif; ?>-->
+					<?php  endif; ?>-->
 				</div>
 			
 				<div class="holder" id="block_1">
@@ -85,33 +85,33 @@
 						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
 						<div class="viewport">
 							 <div class="overview">
-								<? if($menus->length() > 0): ?>
-									<h3 style="line-height: 22px;">This week (<?= $menus->week ?>. week) <br />Packing: 250 HUF/food</h3>
+								<?php  if($menus->length() > 0): ?>
+									<h3 style="line-height: 22px;">This week (<?php echo $menus->week; ?>. week) <br />Packing: 250 HUF/food</h3>
 
-									<? 
+									<?php 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($menus as $menu):
 									?>
-									<h5><span><?= $days[$menu->day] ?></span></h5>
+									<h5><span><?php echo $days[$menu->day]; ?></span></h5>
 									<div class="food">
-										<?= nl2br($menu->offer_text) ?>
+										<?php echo nl2br($menu->offer_text); ?>
 									</div>
-									<? endforeach; ?>
-								<? endif; ?>
+									<?php  endforeach; ?>
+								<?php  endif; ?>
 
-								<? if($next_menus->length() > 0): ?>
-									<h3 style="line-height: 22px;">Next week (<?= $next_menus->week ?>. week) </h3>
+								<?php  if($next_menus->length() > 0): ?>
+									<h3 style="line-height: 22px;">Next week (<?php echo $next_menus->week; ?>. week) </h3>
 
-									<? 
+									<?php 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($next_menus as $menu):
 									?>
-									<h5><span><?= $days[$menu->day] ?></span></h5>
+									<h5><span><?php echo $days[$menu->day]; ?></span></h5>
 									<div class="food">
-										<?= nl2br($menu->offer_text) ?>
+										<?php echo nl2br($menu->offer_text); ?>
 									</div>
-									<? endforeach; ?>
-								<? endif; ?>
+									<?php  endforeach; ?>
+								<?php  endif; ?>
 							</div>
 						</div>
 					</div>
@@ -167,7 +167,7 @@
         </div>
     </div>
 
-    <?= $footer ?>
+    <?php echo $footer; ?>
 </div>
 <!-- eof container -->
 

@@ -47,18 +47,18 @@
 
 <!-- container -->
 <div id="container">
-    <?= $header ?>
+    <?php echo $header; ?>
 
     <div id="middle">
         <div class="box_two">
             <div class="covers">
 				<? $i=1; foreach($covers as $cover): ?>
 				<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
-                <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
+                <div class="item SlideShow" style="background-image: url(http://<?php echo $_SERVER["HTTP_HOST"]; ?>/<?php echo $url; ?>);">
                     <div class="navigation">
-                        <h2><?= nl2br($cover->description) ?></h2>
+                        <h2><?php echo nl2br($cover->description); ?></h2>
 
-                        <div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
+                        <div class="num"><span><?php echo $i; ?></span>/<?php echo $covers->length(); ?></div>
 
                         <a href="" class="prev SlideShowControlPrev">Előző</a>
                         <a href="" class="next SlideShowControlNext">Következő</a>
@@ -83,29 +83,29 @@
 						<div class="viewport">
 							 <div class="overview">
 								<? if($menus->length() > 0): ?>
-									<h3 style="line-height: 22px;">This week (<?= $menus->week ?>. week)<br />Weekly menu price: 990 HUF / 1290 HUF<br />Packing: 100 HUF/food </h3>
+									<h3 style="line-height: 22px;">This week (<?php echo $menus->week; ?>. week)<br />Weekly menu price: 990 HUF / 1290 HUF<br />Packing: 100 HUF/food </h3>
 
 									<? 
 									$days = array("Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($menus as $menu):
 									?>
-									<h5><span><?= $days[$menu->day] ?></span></h5>
+									<h5><span><?php echo $days[$menu->day]; ?></span></h5>
 									<div class="food">
-										<?= nl2br($menu->offer_text) ?>
+										<?php echo nl2br($menu->offer_text); ?>
 									</div>
 									<? endforeach; ?>
 								<? endif; ?>
 
 								<? if($next_menus->length() > 0): ?>
-									<h3 style="line-height: 22px;">Next week (<?= $next_menus->week ?>. week)<br />Weekly menu price: 990 HUF / 1290 HUF</h3>
+									<h3 style="line-height: 22px;">Next week (<?php echo $next_menus->week; ?>. week)<br />Weekly menu price: 990 HUF / 1290 HUF</h3>
 
 									<? 
 									$days = array("Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($next_menus as $menu):
 									?>
-									<h5><span><?= $days[$menu->day] ?></span></h5>
+									<h5><span><?php echo $days[$menu->day]; ?></span></h5>
 									<div class="food">
-										<?= nl2br($menu->offer_text) ?>
+										<?php echo nl2br($menu->offer_text); ?>
 									</div>
 									<? endforeach; ?>
 								<? endif; ?>
@@ -164,7 +164,7 @@
         </div>
     </div>
 
-    <?= $footer ?>
+    <?php echo $footer; ?>
 </div>
 <!-- eof container -->
 
