@@ -1,7 +1,5 @@
 <div id="header">
     <div class="holder">
-        <h1><a href="/index">Jégverem Fogadó</a></h1>
-
         <div class="top-links">
             <div class="languages">
                 <a href="/index" class="on">HU</a>
@@ -10,9 +8,9 @@
             </div>
 
             <div class="social-icons">
-                <a href="#" aria-label="TikTok"><img src="/images/skin_v2/tiktok.png" alt="TikTok" /></a>
-                <a href="#" aria-label="Instagram"><img src="/images/skin_v2/instagram.png" alt="Instagram" /></a>
-                <a href="#" aria-label="Facebook"><img src="/images/skin_v2/facebook.png" alt="Facebook" /></a>
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><img src="/images/skin_v2/tiktok.png" alt="TikTok" /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/images/skin_v2/instagram.png" alt="Instagram" /></a>
+                <a href="https://www.facebook.com/jegverem.fogado" target="_blank" rel="noopener" aria-label="Facebook"><img src="/images/skin_v2/facebook.png" alt="Facebook" /></a>
             </div>
         </div>
     </div>
