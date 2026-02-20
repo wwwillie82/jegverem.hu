@@ -5,24 +5,6 @@
 		<div class="booking"><a href="https://nethotelbooking.net/hotels/jegverem/lang=en">ONLINE BOOKING</a></div>
 		<div class="EFRA"><a href="http://jegverem.hu/projektek"><img src="../images/infoblokk_kedv_final_felso_cmyk_ERFA.jpg"></a></div>
 
-		<? $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'; ?>
-		<? $isHome = in_array($path, ['/en', '/en/', '/en/index', '/en/index/'], true); ?>
-		<? if($isHome): ?>
-		<div class="home-v2-topbar">
-			<div class="home-v2-social">
-				<span class="soc tiktok"><img src="../images/skin_v2/tiktok.png" alt="TikTok"></span>
-				<span class="soc instagram"><img src="../images/skin_v2/instagram.png" alt="Instagram"></span>
-				<a href="https://www.facebook.com/jegverem.fogado" class="soc facebook"><img src="../images/skin_v2/facebook.png" alt="Facebook"></a>
-			</div>
-			<div class="home-v2-cta">
-				<a class="cta order" href="https://mobilpincer.net/hu/jegverem-fogado"><span>Online order</span></a>
-				<a class="cta table" href="https://reservation.dish.co/landingPage/hydra-fa60e3c2-9cc8-4282-9212-df64ffb965ee"><span>Table booking</span></a>
-				<a class="cta rooms" href="https://nethotelbooking.net/hotels/jegverem/lang=en"><span>Rooms</span></a>
-				<a class="cta events" href="#" onclick="return false;"><span>Private events</span></a>
-			</div>
-		</div>
-		<? endif; ?>
-
         <div id="menu">
             <span><a href="/en/index" <? if($_SERVER["REQUEST_URI"] == "/en/index" || $_SERVER["REQUEST_URI"] == "/en"): ?>class="on"<? endif; ?>>Home</a></span>
             <span><a href="/en/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/en/heti_menu"): ?>class="on"<? endif; ?>>Weekly menu</a></span>
