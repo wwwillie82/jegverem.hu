@@ -55,8 +55,8 @@
     <div id="middle">
         <div class="box_two">
             <div class="covers">
-				<?php  $i=1; foreach($covers as $cover): ?>
-				<?php  $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
+				<? $i=1; foreach($covers as $cover): ?>
+				<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
                 <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
                     <div class="navigation">
                         <h2><?= nl2br($cover->description) ?></h2>
@@ -67,7 +67,7 @@
                         <a href="" class="next SlideShowControlNext">Következő</a>
                     </div>
                 </div>
-				<?php  $i++; endforeach; ?>
+				<? $i++; endforeach; ?>
             </div>
 
             <div class="offers">
@@ -75,9 +75,9 @@
 					<span><a href="#" class="on">Weekly menu</a></span>
 					<span><a href="/en/ettermunk_kinalata">Menu</a></span>
 					<span><a href="/en/itallap">Drinks</a></span>
-					<!--<?php  if($category->length() > 0): ?>
+					<!--<? if($category->length() > 0): ?>
 					<span><a href="/en/aktualis_ajanlat" class="no">Aktuális ajánlat</a></span>
-					<?php  endif; ?>-->
+					<? endif; ?>-->
 				</div>
 			
 				<div class="holder" id="block_1">
@@ -85,10 +85,10 @@
 						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
 						<div class="viewport">
 							 <div class="overview">
-								<?php  if($menus->length() > 0): ?>
+								<? if($menus->length() > 0): ?>
 									<h3 style="line-height: 22px;">This week (<?= $menus->week ?>. week) <br />Packing: 250 HUF/food</h3>
 
-									<?php 
+									<? 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($menus as $menu):
 									?>
@@ -96,13 +96,13 @@
 									<div class="food">
 										<?= nl2br($menu->offer_text) ?>
 									</div>
-									<?php  endforeach; ?>
-								<?php  endif; ?>
+									<? endforeach; ?>
+								<? endif; ?>
 
-								<?php  if($next_menus->length() > 0): ?>
+								<? if($next_menus->length() > 0): ?>
 									<h3 style="line-height: 22px;">Next week (<?= $next_menus->week ?>. week) </h3>
 
-									<?php 
+									<? 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($next_menus as $menu):
 									?>
@@ -110,8 +110,8 @@
 									<div class="food">
 										<?= nl2br($menu->offer_text) ?>
 									</div>
-									<?php  endforeach; ?>
-								<?php  endif; ?>
+									<? endforeach; ?>
+								<? endif; ?>
 							</div>
 						</div>
 					</div>
