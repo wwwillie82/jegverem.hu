@@ -21,7 +21,7 @@
 
 	<link rel="shortcut icon" href="favicon.ico"/>
 	<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-	<link href="/css/main.css?v=210125" rel="stylesheet" type="text/css" media="screen" />
+	<link href="/css/main.css?v=20260220" rel="stylesheet" type="text/css" media="screen" />
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="/js/voov.slideshow.js" type="text/javascript"></script>
