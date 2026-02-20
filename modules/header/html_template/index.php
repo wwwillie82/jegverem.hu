@@ -9,9 +9,9 @@
 		<div class="EFRA"><a href="http://jegverem.hu/projektek"><img src="../images/infoblokk_kedv_final_felso_cmyk_ERFA.jpg"></a></div>
 		<div class="phone_number"></div>
 
-		<?php  $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'; ?>
-		<?php  $isHome = in_array($path, ['/', '/index', '/index/'], true); ?>
-		<?php  if($isHome): ?>
+		<? $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'; ?>
+		<? $isHome = in_array($path, ['/', '/index', '/index/'], true); ?>
+		<? if($isHome): ?>
 		<div class="home-v2-topbar">
 			<div class="home-v2-social">
 				<span class="soc tiktok"><img src="../images/skin_v2/tiktok.png" alt="TikTok"></span>
@@ -25,16 +25,16 @@
 				<a class="cta events" href="#" onclick="return false;"><span>Zártkörű rendezvények</span></a>
 			</div>
 		</div>
-		<?php  endif; ?>
+		<? endif; ?>
         <div id="menu">
-            <span><a href="/index" <?php  if($_SERVER["REQUEST_URI"] == "/index" || $_SERVER["REQUEST_URI"] == "/"): ?>class="on"<?php  endif; ?>>Kezdőlap</a></span>
-            <span><a href="/heti_menu" <?php  if($_SERVER["REQUEST_URI"] == "/heti_menu"): ?>class="on"<?php  endif; ?>>Heti menü</a></span>
-            <span><a href="/ettermunk_kinalata" <?php  if($_SERVER["REQUEST_URI"] == "/ettermunk_kinalata"): ?>class="on"<?php  endif; ?>>Éttermünk kínálata</a></span>
-            <span><a href="/galeria" <?php  if($_SERVER["REQUEST_URI"] == "/galeria"): ?>class="on"<?php  endif; ?>>Galéria</a></span>
-            <span><a href="/a_panziorol" <?php  if($_SERVER["REQUEST_URI"] == "/a_panziorol"): ?>class="on"<?php  endif; ?>>A panzióról</a></span>
-            <span><a href="/a_jegverem_tortenete" <?php  if($_SERVER["REQUEST_URI"] == "/a_jegverem_tortenete"): ?>class="on"<?php  endif; ?>>Jégverem története</a></span>
-			<span><a href="/projektek" <?php  if($_SERVER["REQUEST_URI"] == "/projektek"): ?>class="on"<?php  endif; ?>>Projektek</a></span>
-            <span class="no"><a href="/kapcsolat" <?php  if($_SERVER["REQUEST_URI"] == "/kapcsolat"): ?>class="on"<?php  endif; ?>>Kapcsolat</a></span>
+            <span><a href="/index" <? if($_SERVER["REQUEST_URI"] == "/index" || $_SERVER["REQUEST_URI"] == "/"): ?>class="on"<? endif; ?>>Kezdőlap</a></span>
+            <span><a href="/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/heti_menu"): ?>class="on"<? endif; ?>>Heti menü</a></span>
+            <span><a href="/ettermunk_kinalata" <? if($_SERVER["REQUEST_URI"] == "/ettermunk_kinalata"): ?>class="on"<? endif; ?>>Éttermünk kínálata</a></span>
+            <span><a href="/galeria" <? if($_SERVER["REQUEST_URI"] == "/galeria"): ?>class="on"<? endif; ?>>Galéria</a></span>
+            <span><a href="/a_panziorol" <? if($_SERVER["REQUEST_URI"] == "/a_panziorol"): ?>class="on"<? endif; ?>>A panzióról</a></span>
+            <span><a href="/a_jegverem_tortenete" <? if($_SERVER["REQUEST_URI"] == "/a_jegverem_tortenete"): ?>class="on"<? endif; ?>>Jégverem története</a></span>
+			<span><a href="/projektek" <? if($_SERVER["REQUEST_URI"] == "/projektek"): ?>class="on"<? endif; ?>>Projektek</a></span>
+            <span class="no"><a href="/kapcsolat" <? if($_SERVER["REQUEST_URI"] == "/kapcsolat"): ?>class="on"<? endif; ?>>Kapcsolat</a></span>
         </div>
 		
 		<div class="languages">
