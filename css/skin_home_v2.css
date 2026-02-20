@@ -25,12 +25,18 @@ body {
 #container #header .holder #menu {
   background: #727272;
   font-family: "Roboto", "Segoe UI", Tahoma, Arial, sans-serif;
+  font-style: normal;
+}
+
+#container #header .holder #menu span {
+  border-right: 0;
 }
 
 #container #header .holder #menu a,
 #container #header .holder #menu a:hover {
   color: #fefefe;
   font-family: inherit;
+  font-style: normal;
   text-decoration: none;
 }
 
