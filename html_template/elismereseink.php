@@ -42,7 +42,7 @@
 <!-- container -->
 <script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script>
 <div id="container">
-    <?= $header ?>
+    <?php echo $header; ?>
 
     <div id="middle">
 		<div class="tabs">
@@ -110,8 +110,8 @@
         <br class="clearfix" />
     </div>
 
-	<?= $banner ?>
-    <?= $footer ?>
+	<?php echo $banner; ?>
+    <?php echo $footer; ?>
 </div>
 <!-- eof container -->
 

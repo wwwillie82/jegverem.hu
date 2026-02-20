@@ -2,9 +2,9 @@
 <!--
 <div class="filter">
 	<div class="search">
-		<?= Form::StartForm("filter", ModuleHelper::GetFunctionLink("admin/index")) ?>
-		<input type="text" name="search" value="<?= Localization::_("Keresés...") ?>" onfocus="if(this.value=='<?= Localization::_("Keresés...") ?>'){this.value=''}"
-		       onblur="if(this.value==''){this.value='<?= Localization::_("Keresés...") ?>'}" class="input"/>
+		<?php echo Form::StartForm("filter", ModuleHelper::GetFunctionLink("admin/index")); ?>
+		<input type="text" name="search" value="<?php echo Localization::_("Keresés..."); ?>" onfocus="if(this.value=='<?php echo Localization::_("Keresés..."); ?>'){this.value=''}"
+		       onblur="if(this.value==''){this.value='<?php echo Localization::_("Keresés..."); ?>'}" class="input"/>
 		<input type="submit" name="submit" value="" class="btn_search"/>
 		<br class="clearfix"/>
 		<? Form::EndForm() ?>
@@ -17,35 +17,35 @@
 <table class="list" cellpadding="10" cellspacing="0">
 <thead>
 <tr>
-	<th align="left" valign="middle"><?= Localization::_("Év") ?></th>
-	<th align="left" valign="middle"><?= Localization::_("Hét") ?></th>
-	<th align="center" valign="middle" width="50"><?= Localization::_("Szerkeszt") ?></th>
-	<th align="center" valign="middle" class="last" width="50"><?= Localization::_("Töröl") ?></th>
+	<th align="left" valign="middle"><?php echo Localization::_("Év"); ?></th>
+	<th align="left" valign="middle"><?php echo Localization::_("Hét"); ?></th>
+	<th align="center" valign="middle" width="50"><?php echo Localization::_("Szerkeszt"); ?></th>
+	<th align="center" valign="middle" class="last" width="50"><?php echo Localization::_("Töröl"); ?></th>
 </tr>
 </thead>
 
 <tbody>
 <? foreach($menus as $menu): ?>
 <tr <? if($menus->IsOdd()): ?>class="dark"<? endif; ?> >
-	<td align="left" valign="middle"><?= $menu->year ?></td>
-	<td align="left" valign="middle"><?= $menu->week ?></td>
-	<td align="center" valign="middle"><a href="<?= ModuleHelper::GetFunctionLink("admin/edit_menu", array("year" => $menu->year,"week" => $menu->week)) ?>"><img src="/images_admin/icons/icon_edit.png" alt="Menük"/></a></td>
-	<td align="center" valign="middle"><a href="<?= ModuleHelper::GetFunctionLink("admin/index/delete", array("week" => $menu->week)) ?>"><img src="/images_admin/icons/icon_delete.png" alt="Szerkeszt"/></a></td>
+	<td align="left" valign="middle"><?php echo $menu->year; ?></td>
+	<td align="left" valign="middle"><?php echo $menu->week; ?></td>
+	<td align="center" valign="middle"><a href="<?php echo ModuleHelper::GetFunctionLink("admin/edit_menu", array("year" => $menu->year,"week" => $menu->week)); ?>"><img src="/images_admin/icons/icon_edit.png" alt="Menük"/></a></td>
+	<td align="center" valign="middle"><a href="<?php echo ModuleHelper::GetFunctionLink("admin/index/delete", array("week" => $menu->week)); ?>"><img src="/images_admin/icons/icon_delete.png" alt="Szerkeszt"/></a></td>
 </tr>
 <? endforeach; ?>
 </tbody>
 </table>
 
 <div class="pages">
-	<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => max(1, URI::GetNamedParam("page", 1)-1))) ?>" class="btn_prev">Előző oldal</a>
+	<a href="<?php echo ModuleHelper::GetFunctionLink("admin/index", array("page" => max(1, URI::GetNamedParam("page", 1)-1))); ?>" class="btn_prev">Előző oldal</a>
 
 	<div class="pager">
 		<? for($i=1; $i<=$num_pages; $i++): ?>
-		<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => $i)) ?>" <?if($i==URI::GetNamedParam("page", 1)): ?> class="on" <? endif; ?>><?= $i ?></a>
+		<a href="<?php echo ModuleHelper::GetFunctionLink("admin/index", array("page" => $i)); ?>" <?if($i==URI::GetNamedParam("page", 1)): ?> class="on" <? endif; ?>><?php echo $i; ?></a>
 		<? endfor; ?>
 	</div>
 
-	<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => min($num_pages, URI::GetNamedParam("page", 1)+1))) ?>" class="btn_next">Következő oldal</a>
+	<a href="<?php echo ModuleHelper::GetFunctionLink("admin/index", array("page" => min($num_pages, URI::GetNamedParam("page", 1)+1))); ?>" class="btn_next">Következő oldal</a>
 	<br class="clearfix"/>
 </div>
 </div>

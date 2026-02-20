@@ -43,7 +43,7 @@
 
 <!-- container -->
 <div id="container">
-    <?= $header ?>
+    <?php echo $header; ?>
 <script defer async src='https://cdn.trustindex.io/loader.js?f9074e46542e48ecf4781fac1'></script>
 
 
@@ -53,7 +53,7 @@
             <div class="content">
                 <h2><span>Gallery</span></h2>
 
-                <h3><?= $album ?></h3>
+                <h3><?php echo $album; ?></h3>
 
                 <div class="images">
 					<? foreach($images as $img): ?>
@@ -61,7 +61,7 @@
                         <table cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="center" valign="middle">
-                                    <a href="/<?= $img->pic_path ?>" rel="prettyPhoto"><img src="/<?= $this->ImageCache($img->pic_path)->Crop($img->pic_data)->ResizeImage(135,135) ?>" alt="" /></a>
+                                    <a href="/<?php echo $img->pic_path; ?>" rel="prettyPhoto"><img src="/<?php echo $this->ImageCache($img->pic_path)->Crop($img->pic_data)->ResizeImage(135,135); ?>" alt="" /></a>
                                 </td>
                             </tr>
                         </table>
@@ -80,11 +80,11 @@
             <div class="bottom"></div>
         </div>
 
-        <?= $sidebar ?>
+        <?php echo $sidebar; ?>
         <br class="clearfix" />
     </div>
 
-    <?= $footer ?>
+    <?php echo $footer; ?>
 </div>
 <!-- eof container -->
 

@@ -43,7 +43,7 @@
 
 <!-- container -->
 <div id="container">
-    <?= $header ?>
+    <?php echo $header; ?>
 <script defer async src='https://cdn.trustindex.io/loader.js?0b42a8965ce451e6142286174'></script>
 
     <div id="middle">
@@ -55,11 +55,11 @@
                 <div class="covers">
                     <? $i=1; foreach($covers as $cover): ?>
 					<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
-					<div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
+					<div class="item SlideShow" style="background-image: url(http://<?php echo $_SERVER["HTTP_HOST"]; ?>/<?php echo $url; ?>);">
 						<div class="navigation">
-							<h4><?= nl2br($cover->description) ?></h4>
+							<h4><?php echo nl2br($cover->description); ?></h4>
 
-							<div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
+							<div class="num"><span><?php echo $i; ?></span>/<?php echo $covers->length(); ?></div>
 
 							<a href="" class="prev SlideShowControlPrev">Előző</a>
 							<a href="" class="next SlideShowControlNext">Következő</a>
@@ -125,11 +125,11 @@
             <div class="bottom"></div>
         </div>
 
-        <?= $sidebar ?>
+        <?php echo $sidebar; ?>
         <br class="clearfix" />
     </div>
 
-    <?= $footer ?>
+    <?php echo $footer; ?>
 </div>
 <!-- eof container -->
 

@@ -1,38 +1,38 @@
 <div class="data">
 	<div class="form">
-		<?= Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")) ?>
+		<?php echo Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")); ?>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Cím") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Cím"); ?></label>
 			<input type="text" name="title" value="" class="input_long"/>
 			<br class="clearfix"/>
 		</div>
 
         <div class="item">
-			<label><span>*</span> <?= Localization::_("Cím DE") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Cím DE"); ?></label>
 			<input type="text" name="title_de" value="" class="input_long"/>
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Cím EN") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Cím EN"); ?></label>
 			<input type="text" name="title_en" value="" class="input_long"/>
 			<br class="clearfix"/>
 		</div>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Publikus") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Publikus"); ?></label>
 
 			<div class="checkboxes">
-				<input type="radio" name="active" value="0"/> <span class="check_text"><?= Localization::_("Nem") ?></span>
-				<input type="radio" name="active" value="1" checked="checked"/> <span class="check_text"><?= Localization::_("Igen") ?></span>
+				<input type="radio" name="active" value="0"/> <span class="check_text"><?php echo Localization::_("Nem"); ?></span>
+				<input type="radio" name="active" value="1" checked="checked"/> <span class="check_text"><?php echo Localization::_("Igen"); ?></span>
 			</div>
 			<br class="clearfix"/>
 		</div>
 
 		<link href="/jcrop/jquery.Jcrop.css" type="text/css" rel="stylesheet" />
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Kép") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Kép"); ?></label>
 			<input type="file" id="pickfiles" />
 			<br class="clearfix"/>
 		</div>
@@ -67,36 +67,36 @@
 		</script>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Dátum") ?></label>
-			<input type="text" name="entry_date" value="<?= date("Y-m-d") ?>" class="input_normal"/>
+			<label><span>*</span> <?php echo Localization::_("Dátum"); ?></label>
+			<input type="text" name="entry_date" value="<?php echo date("Y-m-d"); ?>" class="input_normal"/>
 			<br class="clearfix"/>
 
-			<div class="info"><?= Localization::_("Formátum") ?>: <?= date("Y-m-d") ?></div>
+			<div class="info"><?php echo Localization::_("Formátum"); ?>: <?php echo date("Y-m-d"); ?></div>
 		</div>
 
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Rövid leírás") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Rövid leírás"); ?></label>
 			<textarea name="short_text" class="textfield_medium"></textarea>
 			<br class="clearfix"/>
 		</div>
 
         <div class="item">
-			<label><span>*</span> <?= Localization::_("Rövid leírás DE") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Rövid leírás DE"); ?></label>
 			<textarea name="short_text_de" class="textfield_medium"></textarea>
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Rövid leírás EN") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Rövid leírás EN"); ?></label>
 			<textarea name="short_text_en" class="textfield_medium"></textarea>
 			<br class="clearfix"/>
 		</div>
 
 		<div class="item">
-			<label><span class="required">* <?= Localization::_("Kötelező") ?></span></label>
+			<label><span class="required">* <?php echo Localization::_("Kötelező"); ?></span></label>
 			<input type="submit" name="submit" value="Mentés" class="submit"/>
 			<br class="clearfix"/>
 		</div>
-		<?= Form::EndForm() ?>
+		<?php echo Form::EndForm(); ?>
 	</div>
 </div>

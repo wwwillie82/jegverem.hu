@@ -1,16 +1,16 @@
 <link href="/css/expand.css" rel="stylesheet" type="text/css" media="screen"/>
 <script type="text/javascript" src="/js/sp-expandbox.js"></script>
 <script type="text/javascript">
-    var json_obj = eval('<?= $categories ?>');
+    var json_obj = eval('<?php echo $categories; ?>');
     expandbox.addElements(json_obj);
 </script>
 
 <div class="data">
 	<div class="form">
-		<?= Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")) ?>
+		<?php echo Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")); ?>
 
         <div class="item">
-			<label><span>*</span> <?= Localization::_("Kategória") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Kategória"); ?></label>
 			<div class="ckeditor">
                 <script type="text/javascript">
                     expandbox.render();
@@ -22,33 +22,33 @@
 		</div>
 
         <div class="item">
-			<label><span>*</span> <?= Localization::_("Megnevezés") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Megnevezés"); ?></label>
 			<input type="text" name="name" value="" class="input_long" />
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Jellemző") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Jellemző"); ?></label>
 			<input type="text" name="attribute" value="" class="input_normal" />
 			<br class="clearfix"/>
 			<div class="info">Pl.: 2 cl</div>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Ár") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Ár"); ?></label>
 			<input type="text" name="price" value="0" class="input_normal" /> Ft
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Kisadag Ár") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Kisadag Ár"); ?></label>
 			<input type="text" name="price_small" value="0" class="input_normal" /> Ft
 			<br class="clearfix"/>
 		</div>
 
         <link href="/jcrop/jquery.Jcrop.css" type="text/css" rel="stylesheet" />
 		<div class="item">
-			<label><span>*</span> <?= Localization::_("Kép") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Kép"); ?></label>
 			<input type="file" id="pickfiles" />
 			<br class="clearfix"/>
 		</div>
@@ -83,16 +83,16 @@
 		</script>
 
         <div class="item">
-			<label><span>*</span> <?= Localization::_("Leírás") ?></label>
+			<label><span>*</span> <?php echo Localization::_("Leírás"); ?></label>
 			<textarea name="description" class="textfield_small"></textarea>
 			<br class="clearfix"/>
 		</div>
 
 		<div class="item">
-			<label><span class="required">* <?= Localization::_("Kötelező") ?></span></label>
+			<label><span class="required">* <?php echo Localization::_("Kötelező"); ?></span></label>
 			<input type="submit" name="submit" value="Mentés" class="submit"/>
 			<br class="clearfix"/>
 		</div>
-		<?= Form::EndForm() ?>
+		<?php echo Form::EndForm(); ?>
 	</div>
 </div>
