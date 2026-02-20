@@ -44,7 +44,7 @@
 		})();
 	</script>
 </head>
-<body>
+<body class="home-v2">
 
 
 <!-- container -->

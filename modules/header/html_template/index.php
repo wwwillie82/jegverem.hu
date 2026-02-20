@@ -8,6 +8,24 @@
 		width="250" height="66"></a></div>
 		<div class="EFRA"><a href="http://jegverem.hu/projektek"><img src="../images/infoblokk_kedv_final_felso_cmyk_ERFA.jpg"></a></div>
 		<div class="phone_number"></div>
+
+		<? $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/'; ?>
+		<? $isHome = in_array($path, ['/', '/index', '/index/'], true); ?>
+		<? if($isHome): ?>
+		<div class="home-v2-topbar">
+			<div class="home-v2-social">
+				<span class="soc tiktok"><img src="../images/skin_v2/tiktok.png" alt="TikTok"></span>
+				<span class="soc instagram"><img src="../images/skin_v2/instagram.png" alt="Instagram"></span>
+				<a href="https://www.facebook.com/jegverem.fogado" class="soc facebook"><img src="../images/skin_v2/facebook.png" alt="Facebook"></a>
+			</div>
+			<div class="home-v2-cta">
+				<a class="cta order" href="https://mobilpincer.net/hu/jegverem-fogado"><span>Online Ételerendelés</span></a>
+				<a class="cta table" href="https://reservation.dish.co/landingPage/hydra-fa60e3c2-9cc8-4282-9212-df64ffb965ee"><span>Asztalfoglalás</span></a>
+				<a class="cta rooms" href="https://nethotelbooking.net/hotels/jegverem/lang=hu"><span>Szállás</span></a>
+				<a class="cta events" href="#" onclick="return false;"><span>Zártkörű rendezvények</span></a>
+			</div>
+		</div>
+		<? endif; ?>
         <div id="menu">
             <span><a href="/index" <? if($_SERVER["REQUEST_URI"] == "/index" || $_SERVER["REQUEST_URI"] == "/"): ?>class="on"<? endif; ?>>Kezdőlap</a></span>
             <span><a href="/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/heti_menu"): ?>class="on"<? endif; ?>>Heti menü</a></span>
