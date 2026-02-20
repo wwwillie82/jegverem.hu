@@ -40,7 +40,7 @@
 
 <!-- container -->
 <div id="container">
-    <?php echo $header; ?>
+    <?= $header ?>
 <!-- <script defer async src='https://cdn.trustindex.io/loader.js?f9074e46542e48ecf4781fac1'></script> -->
 
 
@@ -54,14 +54,14 @@
 
         <div class="main_full">
             <div class="content">
-				<h3><?php echo $products->cat_title; ?></h3>
+				<h3><?= $products->cat_title ?></h3>
 				
 				<? foreach($products as $product): ?>
 				<div class="item">
 					<div class="txt_full">
-						<h4><?php echo $product->name; ?></h4>
-						<p><?php echo $product->description; ?></p>
-						<? if($product->price > 0): ?><div class="price"><span><?php echo $product->attribute; ?></span> <?php echo $product->price; ?>,-</div><? endif; ?>
+						<h4><?= $product->name ?></h4>
+						<p><?= $product->description ?></p>
+						<? if($product->price > 0): ?><div class="price"><span><?= $product->attribute ?></span> <?= $product->price ?>,-</div><? endif; ?>
 					</div>
 				</div>
 				<? endforeach; ?>
@@ -109,7 +109,7 @@
         <br class="clearfix" />
     </div>
 
-    <?php echo $footer; ?>
+    <?= $footer ?>
 </div>
 <!-- eof container -->
 

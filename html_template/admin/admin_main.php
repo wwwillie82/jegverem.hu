@@ -52,7 +52,7 @@
     <script type="text/javascript">
 
 	    function DeleteRow() {
-		    return confirm('<?php echo Localization::_("Biztosan szeretnéd törölni?"); ?>');
+		    return confirm('<?= Localization::_("Biztosan szeretnéd törölni?") ?>');
 	    }
 
     	$(document).ready(function(){
@@ -81,15 +81,15 @@
 			</div>
 
 			<div class="usermenu">
-				<?php echo Localization::_("Mi újság"); ?>,
-				<span><?php echo Auth::GI()->GetUserSession()->GetUsername(); ?>?</span>
+				<?= Localization::_("Mi újság") ?>,
+				<span><?= Auth::GI()->GetUserSession()->GetUsername() ?>?</span>
 
-				<a href="<?php echo URI::MakeURL("admin/index", array("user_logout" => "true")); ?>"><?php echo Localization::_("Kijelentkezés"); ?></a>
+				<a href="<?= URI::MakeURL("admin/index", array("user_logout" => "true")) ?>"><?= Localization::_("Kijelentkezés") ?></a>
 			</div>
 
 			<div class="timelock">
-				<?php echo Localization::_("Időzár"); ?><br /><span id="session_timer">10:00</span>
-				<a href="#" class="btn_refresh" onclick="RefreshSession(); return false;"><?php echo Localization::_("Frissítés"); ?></a>
+				<?= Localization::_("Időzár") ?><br /><span id="session_timer">10:00</span>
+				<a href="#" class="btn_refresh" onclick="RefreshSession(); return false;"><?= Localization::_("Frissítés") ?></a>
 			</div>
 		</div>
 		<!-- eof header -->
@@ -97,14 +97,14 @@
 		<!-- middle -->
 		<div id="middle">
 			<div class="top">
-				<h2><?php echo implode(" &gt; ", ModuleHelper::GetBreadcrumb()); ?></h2>
+				<h2><?= implode(" &gt; ", ModuleHelper::GetBreadcrumb()) ?></h2>
 
 				<div class="language">
-					<?php echo Localization::_("Szerkesztett nyelv"); ?>
+					<?= Localization::_("Szerkesztett nyelv") ?>
 					<div class="select">
 						<select onchange="GoToURL(this, '/admin/changelanguage/');">
 							<? foreach($lang_select as $lang): ?>
-							<option value="<?php echo $lang->id; ?>" <? if($lang->selected == true): ?> selected="selected" <? endif; ?>><?php echo $lang->name; ?></option>
+							<option value="<?= $lang->id ?>" <? if($lang->selected == true): ?> selected="selected" <? endif; ?>><?= $lang->name ?></option>
 							<? endforeach; ?>
 						</select>
 					</div>
@@ -119,7 +119,7 @@
 						<ul>
 							<? foreach($root_menu->GetMenuItems() as $MenuItem): ?>
 								<? if($MenuItem->IsActive()): ?>
-									<li><a href="<?php echo $MenuItem->GetLink(); ?>" class="on"><?php echo $MenuItem->GetName(); ?></a>
+									<li><a href="<?= $MenuItem->GetLink() ?>" class="on"><?= $MenuItem->GetName() ?></a>
 									
 									<? if(count($MenuItem->GetMenuItems()) > 0):
 											$submenuCounter=0;
@@ -134,13 +134,13 @@
 												$submenuCounter++;
 											?>
 
-											<li><a href="<?php echo $SubMenuItem->GetLink(); ?>" class="<?php echo implode(" ", $class); ?>"><?php echo $SubMenuItem->GetName(); ?></a></li>
+											<li><a href="<?= $SubMenuItem->GetLink() ?>" class="<?= implode(" ", $class) ?>"><?= $SubMenuItem->GetName() ?></a></li>
 											<? endforeach; ?>
 										</ul>
 									<? endif; ?>
 									</li>
 								<? else: ?>
-									<li><a href="<?php echo $MenuItem->GetLink(); ?>"><?php echo $MenuItem->GetName(); ?></a></li>
+									<li><a href="<?= $MenuItem->GetLink() ?>"><?= $MenuItem->GetName() ?></a></li>
 								<? endif; ?>
 							<? endforeach; ?>
 						</ul>
@@ -155,9 +155,9 @@
 						&copy; Copyright Voov Ltd.<br />
 						All rights reserved.</p>
 
-						<p>Loaded: <?php echo round(microtime(true) - $load_time, 3); ?>s<br />
-						SQL: <?php echo Db::GetInstance()->GetQueryCount();; ?> queries<br />
-						build: v.<?php echo SPUTNIK_VERSION; ?></p>
+						<p>Loaded: <?= round(microtime(true) - $load_time, 3) ?>s<br />
+						SQL: <?= Db::GetInstance()->GetQueryCount(); ?> queries<br />
+						build: v.<?= SPUTNIK_VERSION ?></p>
 					</div>
 				</div>
 				<!-- eof sidebar -->
@@ -165,10 +165,10 @@
 				<!-- main -->
 				<div class="main">
 					<? if(Sessions::GetInstance()->GetFlashdata("acl_error")): ?>
-					<div class="status warning"><?php echo Sessions::GetInstance()->GetFlashdata("acl_error"); ?></div>
+					<div class="status warning"><?= Sessions::GetInstance()->GetFlashdata("acl_error") ?></div>
 					<? endif; ?>
 
-					<?php echo $load; ?>
+					<?= $load ?>
 				</div>
 				<!-- eof main -->
 

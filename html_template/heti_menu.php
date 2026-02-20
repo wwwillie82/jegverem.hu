@@ -43,7 +43,7 @@
 <!-- container -->
 <!-- <script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script> -->
 <div id="container">
-    <?php echo $header; ?>
+    <?= $header ?>
 
     <div id="middle">
         <div class="main">
@@ -53,29 +53,29 @@
 				<div class="icon_price"></div>
 
 				<? if($menus->length() > 0): ?>
-					<h3>Ezen a héten (<?php echo $menus->week; ?>. hét)</h3>
+					<h3>Ezen a héten (<?= $menus->week ?>. hét)</h3>
 
 					<? 
 					$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 					foreach($menus as $menu):
 					?>
-					<h5><span><?php echo $days[$menu->day]; ?></span></h5>
+					<h5><span><?= $days[$menu->day] ?></span></h5>
 					<div class="food">
-						<?php echo nl2br($menu->offer_text); ?>
+						<?= nl2br($menu->offer_text) ?>
 					</div>
 					<? endforeach; ?>
 				<? endif; ?>
 
 				<? if($next_menus->length() > 0): ?>
-					<h3>Következő héten (<?php echo $next_menus->week; ?>. hét)</h3>
+					<h3>Következő héten (<?= $next_menus->week ?>. hét)</h3>
 
 					<? 
 					$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 					foreach($next_menus as $menu):
 					?>
-					<h5><span><?php echo $days[$menu->day]; ?></span></h5>
+					<h5><span><?= $days[$menu->day] ?></span></h5>
 					<div class="food">
-						<?php echo nl2br($menu->offer_text); ?>
+						<?= nl2br($menu->offer_text) ?>
 					</div>
 					<? endforeach; ?>
 				<? endif; ?>
@@ -84,12 +84,12 @@
             <div class="bottom"></div>
         </div>
 
-        <?php echo $sidebar; ?>
+        <?= $sidebar ?>
         <br class="clearfix" />
     </div>
 
-	<?php echo $banner; ?>
-    <?php echo $footer; ?>
+	<?= $banner ?>
+    <?= $footer ?>
 </div>
 <!-- eof container -->
 

@@ -67,7 +67,7 @@
 			<h2>Bejelentkezés</h2>
 			
 			<div class="form">
-				<?php echo Form::StartForm("authentication", $_SERVER["HTTP_REFERER"]); ?>
+				<?= Form::StartForm("authentication", $_SERVER["HTTP_REFERER"]) ?>
 					<div class="item">
 						<label>Felhasználónév</label>
 						<input type="text" name="username" value="" class="field" />
@@ -83,11 +83,11 @@
 					<div class="submit_holder">
 						<input type="submit" name="submitLogin" value="Belépés" class="submit" />	
 					</div>
-				<?php echo Form::EndForm(); ?>
+				<?= Form::EndForm() ?>
 				
 				<div class="lost_password">
 					<!-- <a href="#">Elfelejtett jelszó</a> -->
-					<?php echo Sessions::GetInstance()->GetFlashdata("authentication_statustext"); ?>
+					<?= Sessions::GetInstance()->GetFlashdata("authentication_statustext") ?>
 				</div>
 			</div>
 		</div>

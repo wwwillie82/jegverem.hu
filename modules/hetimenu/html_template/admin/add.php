@@ -2,15 +2,15 @@
 
 <div class="data">
 	<div class="form">
-		<?php echo Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")); ?>
+		<?= Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")) ?>
 
 		<div class="item">
-			<label><span>*</span> <?php echo Localization::_("Kategória"); ?></label>
+			<label><span>*</span> <?= Localization::_("Kategória") ?></label>
 
 			<div class="checkboxes">
 				<select name="columns_id">
 					<? foreach($columns as $column): ?>
-						<?php echo HtmlBuilder::HtmlBuilder("option")->value($column->id, -1)->html($column->name); ?>
+						<?= HtmlBuilder::HtmlBuilder("option")->value($column->id, -1)->html($column->name) ?>
 					<? endforeach; ?>
 				</select>
 			</div>
@@ -18,14 +18,14 @@
 		</div>
 
 		<div class="item">
-			<label><span>*</span> <?php echo Localization::_("Cím"); ?></label>
+			<label><span>*</span> <?= Localization::_("Cím") ?></label>
 			<input type="text" name="title" value="" class="input_long"/>
 			<br class="clearfix"/>
 		</div>
 
 		<link href="/jcrop/jquery.Jcrop.css" type="text/css" rel="stylesheet" />
 		<div class="item">
-			<label><span>*</span> <?php echo Localization::_("Kép"); ?></label>
+			<label><span>*</span> <?= Localization::_("Kép") ?></label>
 			<input type="file" id="pickfiles" />
 			<br class="clearfix"/>
 		</div>
@@ -60,10 +60,10 @@
 		</script>
 
 		<div class="item">
-			<label><span class="required">* <?php echo Localization::_("Kötelező"); ?></span></label>
+			<label><span class="required">* <?= Localization::_("Kötelező") ?></span></label>
 			<input type="submit" name="submit" value="Mentés" class="submit"/>
 			<br class="clearfix"/>
 		</div>
-		<?php echo Form::EndForm(); ?>
+		<?= Form::EndForm() ?>
 	</div>
 </div>

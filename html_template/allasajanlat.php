@@ -33,7 +33,7 @@
 <!-- container -->
 <script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script>
 <div id="container">
-    <?php echo $header; ?>
+    <?= $header ?>
 
     <div id="middle">
         <div class="main">
@@ -115,12 +115,12 @@
             <div class="bottom"></div>
         </div>
 
-        <?php echo $sidebar; ?>
+        <?= $sidebar ?>
         <br class="clearfix" />
     </div>
 
-	<?php echo $banner; ?>
-    <?php echo $footer; ?>
+	<?= $banner ?>
+    <?= $footer ?>
 </div>
 <!-- eof container -->
 
