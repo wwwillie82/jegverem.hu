@@ -34,15 +34,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     --nav-bg: #727272;
     --nav-text: #fefefe;
     --text: #2c2b2b;
-    --site-width: 960px;
+    --site-width: 968px;
 }
 
 .site-width {
-	width: 100%;
-	max-width: var(--site-width);
-	margin-left: auto;
-	margin-right: auto;
-	box-sizing: border-box;
+    width: 100%;
+    max-width: var(--site-width);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 body {
@@ -68,9 +67,9 @@ body {
     position: relative;
 }
 #container #header .holder {
-    height: 220px;
-    background: url(../images/skin_v2/fejlec_jv.jpg) center center no-repeat;
-    background-size: cover;
+    height: 160px;
+    background: url(../images/skin_v2/fejlec_jv.jpg) center top no-repeat;
+    background-size: 100% auto;
 }
 #container #header .holder h1 {
     width: 281px;
@@ -78,7 +77,7 @@ body {
     display: block;
     text-indent: -9999px;
     margin: 0 auto;
-    padding-top: 48px;
+    padding-top: 34px;
     background: url(../images/logo.png) left top no-repeat;
 }
 #container #header .holder h1 a,
@@ -144,13 +143,16 @@ body {
     display: block;
 }
 #container #cta-bar {
-    background: var(--panel-bg);
+    background: var(--page-bg);
     padding: 12px 0;
 }
 #container #cta-bar .holder {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    background: var(--panel-bg);
+    border-radius: 4px;
+    padding: 10px;
 }
 #container #cta-bar .cta-btn,
 #container #cta-bar .cta-btn:hover {
@@ -166,6 +168,9 @@ body {
     padding: 11px 8px;
 }
 #container #main-nav {
+    background: var(--page-bg);
+}
+#container #main-nav .holder {
     background: var(--nav-bg);
 }
 #container #main-nav #menu {
@@ -205,22 +210,29 @@ body {
 
 @media screen and (max-width: 980px) {
     #container .holder.site-width {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 12px;
+        margin-right: 12px;
     }
 
     #container #main-nav #menu span {
         margin-bottom: 6px;
     }
+
+    #container #middle {
+        width: auto;
+        margin: 0 12px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     #container #header .holder {
-        height: 180px;
+        height: 140px;
     }
 
     #container #header .holder h1 {
-        padding-top: 54px;
+        padding-top: 42px;
     }
 
     #container #cta-bar .holder {
@@ -229,10 +241,9 @@ body {
 }
 
 #container #middle {
-	width: 100%;
-	max-width: var(--site-width);
-	margin: 0 auto;
-	box-sizing: border-box;
+    width: var(--site-width);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 #container #middle .box_two,
 #container #middle .box_three {
