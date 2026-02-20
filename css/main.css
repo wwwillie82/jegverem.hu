@@ -998,3 +998,40 @@ body {
     font-weight: 500;
     font-style: normal;
 }
+
+/* Final overrides: main gray navigation typography */
+#container #main-nav #menu {
+    font-family: "Roboto", Arial, sans-serif !important;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+#container #main-nav #menu a,
+#container #main-nav #menu a:hover {
+    font: inherit;
+}
+
+/* ettermunk_kinalata only: remove top header gap */
+body.page-ettermunk-kinalata {
+    margin: 0;
+}
+
+body.page-ettermunk-kinalata #container #header {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body.page-ettermunk-kinalata #container #header .holder {
+    margin-top: 0;
+}
+
+/* Remove legacy centered overlay text in header, keep logo background */
+#container #header .cufon,
+#container #header cufon,
+#container #header canvas {
+    display: none !important;
+}

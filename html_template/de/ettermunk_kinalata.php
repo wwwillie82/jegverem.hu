@@ -36,7 +36,7 @@
 		gtag('config', 'G-D729CRGYTY');
 	</script>
 </head>
-<body>
+<body class="page-ettermunk-kinalata">
 
 <!-- container -->
 <div id="container">

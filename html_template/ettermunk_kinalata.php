@@ -39,11 +39,11 @@
 		})();
 	</script>
 </head>
-<body>
+<body class="page-ettermunk-kinalata">
 
 
 <!-- container -->
-<<!-- <script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script> -->
+<!-- <script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script> -->
 <div id="container">
     <?= $header ?>
 
