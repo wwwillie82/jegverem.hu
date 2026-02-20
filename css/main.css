@@ -999,24 +999,12 @@ body {
     font-style: normal;
 }
 
-/* Final overrides: CTA typography parity with homepage */
-#container #cta-bar .cta-btn,
-#container #cta-bar .cta-btn:hover {
-    font-family: "Roboto", "Segoe UI", Tahoma, Arial, sans-serif !important;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 15px;
-    font-style: normal;
-    letter-spacing: normal;
-    text-transform: none;
-}
-
 /* Final overrides: main gray navigation typography */
 #container #main-nav #menu {
     font-family: "Roboto", Arial, sans-serif !important;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
-    line-height: 15px;
+    line-height: 16px;
     font-style: normal;
     letter-spacing: 0;
     text-transform: none;
@@ -1041,7 +1029,9 @@ body.page-ettermunk-kinalata #container #header .holder {
     margin-top: 0;
 }
 
-/* Hide legacy centered slider overlay text layer */
-#container > #middle > .box_two > .covers > .item.SlideShow > .navigation > h2 {
+/* Remove legacy centered overlay text in header, keep logo background */
+#container #header .cufon,
+#container #header cufon,
+#container #header canvas {
     display: none !important;
 }
