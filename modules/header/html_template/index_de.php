@@ -1,10 +1,34 @@
 <div id="header">
     <div class="holder">
         <h1><a href="/de/index">Jégverem Fogadó</a></h1>
-		
-		<div class="booking"><a href="https://nethotelbooking.net/hotels/jegverem/lang=de">ONLINE BUCHUNG</a></div>
-		<div class="EFRA"><a href="http://jegverem.hu/projektek"><img src="../images/infoblokk_kedv_final_felso_cmyk_ERFA.jpg"></a></div>
 
+        <div class="top-links">
+            <div class="languages">
+                <a href="/index">HU</a>
+                <a href="/de" class="on">DE</a>
+                <a href="/en">EN</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" aria-label="TikTok"><img src="/images/skin_v2/tiktok.png" alt="TikTok" /></a>
+                <a href="#" aria-label="Instagram"><img src="/images/skin_v2/instagram.png" alt="Instagram" /></a>
+                <a href="#" aria-label="Facebook"><img src="/images/skin_v2/facebook.png" alt="Facebook" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cta-bar">
+    <div class="holder">
+        <a class="cta-btn" href="https://mobilpincer.net/hu/jegverem-fogado">Online Bestellung</a>
+        <a class="cta-btn" href="https://reservation.dish.co/landingPage/hydra-fa60e3c2-9cc8-4282-9212-df64ffb965ee">Tischreservierung</a>
+        <a class="cta-btn" href="https://nethotelbooking.net/hotels/jegverem/lang=de">Unterkunft</a>
+        <a class="cta-btn" href="#">Private Veranstaltungen</a>
+    </div>
+</div>
+
+<div id="main-nav">
+    <div class="holder">
         <div id="menu">
             <span><a href="/de/index" <? if($_SERVER["REQUEST_URI"] == "/de/index" || $_SERVER["REQUEST_URI"] == "/de"): ?>class="on"<? endif; ?>>Startseite</a></span>
             <span><a href="/de/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/de/heti_menu"): ?>class="on"<? endif; ?>>Wochenmenü</a></span>
@@ -14,24 +38,5 @@
             <span><a href="/de/a_jegverem_tortenete" <? if($_SERVER["REQUEST_URI"] == "/de/a_jegverem_tortenete"): ?>class="on"<? endif; ?>>Geschichte</a></span>
             <span class="no"><a href="/de/kapcsolat" <? if($_SERVER["REQUEST_URI"] == "/de/kapcsolat"): ?>class="on"<? endif; ?>>Kontakte</a></span>
         </div>
-		
-		<div class="languages">
-			<a href="/index">HU</a>
-			<a href="/de" class="on">DE</a>
-			<a href="/en">EN</a>
-		</div>
-		
-		<div id="fb-root"></div>
-
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v2.0";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-		
-		<div class="fb-like" data-href="https://www.facebook.com/jegverem.fogado" 
-		data-width="50" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
 </div>
