@@ -52,7 +52,7 @@
 
 
 <div id="container">
-    <?php echo $header; ?>
+    <?= $header ?>
 <script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script>
     <div id="middle">
         <div class="box_two">
@@ -61,9 +61,9 @@
 				<?php  $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
                 <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
                     <div class="navigation">
-                        <h2><?php echo nl2br($cover->description); ?></h2>
+                        <h2><?= nl2br($cover->description) ?></h2>
 
-                        <div class="num"><span><?php echo $i; ?></span>/<?php echo $covers->length(); ?></div>
+                        <div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
 
                         <a href="" class="prev SlideShowControlPrev">Előző</a>
                         <a href="" class="next SlideShowControlNext">Következő</a>
@@ -94,9 +94,9 @@
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($menus as $menu):
 									?>
-									<h5><span><?php echo $days[$menu->day]; ?></span></h5>
+									<h5><span><?= $days[$menu->day] ?></span></h5>
 									<div class="food">
-										<?php echo nl2br($menu->offer_text); ?>
+										<?= nl2br($menu->offer_text) ?>
 									</div>
 									<?php  endforeach; ?>
 								<?php  endif; ?>
@@ -108,9 +108,9 @@
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($next_menus as $menu):
 									?>
-									<h5><span><?php echo $days[$menu->day]; ?></span></h5>
+									<h5><span><?= $days[$menu->day] ?></span></h5>
 									<div class="food">
-										<?php echo nl2br($menu->offer_text); ?>
+										<?= nl2br($menu->offer_text) ?>
 									</div>
 									<?php  endforeach; ?>
 								<?php  endif; ?>
@@ -174,8 +174,8 @@
         </div>
     </div>
 	
-	<?php echo $banner; ?>
-    <?php echo $footer; ?>
+	<?= $banner ?>
+    <?= $footer ?>
 </div>
 <!-- eof container -->
 

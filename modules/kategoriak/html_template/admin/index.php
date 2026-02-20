@@ -16,7 +16,7 @@
 		return false;
 	}
 
-	var json_obj = eval('<?php echo $categories; ?>');
+	var json_obj = eval('<?= $categories ?>');
 	expandbox.addElements(json_obj);
 	
 	

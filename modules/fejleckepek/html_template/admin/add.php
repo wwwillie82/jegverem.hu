@@ -1,26 +1,26 @@
 <div class="data">
 	<div class="form">
-		<?php echo Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")); ?>
+		<?= Form::StartForm("add", ModuleHelper::GetFunctionLink("admin/add")) ?>
 
 		<div class="item">
-			<label><span>*</span> <?php echo Localization::_("Oldal"); ?></label>
+			<label><span>*</span> <?= Localization::_("Oldal") ?></label>
 			<select name="columns_id">
 				<? foreach($columns as $column): ?>
-				<option value="<?php echo $column->id; ?>"><?php echo $column->name; ?></option>
+				<option value="<?= $column->id ?>"><?= $column->name ?></option>
 				<? endforeach; ?>
 			</select>
 			<br class="clearfix"/>
 		</div>
 		
 		<div class="item">
-			<label><span>*</span> <?php echo Localization::_("Sorrend"); ?></label>
+			<label><span>*</span> <?= Localization::_("Sorrend") ?></label>
 			<input type="text" name="sort_order" value="0" class="input_normal"/>
 			<br class="clearfix"/>
 		</div>
 		
 		<link href="/jcrop/jquery.Jcrop.css" type="text/css" rel="stylesheet" />
 		<div class="item">
-			<label><span>*</span> <?php echo Localization::_("Kép"); ?></label>
+			<label><span>*</span> <?= Localization::_("Kép") ?></label>
 			<input type="file" id="pickfiles" />
 			<br class="clearfix"/>
 		</div>
@@ -55,16 +55,16 @@
 		</script>
 		
 		<div class="item">
-			<label><span>*</span> <?php echo Localization::_("Rövid leírás"); ?></label>
+			<label><span>*</span> <?= Localization::_("Rövid leírás") ?></label>
 			<textarea name="description" class="textfield_small"></textarea>
 			<br class="clearfix"/>
 		</div>
 
 		<div class="item">
-			<label><span class="required">* <?php echo Localization::_("Kötelező"); ?></span></label>
+			<label><span class="required">* <?= Localization::_("Kötelező") ?></span></label>
 			<input type="submit" name="submit" value="Mentés" class="submit"/>
 			<br class="clearfix"/>
 		</div>
-		<?php echo Form::EndForm(); ?>
+		<?= Form::EndForm() ?>
 	</div>
 </div>

@@ -40,7 +40,7 @@
 
 <!-- container -->
 <div id="container">
-    <?php echo $header; ?>
+    <?= $header ?>
 <script defer async src='https://cdn.trustindex.io/loader.js?0b42a8965ce451e6142286174'></script>
 
     <div id="middle">
@@ -52,10 +52,10 @@
 				<? foreach($albums as $album): ?>
                 <div class="album <? if($albums->IsOdd()): ?>right<? endif; ?>">
                     <div class="img">
-                        <a href="<?php echo URI::MakeURL("de/galeria/kepek", array("permalink" => $album->permalink), true); ?>"><img src="/<?php echo $this->ImageCache($album->pic_path)->Crop($album->pic_data)->ResizeImage(287,287); ?>" alt="<?php echo $album->title; ?>" /></a>
+                        <a href="<?= URI::MakeURL("de/galeria/kepek", array("permalink" => $album->permalink), true) ?>"><img src="/<?= $this->ImageCache($album->pic_path)->Crop($album->pic_data)->ResizeImage(287,287) ?>" alt="<?= $album->title ?>" /></a>
                     </div>
 
-                    <h4><?php echo $album->title_de; ?></h4>
+                    <h4><?= $album->title_de ?></h4>
                 </div>
 				
 				<? if($albums->IsOdd() && !$albums->IsLast()): ?>
@@ -71,11 +71,11 @@
             <div class="bottom"></div>
         </div>
 
-        <?php echo $sidebar; ?>
+        <?= $sidebar ?>
         <br class="clearfix" />
     </div>
 
-    <?php echo $footer; ?>
+    <?= $footer ?>
 </div>
 <!-- eof container -->
 

@@ -28,7 +28,7 @@
 	<body>
 		<!-- container -->
 		<div id="container">
-			<?php echo $header; ?>
+			<?= $header ?>
 <!--<script defer async src='https://cdn.trustindex.io/loader.js?0b42a8965ce451e6142286174'></script> -->
 			<div id="middle">
 				<div class="tabs">
@@ -38,16 +38,16 @@
 				</div>
 				<div class="main_full">
 					<div class="content">
-						<h3><?php echo $products->cat_title; ?></h3> <? foreach($products as $product): ?>
+						<h3><?= $products->cat_title ?></h3> <? foreach($products as $product): ?>
 						<div class="item">
 							<div class="txt_full">
-								<h4><?php echo $product->name; ?></h4>
+								<h4><?= $product->name ?></h4>
 								<p>
-									<?php echo $product->description; ?>
+									<?= $product->description ?>
 								</p>
 								<? if($product->price > 0): ?>
 								<div class="price">
-									<span><?php echo $product->attribute; ?></span> <?php echo $product->price; ?>,-
+									<span><?= $product->attribute ?></span> <?= $product->price ?>,-
 								</div>
 								<? endif; ?>
 							</div>
@@ -58,7 +58,7 @@
 				</div>
 				<div class="sidebar_full">
 					<div class="navigation">
-						<? foreach($categories as $cat): ?> <a href="<?php echo URI::MakeURL("de/itallap", array("filter" => $cat->permalink), true); ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?php echo $cat->title; ?></a> <? endforeach; ?>
+						<? foreach($categories as $cat): ?> <a href="<?= URI::MakeURL("de/itallap", array("filter" => $cat->permalink), true) ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?= $cat->title ?></a> <? endforeach; ?>
 					</div>
 					<div class="fix"></div>
 					<div class="item">
@@ -79,7 +79,7 @@
 				</div>
 				<br class="clearfix" />
 			</div>
-			<?php echo $footer; ?>
+			<?= $footer ?>
 		</div><!-- eof container -->
 	</body>
 </html>
