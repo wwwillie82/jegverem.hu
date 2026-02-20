@@ -1,5 +1,7 @@
 <div id="header">
     <div class="holder site-width">
+        <h1><a href="/index">Jégverem Fogadó</a></h1>
+
         <div class="top-links">
             <div class="languages">
                 <a href="/index" class="on">HU</a>
