@@ -1,5 +1,5 @@
 <div id="header">
-    <div class="holder">
+    <div class="holder site-width">
         <h1><a href="/de/index">Jégverem Fogadó</a></h1>
 
         <div class="top-links">
@@ -19,7 +19,7 @@
 </div>
 
 <div id="cta-bar">
-    <div class="holder">
+    <div class="holder site-width">
         <a class="cta-btn" href="https://mobilpincer.net/hu/jegverem-fogado">Online Bestellung</a>
         <a class="cta-btn" href="https://reservation.dish.co/landingPage/hydra-fa60e3c2-9cc8-4282-9212-df64ffb965ee">Tischreservierung</a>
         <a class="cta-btn" href="https://nethotelbooking.net/hotels/jegverem/lang=de">Unterkunft</a>
@@ -28,7 +28,7 @@
 </div>
 
 <div id="main-nav">
-    <div class="holder">
+    <div class="holder site-width">
         <div id="menu">
             <span><a href="/de/index" <? if($_SERVER["REQUEST_URI"] == "/de/index" || $_SERVER["REQUEST_URI"] == "/de"): ?>class="on"<? endif; ?>>Startseite</a></span>
             <span><a href="/de/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/de/heti_menu"): ?>class="on"<? endif; ?>>Wochenmenü</a></span>
