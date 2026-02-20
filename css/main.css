@@ -71,21 +71,24 @@ body {
     background: url(../images/skin_v2/fejlec_jv.jpg) center top no-repeat;
     background-size: 100% auto;
 }
+/* Header SEO-only title — hide visual logo.png */
 #container #header .holder h1 {
-    width: 281px;
-    height: 99px;
-    display: block;
-    text-indent: -9999px;
-    margin: 0 auto;
-    padding-top: 34px;
-    background: url(../images/logo.png) left top no-repeat;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: none !important;
 }
 #container #header .holder h1 a,
 #container #header .holder h1 a:hover {
-    width: 281px;
-    height: 99px;
     display: block;
-    text-indent: -9999px;
+    width: 1px;
+    height: 1px;
+    background: none !important;
 }
 #container #header .top-links {
     position: absolute;
