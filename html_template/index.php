@@ -59,7 +59,7 @@
             <div class="covers">
 				<?php  $i=1; foreach($covers as $cover): ?>
 				<?php  $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
-                <div class="item SlideShow" style="background-image: url(http://<?php echo $_SERVER["HTTP_HOST"]; ?>/<?php echo $url; ?>);">
+                <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
                     <div class="navigation">
                         <h2><?php echo nl2br($cover->description); ?></h2>
 
@@ -88,7 +88,7 @@
 						<div class="viewport">
 							 <div class="overview">
 								<?php  if($menus->length() > 0): ?>
-									<h3 style="line-height: 22px;">Ezen a héten (<?php echo $menus->week; ?>. hét)<br /> Csomagolás: 250 Ft/menü </h3>
+									<h3 style="line-height: 22px;">Ezen a héten (<?= $menus->week ?>. hét)<br /> Csomagolás: 250 Ft/menü </h3>
 
 									<?php 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
@@ -102,7 +102,7 @@
 								<?php  endif; ?>
 
 								<?php  if($next_menus->length() > 0): ?>
-									<h3 style="line-height: 22px;">Következő a héten (<?php echo $next_menus->week; ?>. hét)</h3>
+									<h3 style="line-height: 22px;">Következő a héten (<?= $next_menus->week ?>. hét)</h3>
 
 									<?php 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
