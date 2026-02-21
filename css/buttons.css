@@ -10,7 +10,7 @@ a:hover.btn_tovabb {
     color: #545454;
     text-align: center;
     text-decoration: none;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     background: url(../images/buttons/btn_tovabb.gif) left top no-repeat;
     position: absolute;
     bottom: 18px;

@@ -298,7 +298,7 @@ body {
     position: absolute;
     left: 125px;
     top: 12px;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
     color: #fff;
@@ -312,7 +312,7 @@ body {
     left: 0;
     text-align: center;
     color: #818181;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
     font-weight: bold;
@@ -396,7 +396,7 @@ body {
     width: auto;
     display: block;
 	margin: 0 0 13px 0;
-	font-family: Georgia, Arial, Tahoma;
+	font-family: "Roboto", Arial, sans-serif;
 	color: #981e2f;
 	font-size: 13px;
 	font-weight: bold;
@@ -407,7 +407,7 @@ body {
     width: auto;
     display: block;
 	margin: 0 0 7px 0;
-	font-family: Georgia, Arial, Tahoma;
+	font-family: "Roboto", Arial, sans-serif;
 	color: #2e2e2e;
 	font-size: 12px;
 	font-weight: bold;
@@ -446,7 +446,7 @@ body {
 }
 #container #middle .box_three .item h3 {
     width: auto;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-style: italic;
@@ -538,7 +538,7 @@ body {
 	display: block;
 	font-size: 18px;
 	line-height: 22px;
-	font-family: Georgia, Arial, Tahoma;
+	font-family: "Roboto", Arial, sans-serif;
 	font-style: italic;
 	font-weight: bold;
 	color: #9d9d9d;
@@ -552,7 +552,7 @@ body {
     width: auto;
 	font-size: 14px;
 	line-height: 18px;
-	font-family: Georgia, Arial, Tahoma;
+	font-family: "Roboto", Arial, sans-serif;
 	font-style: italic;
 	font-weight: bold;
 	color: #2e2e2e;
@@ -569,7 +569,7 @@ body {
 	color: #991e2f;
 	font-size: 12px;
 	line-height: 14px;
-	font-family: Georgia, Arial, Tahoma;
+	font-family: "Roboto", Arial, sans-serif;
 	font-style: italic;
 	font-weight: bold;
 }
@@ -595,7 +595,7 @@ body {
     width: 323px;
 	font-size: 14px;
 	font-style: italic;
-	font-family: Georgia, Arial, Tahoma;
+	font-family: "Roboto", Arial, sans-serif;
 	background: url(../images/sidebar_nav.png) left top repeat-y;
 }
 #container #middle .sidebar_full .navigation a,
@@ -646,7 +646,7 @@ body {
 }
 #container #middle .sidebar_full .item h3 {
     width: auto;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-style: italic;
@@ -736,7 +736,7 @@ body {
 }
 #container #middle .main .content .album h4 {
     width: auto;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
@@ -768,7 +768,7 @@ body {
     display: block;
     padding: 7px 0 0 0;
     margin: 0 0 12px 0;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-style: italic;
     font-size: 18px;
     line-height: 20px;
@@ -789,7 +789,7 @@ body {
     display: block;
     padding: 7px 0 0 0;
     margin: 0 0 6px 0;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-style: italic;
     font-size: 16px;
     line-height: 18px;
@@ -815,7 +815,7 @@ body {
     display: block;
     padding: 7px 0 0 0;
     margin: 0 auto 15px auto;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-style: italic;
     font-size: 12px;
     line-height: 17px;
@@ -873,7 +873,7 @@ body {
     position: absolute;
     left: 125px;
     top: 12px;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
     color: #fff;
@@ -887,7 +887,7 @@ body {
     left: 0;
     text-align: center;
     color: #818181;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
     font-weight: bold;
@@ -940,7 +940,7 @@ body {
 }
 #container #middle .sidebar .item h3 {
     width: auto;
-    font-family: Georgia, Arial, Tahoma;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-style: italic;
