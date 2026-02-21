@@ -181,6 +181,9 @@ body {
     font-size: 13px;
     font-weight: bold;
     color: var(--nav-text);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 #container #main-nav #menu span.nav-item {
 	padding: 0 14px 0 0;
@@ -224,6 +227,10 @@ body {
 }
 
 @media screen and (max-width: 980px) {
+    #container #main-nav #menu {
+        flex-wrap: wrap;
+    }
+
     #container .holder.site-width {
         padding-left: 0;
         padding-right: 0;
