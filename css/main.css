@@ -1091,3 +1091,12 @@ body.page-ettermunk-kinalata #container #header .holder {
     color: #ffffff;
     border-radius: 3px;
 }
+
+/* =========================================================
+   TRUSTINDEX WIDGET SCALE — 75%
+   ========================================================= */
+
+.ti-widget .ti-inner {
+    transform: scale(0.75);
+    transform-origin: bottom left;
+}
