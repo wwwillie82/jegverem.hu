@@ -1171,6 +1171,26 @@ body.page-ettermunk-kinalata #container #header .holder {
   transform: translateZ(0);
 }
 
+#header {
+  position: relative;
+  z-index: 1;
+}
+
+.header-overlay-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* hogy a belső elemek (pl. gombok, social) kattinthatók maradjanak */
+#header .holder {
+  position: relative;
+  z-index: 10;
+}
+
 #site-header #header {
   max-height: 400px;
   opacity: 1;
