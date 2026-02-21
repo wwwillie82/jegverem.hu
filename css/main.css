@@ -1104,9 +1104,21 @@ body.page-ettermunk-kinalata #container #header .holder {
 
 #container #main-nav #menu a:hover,
 #container #main-nav #menu span:hover a {
-    background-color: rgba(255,255,255,0.18);
+    background-color: rgba(255,255,255,0.28);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35);
     color: #ffffff;
     border-radius: 3px;
+    text-decoration: none;
+}
+
+#container #main-nav #menu a.on,
+#container #main-nav #menu a:hover.on {
+    background-color: rgba(255,255,255,0.38);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.55),
+                inset 0 -3px 0 rgba(255,255,255,0.95);
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
 }
 
 /* =========================================================
