@@ -1168,10 +1168,20 @@ body.page-ettermunk-kinalata #container #header .holder {
   top: 0;
   z-index: 9999;
   background: var(--page-bg, #eeeeee);
+  transform: translateZ(0);
+}
+
+#site-header #header {
+  max-height: 400px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 250ms ease, opacity 200ms ease;
 }
 
 #site-header.is-compact #header{
-  display: none;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 
