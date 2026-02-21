@@ -11,9 +11,9 @@
             </div>
 
             <div class="social-icons">
-                <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><img src="/images/skin_v2/tiktok.png" alt="TikTok" /></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/images/skin_v2/instagram.png" alt="Instagram" /></a>
-                <a href="https://www.facebook.com/jegverem.fogado" target="_blank" rel="noopener" aria-label="Facebook"><img src="/images/skin_v2/facebook.png" alt="Facebook" /></a>
+                <a href="https://www.tiktok.com/@jegveremfogado" target="_blank" rel="noopener" aria-label="TikTok"><img src="/images/skin_v2/tiktok.png" alt="TikTok" /></a>
+                <a href="https://www.instagram.com/jegveremfogado" target="_blank" rel="noopener" aria-label="Instagram"><img src="/images/skin_v2/instagram.png" alt="Instagram" /></a>
+                <a href="https://www.facebook.com/jegveremfogado/" target="_blank" rel="noopener" aria-label="Facebook"><img src="/images/skin_v2/facebook.png" alt="Facebook" /></a>
             </div>
         </div>
     </div>
