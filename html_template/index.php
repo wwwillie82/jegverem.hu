@@ -125,20 +125,18 @@
         </div>
 
         <div class="box_three">
-            <div class="item">
-                <div class="img">
-                    <a href="/ettermunk_kinalata"><img src="../images/img_1.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-menu-mini">
+                <div class="home-card-mini-media">
+                    <a href="/ettermunk_kinalata"><img src="../images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Éttermünk kínálata" /></a>
                 </div>
 
-                <h3>Éttermünk kínálata</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Éttermünk kínálata</h3>
 
-                <div class="text">
-                    <p>A fogadó gasztronómiai tevékenységét védnöki táblával is elismerték. Bízunk benne, hogy 
-					Ön is kedvére való ételeket talál kínálatunkban. Az étlapon szereplő ételek ára mellett található 
-					árak a kis adag ételek árait jelentik.</p>
+                    <p class="home-card-mini-text">Étlapunk a hagyományos magyar ízekből merít inspirációt, amelyeket kreatívan újragondolt klasszikusok és a nemzetközi konyhaművészet izgalmas fogásai egészítenek ki. Kínálatunk a minőségi alapanyagokra és a harmonikus ízélményre épül.</p>
+
+                    <a href="/ettermunk_kinalata" class="home-card-mini-btn">ÉTLAPUNK >></a>
                 </div>
-
-                <a href="/ettermunk_kinalata" class="btn_tovabb">Tovább</a>
             </div>
 
             <div class="item">

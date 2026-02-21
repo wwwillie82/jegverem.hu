@@ -122,18 +122,18 @@
         </div>
 
         <div class="box_three">
-            <div class="item">
-                <div class="img">
-                    <a href="/de/ettermunk_kinalata"><img src="../images/img_1.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-menu-mini">
+                <div class="home-card-mini-media">
+                    <a href="/de/ettermunk_kinalata"><img src="../images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Das Angebot unseres Restaurants" /></a>
                 </div>
 
-                <h3>Angebote unseres Restaurants</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Das Angebot unseres Restaurants</h3>
 
-                <div class="text">
-                    <p>Wir hoffen, dass Sie in der zertifizierten Gastronomie unserer Pension Ihnen entsprechende Speisen aus unserem Angebot finde. Der zweite Preis neben den Speisen in der Speisekarte ist der Preis für kleinere Portionen. </p>
+                    <p class="home-card-mini-text">Unsere Speisekarte lässt sich von traditionellen ungarischen Aromen inspirieren, die durch kreativ neu interpretierte Klassiker und spannende Gerichte der internationalen Kochkunst ergänzt werden. Unser Angebot basiert auf hochwertigen Zutaten und einem harmonischen Geschmackserlebnis.</p>
+
+                    <a href="/de/ettermunk_kinalata" class="home-card-mini-btn">ZUR SPEISEKARTE >></a>
                 </div>
-
-                <a href="/de/ettermunk_kinalata" class="btn_tovabb">Weiter</a>
             </div>
 
             <div class="item">
