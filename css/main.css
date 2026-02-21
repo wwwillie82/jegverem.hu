@@ -1190,7 +1190,7 @@ body.page-ettermunk-kinalata #container #header .holder {
 
 /* Google review widget méretezés – tartalom torzítás nélkül */
 .ti-reviews-container-wrapper {
-  width: 70% !important;
+  width: 72% !important;
   max-width: 450px; /* biztonsági korlát desktopon */
   transform: none !important;
 }
