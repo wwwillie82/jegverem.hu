@@ -177,13 +177,13 @@ body {
 }
 #container #main-nav #menu {
     min-height: 25px;
-    padding: 7px 14px;
+    padding: 0 14px;
     font-size: 13px;
     font-weight: bold;
     color: var(--nav-text);
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: stretch;
 }
 #container #main-nav #menu span.nav-item {
 	margin: 0;
@@ -201,6 +201,7 @@ body {
     margin: 0;
     text-decoration: none;
 }
+/* Legacy menu hover/active overlay disabled for nav-item-controlled states.
 #container #main-nav #menu a:hover,
 #container #main-nav #menu a.on,
 #container #main-nav #menu a:hover.on {
@@ -208,6 +209,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
 }
+*/
 
 #container #cta-bar .holder,
 #container #middle .box_two .offers,
