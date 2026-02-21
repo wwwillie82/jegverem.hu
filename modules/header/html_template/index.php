@@ -30,14 +30,14 @@
 <div id="main-nav">
     <div class="holder site-width">
         <div id="menu">
-            <span><a href="/index" <? if($_SERVER["REQUEST_URI"] == "/index" || $_SERVER["REQUEST_URI"] == "/"): ?>class="on"<? endif; ?>>Kezdőlap</a></span>
-            <span><a href="/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/heti_menu"): ?>class="on"<? endif; ?>>Heti menü</a></span>
-            <span><a href="/ettermunk_kinalata" <? if($_SERVER["REQUEST_URI"] == "/ettermunk_kinalata"): ?>class="on"<? endif; ?>>Éttermünk kínálata</a></span>
-            <span><a href="/galeria" <? if($_SERVER["REQUEST_URI"] == "/galeria"): ?>class="on"<? endif; ?>>Galéria</a></span>
-            <span><a href="/a_panziorol" <? if($_SERVER["REQUEST_URI"] == "/a_panziorol"): ?>class="on"<? endif; ?>>A panzióról</a></span>
-            <span><a href="/a_jegverem_tortenete" <? if($_SERVER["REQUEST_URI"] == "/a_jegverem_tortenete"): ?>class="on"<? endif; ?>>Jégverem története</a></span>
-            <span><a href="/projektek" <? if($_SERVER["REQUEST_URI"] == "/projektek"): ?>class="on"<? endif; ?>>Projektek</a></span>
-            <span class="no"><a href="/kapcsolat" <? if($_SERVER["REQUEST_URI"] == "/kapcsolat"): ?>class="on"<? endif; ?>>Kapcsolat</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/index" || $_SERVER["REQUEST_URI"] == "/"): ?>active<? endif; ?>"><a href="/index">Kezdőlap</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/heti_menu"): ?>active<? endif; ?>"><a href="/heti_menu">Heti menü</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/ettermunk_kinalata">Éttermünk kínálata</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/galeria"): ?>active<? endif; ?>"><a href="/galeria">Galéria</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/a_panziorol"): ?>active<? endif; ?>"><a href="/a_panziorol">A panzióról</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/a_jegverem_tortenete">Jégverem története</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/projektek"): ?>active<? endif; ?>"><a href="/projektek">Projektek</a></span>
+            <span class="nav-item no <? if($_SERVER["REQUEST_URI"] == "/kapcsolat"): ?>active<? endif; ?>"><a href="/kapcsolat">Kapcsolat</a></span>
         </div>
     </div>
 </div>
