@@ -22,3 +22,4 @@
         Copyright Jégverem Fogadó Sopron. Minden jog fenntartva. Site by <a href="http://voov.hu">Voov</a>.
     </div>
 </div>
+<script src="/js/header_sticky.js" type="text/javascript"></script>
