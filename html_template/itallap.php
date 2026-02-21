@@ -23,7 +23,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-      <link href="/css/main.css?v=20260220" rel="stylesheet" type="text/css" media="screen" />
+      <link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>    <script src="../js/voov.slideshow.js" type="text/javascript"></script>    <script src="../js/jegverem.js" type="text/javascript"></script>
    </head>
    <body>
