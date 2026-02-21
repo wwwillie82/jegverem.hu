@@ -1058,3 +1058,36 @@ body.page-ettermunk-kinalata #container #header .holder {
     text-transform: none !important;
 
 }
+
+/* =========================================================
+   HOVER STATES — CTA BAR
+   ========================================================= */
+
+#container #cta-bar .cta-btn {
+    transition: background-color 0.18s ease, 
+                box-shadow 0.18s ease, 
+                transform 0.12s ease;
+}
+
+#container #cta-bar .cta-btn:hover {
+    background-color: #bdbdbd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HOVER STATES — MAIN NAV
+   ========================================================= */
+
+#container #main-nav #menu a {
+    transition: background-color 0.15s ease,
+                color 0.15s ease;
+}
+
+#container #main-nav #menu a:hover,
+#container #main-nav #menu span:hover a {
+    background-color: rgba(255,255,255,0.18);
+    color: #ffffff;
+    border-radius: 3px;
+}
