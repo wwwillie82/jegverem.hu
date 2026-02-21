@@ -1190,7 +1190,6 @@ body.page-ettermunk-kinalata #container #header .holder {
 /* hogy a belső elemek (pl. gombok, social) kattinthatók maradjanak */
 #header .holder {
   position: relative;
-  z-index: 10;
 }
 
 #site-header #header {
