@@ -123,18 +123,18 @@
         </div>
 
         <div class="box_three">
-            <div class="item">
-                <div class="img">
-                    <a href="/en/ettermunk_kinalata"><img src="../images/img_1.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-menu-mini">
+                <div class="home-card-mini-media">
+                    <a href="/en/ettermunk_kinalata"><img src="../images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Our Restaurant’s Menu" /></a>
                 </div>
 
-                <h3>Restaurant menu</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Our Restaurant’s Menu</h3>
 
-                <div class="text">
-                    <p>The fine gastronomy of the Jégverem Inn was recognised with a Grand Prix award. We are confident that you will also find delicious, filling meals on our menu. The prices for small portions are listed in the menu next to the full portion price.</p>
+                    <p class="home-card-mini-text">Our menu draws inspiration from traditional Hungarian flavors, complemented by creatively reimagined classics and exciting dishes from international cuisine. Our selection is built on quality ingredients and a harmonious taste experience.</p>
+
+                    <a href="/en/ettermunk_kinalata" class="home-card-mini-btn">VIEW OUR MENU >></a>
                 </div>
-
-                <a href="/en/ettermunk_kinalata" class="btn_tovabb">Details</a>
             </div>
 
             <div class="item">
