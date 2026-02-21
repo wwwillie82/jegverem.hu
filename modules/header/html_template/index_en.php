@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <a href="/index" class="header-overlay-link" aria-label="Home"></a>
+    <a href="/en" class="header-overlay-link" aria-label="Home"></a>
 </div>
 
 <div id="cta-bar">
