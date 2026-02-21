@@ -1162,3 +1162,31 @@ body.page-ettermunk-kinalata #container #header .holder {
     transform: scale(0.75);
     transform-origin: bottom left;
 }
+
+#site-header{
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: var(--page-bg, #eeeeee);
+}
+
+#site-header.is-compact #header{
+  display: none;
+}
+
+
+#site-header.is-compact #cta-bar .cta-btn{
+  padding: 7px 8px;
+  font-size: 14px;
+}
+
+#site-header.is-compact #cta-bar .holder{
+  gap: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#site-header.is-compact #main-nav #menu span.nav-item a{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}

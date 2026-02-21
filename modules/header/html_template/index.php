@@ -1,3 +1,4 @@
+<div id="site-header">
 <div id="header">
     <div class="holder site-width">
         <h1><a href="/index">Jégverem Fogadó</a></h1>
@@ -40,4 +41,5 @@
             <span class="nav-item no <? if($_SERVER["REQUEST_URI"] == "/kapcsolat"): ?>active<? endif; ?>"><a href="/kapcsolat">Kapcsolat</a></span>
         </div>
     </div>
+</div>
 </div>
