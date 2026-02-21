@@ -32,7 +32,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     --panel-bg: #c6c6c6;
     --nav-bg: #727272;
     --nav-text: #fefefe;
-    --text: #2c2b2b;
+    --text-color: #2c2b2b;
     --site-width: 968px;
 }
 
@@ -46,11 +46,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 11px;
 	line-height: 15px;
 	background: var(--page-bg);
-	color: var(--text);
+	color: var(--text-color);
 }
 #container {
     width: 100%;
@@ -159,7 +159,7 @@ body {
 #container #cta-bar .cta-btn,
 #container #cta-bar .cta-btn:hover {
     background: var(--panel-bg);
-    color: var(--text);
+    color: var(--text-color);
     border: 1px solid #b1b1b1;
     border-radius: 4px;
     display: block;
@@ -208,6 +208,23 @@ body {
     color: #fff;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
+}
+
+#container #cta-bar .holder,
+#container #middle .box_two .offers,
+#container #middle .box_three .item {
+    background-color: var(--panel-bg);
+}
+
+#container,
+#container p,
+#container li,
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5 {
+    color: var(--text-color);
 }
 
 @media screen and (max-width: 980px) {
