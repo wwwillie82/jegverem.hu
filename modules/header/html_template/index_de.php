@@ -30,13 +30,13 @@
 <div id="main-nav">
     <div class="holder site-width">
         <div id="menu">
-            <span><a href="/de/index" <? if($_SERVER["REQUEST_URI"] == "/de/index" || $_SERVER["REQUEST_URI"] == "/de"): ?>class="on"<? endif; ?>>Startseite</a></span>
-            <span><a href="/de/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/de/heti_menu"): ?>class="on"<? endif; ?>>Wochenmenü</a></span>
-            <span><a href="/de/ettermunk_kinalata" <? if($_SERVER["REQUEST_URI"] == "/de/ettermunk_kinalata"): ?>class="on"<? endif; ?>>Angebote unseres Restaurants</a></span>
-            <span><a href="/de/galeria" <? if($_SERVER["REQUEST_URI"] == "/de/galeria"): ?>class="on"<? endif; ?>>Galerie</a></span>
-            <span><a href="/de/a_panziorol" <? if($_SERVER["REQUEST_URI"] == "/de/a_panziorol"): ?>class="on"<? endif; ?>>Über uns</a></span>
-            <span><a href="/de/a_jegverem_tortenete" <? if($_SERVER["REQUEST_URI"] == "/de/a_jegverem_tortenete"): ?>class="on"<? endif; ?>>Geschichte</a></span>
-            <span class="no"><a href="/de/kapcsolat" <? if($_SERVER["REQUEST_URI"] == "/de/kapcsolat"): ?>class="on"<? endif; ?>>Kontakte</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/index" || $_SERVER["REQUEST_URI"] == "/de"): ?>active<? endif; ?>"><a href="/de/index">Startseite</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/heti_menu"): ?>active<? endif; ?>"><a href="/de/heti_menu">Wochenmenü</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/de/ettermunk_kinalata">Angebote unseres Restaurants</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/galeria"): ?>active<? endif; ?>"><a href="/de/galeria">Galerie</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/a_panziorol"): ?>active<? endif; ?>"><a href="/de/a_panziorol">Über uns</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/de/a_jegverem_tortenete">Geschichte</a></span>
+            <span class="nav-item no <? if($_SERVER["REQUEST_URI"] == "/de/kapcsolat"): ?>active<? endif; ?>"><a href="/de/kapcsolat">Kontakte</a></span>
         </div>
     </div>
 </div>

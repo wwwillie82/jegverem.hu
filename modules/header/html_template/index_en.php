@@ -30,13 +30,13 @@
 <div id="main-nav">
     <div class="holder site-width">
         <div id="menu">
-            <span><a href="/en/index" <? if($_SERVER["REQUEST_URI"] == "/en/index" || $_SERVER["REQUEST_URI"] == "/en"): ?>class="on"<? endif; ?>>Home</a></span>
-            <span><a href="/en/heti_menu" <? if($_SERVER["REQUEST_URI"] == "/en/heti_menu"): ?>class="on"<? endif; ?>>Weekly menu</a></span>
-            <span><a href="/en/ettermunk_kinalata" <? if($_SERVER["REQUEST_URI"] == "/en/ettermunk_kinalata"): ?>class="on"<? endif; ?>>Restaurant menu</a></span>
-            <span><a href="/en/galeria" <? if($_SERVER["REQUEST_URI"] == "/en/galeria"): ?>class="on"<? endif; ?>>Gallery</a></span>
-            <span><a href="/en/a_panziorol" <? if($_SERVER["REQUEST_URI"] == "/en/a_panziorol"): ?>class="on"<? endif; ?>>About the Inn</a></span>
-            <span><a href="/en/a_jegverem_tortenete" <? if($_SERVER["REQUEST_URI"] == "/en/a_jegverem_tortenete"): ?>class="on"<? endif; ?>>History</a></span>
-            <span class="no"><a href="/en/kapcsolat" <? if($_SERVER["REQUEST_URI"] == "/en/kapcsolat"): ?>class="on"<? endif; ?>>Contact</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/en/index" || $_SERVER["REQUEST_URI"] == "/en"): ?>active<? endif; ?>"><a href="/en/index">Home</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/en/heti_menu"): ?>active<? endif; ?>"><a href="/en/heti_menu">Weekly menu</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/en/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/en/ettermunk_kinalata">Restaurant menu</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/en/galeria"): ?>active<? endif; ?>"><a href="/en/galeria">Gallery</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/en/a_panziorol"): ?>active<? endif; ?>"><a href="/en/a_panziorol">About the Inn</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/en/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/en/a_jegverem_tortenete">History</a></span>
+            <span class="nav-item no <? if($_SERVER["REQUEST_URI"] == "/en/kapcsolat"): ?>active<? endif; ?>"><a href="/en/kapcsolat">Contact</a></span>
         </div>
     </div>
 </div>
