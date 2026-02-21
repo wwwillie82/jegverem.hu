@@ -1188,9 +1188,11 @@ body.page-ettermunk-kinalata #container #header .holder {
    TRUSTINDEX WIDGET SCALE — 75%
    ========================================================= */
 
-.ti-widget .ti-inner {
-    transform: scale(0.75);
-    transform-origin: bottom left;
+/* Google review widget méretezés – tartalom torzítás nélkül */
+.ti-reviews-container-wrapper {
+  width: 70% !important;
+  max-width: 320px; /* biztonsági korlát desktopon */
+  transform: none !important;
 }
 
 #site-header{
