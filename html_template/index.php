@@ -127,7 +127,7 @@
         <div class="box_three">
             <div class="item home-card-mini home-card-menu-mini">
                 <div class="home-card-mini-media">
-                    <a href="/ettermunk_kinalata"><img src="../images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Éttermünk kínálata" /></a>
+                    <a href="/ettermunk_kinalata"><img src="/images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Éttermünk kínálata" /></a>
                 </div>
 
                 <div class="home-card-mini-body">
@@ -139,20 +139,18 @@
                 </div>
             </div>
 
-            <div class="item">
-                <div class="img">
-                    <a href="/kapcsolat"><img src="../images/img_2.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-delivery-mini">
+                <div class="home-card-mini-media">
+                    <a href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer"><img src="/images/skin_v2/jegverem_fogado_sopron_kiszallitas_web.png" alt="Házhozszállítás" /></a>
                 </div>
 
-                <h3>Házhozszállítás</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Házhozszállítás</h3>
 
-                <div class="text">
-                    <p><span style="color: red; font-weight: bold;">Minden hétköznap, a nyitvatartási időn belül<br />(11.00-22.00)</span> a Jégverem pincér házhoz megy!</p>
-					<p><b>Fizetési lehetőségek kiszállítás esetén:</b><br />
-					Készpénz, SZÉP Kártya, Étkezési utalvány, Kékfrank, Bankkártya</p>
+                    <p class="home-card-mini-text">Minden hétköznap 11.00-21.00 között a Jégverem pincér házhoz megy!</p>
+
+                    <a class="home-card-mini-btn" href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer">Online Ételrendelés</a>
                 </div>
-
-                <a href="/kapcsolat" class="btn_tovabb">Tovább</a>
             </div>
 
             <div class="item no">

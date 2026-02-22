@@ -124,7 +124,7 @@
         <div class="box_three">
             <div class="item home-card-mini home-card-menu-mini">
                 <div class="home-card-mini-media">
-                    <a href="/de/ettermunk_kinalata"><img src="../images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Das Angebot unseres Restaurants" /></a>
+                    <a href="/de/ettermunk_kinalata"><img src="/images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Das Angebot unseres Restaurants" /></a>
                 </div>
 
                 <div class="home-card-mini-body">
@@ -136,19 +136,18 @@
                 </div>
             </div>
 
-            <div class="item">
-                <div class="img">
-                    <a href="/de/kapcsolat"><img src="../images/img_2.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-delivery-mini">
+                <div class="home-card-mini-media">
+                    <a href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer"><img src="/images/skin_v2/jegverem_fogado_sopron_kiszallitas_web.png" alt="Lieferung" /></a>
                 </div>
 
-                <h3>Der Jégverem Kellner</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Lieferung</h3>
 
-                <div class="text">
-                    <p>Der Jégverem  Kellner  liefert  zu  Ihnen  nach Haus <span style="color: red; font-weight: bold;">Jeden Wochentage zwischen 11.00-22.00 Uhr!</span></p>
-					<p>Sie  können  zahlen  mit  Bargeld,  Essen  Bon,  SZÉP Karte, Kékfrank, Bankkarte.</p>
+                    <p class="home-card-mini-text">An jedem Wochentag von 11:00 bis 21:00 Uhr kommt der Jégverem-Kellner direkt zu Ihnen nach Hause!</p>
+
+                    <a class="home-card-mini-btn" href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer">Online Bestellung</a>
                 </div>
-
-                <a href="/de/kapcsolat" class="btn_tovabb">Weiter</a>
             </div>
 
             <div class="item no">

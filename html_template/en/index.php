@@ -125,7 +125,7 @@
         <div class="box_three">
             <div class="item home-card-mini home-card-menu-mini">
                 <div class="home-card-mini-media">
-                    <a href="/en/ettermunk_kinalata"><img src="../images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Our Restaurant’s Menu" /></a>
+                    <a href="/en/ettermunk_kinalata"><img src="/images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Our Restaurant’s Menu" /></a>
                 </div>
 
                 <div class="home-card-mini-body">
@@ -137,19 +137,18 @@
                 </div>
             </div>
 
-            <div class="item">
-                <div class="img">
-                    <a href="/en/kapcsolat"><img src="../images/img_2.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-delivery-mini">
+                <div class="home-card-mini-media">
+                    <a href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer"><img src="/images/skin_v2/jegverem_fogado_sopron_kiszallitas_web.png" alt="Delivery" /></a>
                 </div>
 
-                <h3>Delivery</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Delivery</h3>
 
-                <div class="text">
-                    <p><span style="color: red; font-weight: bold;">Every weekday</span> the "Jégverem Waiter" is going to your house <span style="color: red; font-weight: bold;">between 11.00-22.00!</span></p>
-					<p>You can pay in: Cash, SZÉP card, Dining voucher, Kékfrank, Bank Card</p>
+                    <p class="home-card-mini-text">Every weekday between 11:00 AM and 9:00 PM, the Jégverem waiter delivers right to your door!</p>
+
+                    <a class="home-card-mini-btn" href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer">Online Ordering</a>
                 </div>
-
-                <a href="/en/kapcsolat" class="btn_tovabb">Details</a>
             </div>
 
             <div class="item no">
