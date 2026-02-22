@@ -52,7 +52,6 @@
 			<span><a href="/ettermunk_kinalata">Étlap</a></span>
 			<span><a href="/itallap">Itallap</a></span>
 			<span><a href="/aktualis_ajanlat" class="on">Aktuális ajánlat</a></span>
-			<span><a href="/elismereseink">Elismeréseink</a></span>
 		</div>
 
         <div class="main_full">

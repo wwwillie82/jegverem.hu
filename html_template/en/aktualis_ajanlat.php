@@ -52,7 +52,6 @@
 			<span><a href="/en/ettermunk_kinalata">Menu</a></span>
 			<span><a href="/en/itallap">Drinks</a></span>
 			<span><a href="/en/aktualis_ajanlat" class="on">Aktuális ajánlat</a></span>
-			<span><a href="/en/elismereseink">Elismeréseink</a></span>
 		</div>
 
         <div class="main_full">

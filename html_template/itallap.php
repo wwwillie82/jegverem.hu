@@ -34,7 +34,7 @@
       <div id="container">
          <?= $header ?>    
          <div id="middle">
-            <div class="tabs">			<span><a href="/ettermunk_kinalata">Étlap</a></span>			<span><a href="/itallap" class="on">Itallap</a></span>			<? if($aktualis->length() > 0): ?>			<span><a href="/aktualis_ajanlat">Aktuális ajánlat</a></span>			<? endif; ?><span><a href="/elismereseink">Elismeréseink</a></span>		</div>
+            <div class="tabs">			<span><a href="/ettermunk_kinalata">Étlap</a></span>			<span><a href="/itallap" class="on">Itallap</a></span>			<? if($aktualis->length() > 0): ?>			<span><a href="/aktualis_ajanlat">Aktuális ajánlat</a></span>			<? endif; ?>		</div>
             <div class="main_full">
                <div class="content">
                   <h3><?= $products->cat_title ?></h3>

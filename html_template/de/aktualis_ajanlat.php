@@ -51,7 +51,6 @@
 			<span><a href="/de/ettermunk_kinalata">Speisekarte</a></span>
 			<span><a href="/de/itallap">Getränke</a></span>
 			<span><a href="/de/aktualis_ajanlat" class="on">Aktuelle Angebote</a></span>
-			<span><a href="/de/elismereseink">Elismeréseink</a></span>
 		</div>
 
         <div class="main_full">
