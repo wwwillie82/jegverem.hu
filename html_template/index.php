@@ -76,7 +76,7 @@
 
             <div class="offers">
 				<div class="head">
-					<span><a href="#" class="on">Heti menü</a></span>
+					<span><a href="/heti_menu" class="on">Heti menü</a></span>
 					<span><a href="/ettermunk_kinalata">Étlap</a></span>
 					<span><a href="/itallap">Itallap</a></span>
 					<? if($category->length() > 0): ?>
