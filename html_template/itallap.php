@@ -26,7 +26,7 @@
       <link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>    <script src="../js/voov.slideshow.js" type="text/javascript"></script>    <script src="../js/jegverem.js" type="text/javascript"></script>
    </head>
-   <body>
+   <body class="page-itallap-tabs">
       
 	  
 	  
