@@ -57,6 +57,7 @@
 			<? if($aktualis->length() > 0): ?>
 			<span><a href="/aktualis_ajanlat">Aktuális ajánlat</a></span>
 			<? endif; ?>
+			<span><a href="/elismereseink">Elismeréseink</a></span>
 		</div>
 	
         <div class="main_full">
