@@ -19,7 +19,7 @@
 </div>
 
     <div class="footer-legal">
-        <span class="footer-copy">© 2021 Palatinus Group. Minden jog fenntartva.</span>
+        <span class="footer-copy">© 2026 Palatinus Group. Minden jog fenntartva.</span>
         <a class="footer-legal-link" href="#" onclick="return false;">Jogi nyilatkozat</a>
         <a class="footer-legal-link" href="#" onclick="return false;">Adatkezelési tájékoztató</a>
     </div>
