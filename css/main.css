@@ -1377,11 +1377,6 @@ body.page-ettermunk-kinalata #container #header .holder {
   margin: 0 0 10px 0;
 }
 
-#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-title a,
-#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-title a:hover {
-  text-decoration: none;
-}
-
 #container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-btn {
   display: inline-flex;
   align-items: center;

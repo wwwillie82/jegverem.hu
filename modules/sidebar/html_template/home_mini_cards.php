@@ -27,7 +27,7 @@ $cards = array(
             'link' => '/ettermunk_kinalata',
             'title' => 'Éttermünk kínálata',
             'text' => 'Étlapunk a hagyományos magyar ízekből merít inspirációt, amelyeket kreatívan újragondolt klasszikusok és a nemzetközi konyhaművészet izgalmas fogásai egészítenek ki. Kínálatunk a minőségi alapanyagokra és a harmonikus ízélményre épül.',
-            'cta' => 'ÉTLAPUNK >>',
+            'cta' => 'Étlapunk >>',
             'external' => false,
         ),
         'delivery' => array(
@@ -37,7 +37,7 @@ $cards = array(
             'link' => 'https://mobilpincer.net/hu/jegverem-fogado',
             'title' => 'Házhozszállítás',
             'text' => 'Minden hétköznap 11.00-21.00 között a Jégverem pincér házhoz megy!',
-            'cta' => 'Online Ételrendelés',
+            'cta' => 'Online Ételrendelés >>',
             'external' => true,
         ),
     ),

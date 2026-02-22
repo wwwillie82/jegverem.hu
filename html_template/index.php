@@ -135,7 +135,7 @@
 
                     <p class="home-card-mini-text">Étlapunk a hagyományos magyar ízekből merít inspirációt, amelyeket kreatívan újragondolt klasszikusok és a nemzetközi konyhaművészet izgalmas fogásai egészítenek ki. Kínálatunk a minőségi alapanyagokra és a harmonikus ízélményre épül.</p>
 
-                    <a href="/ettermunk_kinalata" class="home-card-mini-btn">ÉTLAPUNK >></a>
+                    <a href="/ettermunk_kinalata" class="home-card-mini-btn">Étlapunk >></a>
                 </div>
             </div>
 
@@ -149,7 +149,7 @@
 
                     <p class="home-card-mini-text">Minden hétköznap 11.00-21.00 között a Jégverem pincér házhoz megy!</p>
 
-                    <a class="home-card-mini-btn" href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer">Online Ételrendelés</a>
+                    <a class="home-card-mini-btn" href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer">Online Ételrendelés >></a>
                 </div>
             </div>
 
