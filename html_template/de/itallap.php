@@ -28,7 +28,7 @@
 		<script src="/js/voov.slideshow.js" type="text/javascript"></script>
 		<script src="/js/jegverem.js" type="text/javascript"></script>
 	</head>
-	<body>
+	<body class="page-itallap-tabs">
 		<!-- container -->
 		<div id="container">
 			<?= $header ?>
