@@ -85,23 +85,9 @@
 				<? endforeach; ?>
 			</div>
 			<div class="fix"></div>
-			
-			<div class="item">
-				<div class="img">
-					<a href="/en/kapcsolat"><img src="../images/img_2.jpg" alt="" /></a>
-				</div>
-
-				<h3>Delivery</h3>
-
-				<div class="text">
-                    <p><span style="color: red; font-weight: bold;">From Monday to Friday</span> the "Jégverem Waiter" is going to your house <span style="color: red; font-weight: bold;">between 11.00-22.00!</span></p>
-					<p>You can pay in: Cash, SZÉP card, Dining voucher, Kékfrank, Bank Card</p>
-                </div>
-
-				<a href="/en/kapcsolat" class="btn_tovabb">Details</a>
-			</div>
+			<? include __DIR__ . '/../partials/sidebar_cards_en.php'; ?>
 			<br class="clearfix" />
-		</div>
+</div>
         <br class="clearfix" />
     </div>
 
