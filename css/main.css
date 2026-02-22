@@ -1257,6 +1257,90 @@ body.page-ettermunk-kinalata #container #header .holder {
   padding-bottom: 6px;
 }
 
+#container #middle .item.home-card-mini {
+    background: #c6c6c6;
+    box-shadow:
+        inset 0 0 0 1px #b7b7b7,
+        0 1px 0 rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 307 / 170;
+    margin: 0 0 14px 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-media img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 307 / 170;
+    object-fit: cover;
+    display: block;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 10px;
+    font-family: "Roboto", Arial, sans-serif;
+    color: #2c2b2b;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-title {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-style: normal;
+    color: #2c2b2b;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-title a,
+#container #middle .item.home-card-mini .home-card-mini-title a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #2c2b2b;
+}
+
+#container #middle .item.home-card-menu-mini .home-card-mini-text,
+#container #middle .item.home-card-accommodation-mini .home-card-mini-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-btn {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 10px 14px;
+    background: #727272;
+    color: #fefefe;
+    text-decoration: none;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#container #middle .item.home-card-mini .home-card-mini-btn:hover {
+    background: #838383;
+}
+
 #container #middle .sidebar.sidebar-home-mini-cards {
   display: flow-root;
 }
@@ -1266,10 +1350,41 @@ body.page-ettermunk-kinalata #container #header .holder {
   margin-right: 0;
   float: none;
   margin-bottom: 12px;
+  height: auto;
+  padding: 0;
 }
 
 #container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini:last-child {
   margin-bottom: 0;
+}
+
+/* --- Sidebar link reset: ensure same behavior as home cards --- */
+
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-title a,
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-title a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini a.home-card-mini-btn,
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini a.home-card-mini-btn:hover {
+  text-decoration: none;
+}
+
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-title {
+  font-style: normal;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-title a,
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-title a:hover {
+  text-decoration: none;
+}
+
+#container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini .home-card-mini-btn {
+  display: inline-flex;
+  align-items: center;
 }
 
 #container #middle .box_three .item.home-card-mini {
@@ -1282,152 +1397,6 @@ body.page-ettermunk-kinalata #container #header .holder {
 
 #container #middle .box_three > div.item.home-card-mini:nth-of-type(3) {
     margin-right: 0;
-}
-
-#container #middle .box_three .item.home-card-menu-mini,
-#container #middle .box_three .item.home-card-accommodation-mini {
-    background: #c6c6c6;
-    box-shadow:
-        inset 0 0 0 1px #b7b7b7,
-        0 1px 0 rgba(0,0,0,0.04);
-    display: flex;
-    flex-direction: column;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-media,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-media {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 307 / 170;
-    margin: 0 0 14px 0;
-    font-size: 0;
-    line-height: 0;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-media img,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-media img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 307 / 170;
-    object-fit: cover;
-    display: block;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-body,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 0 10px;
-    font-family: "Roboto", Arial, sans-serif;
-    color: #2c2b2b;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-title,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-title {
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.2;
-    font-weight: 700;
-    font-style: normal;
-    color: #2c2b2b;
-    text-align: left;
-    margin: 0 0 10px 0;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-title a,
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-title a:hover,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-title a,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-title a:hover {
-    color: inherit;
-    text-decoration: none;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-text,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-text {
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.35;
-    color: #2c2b2b;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-btn,
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-btn:hover,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-btn,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-btn:hover {
-    margin-top: auto;
-    align-self: flex-start;
-    padding: 10px 14px;
-    background: #727272;
-    color: #fefefe;
-    text-decoration: none;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-}
-#container #middle .box_three .item.home-card-menu-mini .home-card-mini-btn:hover,
-#container #middle .box_three .item.home-card-accommodation-mini .home-card-mini-btn:hover {
-    background: #838383;
-}
-
-#container #middle .box_three .item.home-card-delivery-mini {
-    background: #c6c6c6;
-    box-shadow:
-        inset 0 0 0 1px #b7b7b7,
-        0 1px 0 rgba(0,0,0,0.04);
-    display: flex;
-    flex-direction: column;
-}
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-media {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 307 / 170;
-    margin: 0 0 14px 0;
-    font-size: 0;
-    line-height: 0;
-}
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-media img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 307 / 170;
-    object-fit: cover;
-    display: block;
-}
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 0 10px;
-    font-family: "Roboto", Arial, sans-serif;
-    color: #2c2b2b;
-}
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-title {
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.2;
-    font-weight: 700;
-    font-style: normal;
-    color: #2c2b2b;
-    text-align: left;
-    margin: 0 0 10px 0;
-}
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-text {
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.35;
-    color: #2c2b2b;
-}
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-btn,
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-btn:hover {
-    margin-top: auto;
-    align-self: flex-start;
-    padding: 10px 14px;
-    background: #727272;
-    color: #fefefe;
-    text-decoration: none;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-}
-#container #middle .box_three .item.home-card-delivery-mini .home-card-mini-btn:hover {
-    background: #838383;
 }
 
 /* =========================================================
