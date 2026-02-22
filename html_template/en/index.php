@@ -151,18 +151,18 @@
                 </div>
             </div>
 
-            <div class="item no">
-                <div class="img">
-                    <a href="/en/a_panziorol"><img src="../images/img_3.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-accommodation-mini">
+                <div class="home-card-mini-media">
+                    <a href="/en/a_panziorol"><img src="/images/skin_v2/jegverem_fogado_sopron_panzio_szallas.png" alt="Accommodation" /></a>
                 </div>
 
-                <h3>About the Inn</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title"><a href="/en/a_panziorol">Accommodation</a></h3>
 
-                <div class="text">
-                    <p>The Jégverem Inn is housed in a 250-year old, wood-beam building, with 2- and 4-bed rooms with all modern amenities, including TV and in-suite bathroom. The Inn is an ideal starting point for exploring the city of Sopron, as it is located right next to the historical city centre, in the old “Poncichter” quarter.</p>
+                    <p class="home-card-mini-text">The guesthouse offers 6 authentic-style rooms equipped with modern amenities. This accommodation is an ideal starting point for exploring Sopron, as it is located in the immediate vicinity of the historic Old Town, in the heart of the old Poncichter district.</p>
+
+                    <a href="/en/a_panziorol" class="home-card-mini-btn">About the guesthouse >></a>
                 </div>
-
-                <a href="/en/a_panziorol" class="btn_tovabb">Details</a>
             </div>
             <br class="clearfix" />
         </div>

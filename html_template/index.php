@@ -153,20 +153,18 @@
                 </div>
             </div>
 
-            <div class="item no">
-                <div class="img">
-                    <a href="/a_panziorol"><img src="../images/img_3.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-accommodation-mini">
+                <div class="home-card-mini-media">
+                    <a href="/a_panziorol"><img src="/images/skin_v2/jegverem_fogado_sopron_panzio_szallas.png" alt="Szállás" /></a>
                 </div>
 
-                <h3>A panzióról</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title"><a href="/a_panziorol">Szállás</a></h3>
 
-                <div class="text">
-                    <p>A 250 esztendős, fagerendázatú fogadóban összkomfortos, TV-vel, fürdővel felszerelt 2 és 4 ágyas szobák, 
-					várják a pihenni vágyókat. A panzió ideális kiindulópont Sopron felfedezéséhez, hiszen a történelmi belváros 
-					közvetlen szomszédságában, a régi poncichter-negyedben található.</p>
+                    <p class="home-card-mini-text">A panzióban 6 autentikus stílusú, modern felszereltséggel ellátott szoba várja a vendégeket. Ez a szálláshely ideális kiindulópont Sopron felfedezéséhez, hiszen a történelmi belváros közvetlen szomszédságában, a régi poncichter-negyedben található.</p>
+
+                    <a href="/a_panziorol" class="home-card-mini-btn">A panzióról >></a>
                 </div>
-
-                <a href="/a_panziorol" class="btn_tovabb">Tovább</a>
             </div>
             <br class="clearfix" />
         </div>

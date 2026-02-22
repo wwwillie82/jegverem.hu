@@ -150,18 +150,18 @@
                 </div>
             </div>
 
-            <div class="item no">
-                <div class="img">
-                    <a href="/de/a_panziorol"><img src="../images/img_3.jpg" alt="" /></a>
+            <div class="item home-card-mini home-card-accommodation-mini">
+                <div class="home-card-mini-media">
+                    <a href="/de/a_panziorol"><img src="/images/skin_v2/jegverem_fogado_sopron_panzio_szallas.png" alt="Unterkunft" /></a>
                 </div>
 
-                <h3>Über die Pension</h3>
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title"><a href="/de/a_panziorol">Unterkunft</a></h3>
 
-                <div class="text">
-                    <p>Im 250 Jahre alte Holz-Fachwerk Gasthaus, erwarten wir unsere Lieben Gäste mit TV, Bad, 2 und 4 Betten geschmackvoll eingerichtete Komfortzimmer. Die Pension liegt im poncicher-Viertel in unmittelbare Nähe zur historischen Innenstadt und hat daher eine Ideale Lage als Ausgangspunkt für Stadtbesichtigungen.</p>
+                    <p class="home-card-mini-text">In der Pension erwarten 6 Zimmer im authentischen Stil, ausgestattet mit modernem Komfort, die Gäste. Diese Unterkunft ist ein idealer Ausgangspunkt für die Entdeckung von Ödenburg (Sopron), da sie sich in unmittelbarer Nähe der historischen Altstadt, im alten Poncichter-Viertel, befindet.</p>
+
+                    <a href="/de/a_panziorol" class="home-card-mini-btn">Über die Pension >></a>
                 </div>
-
-                <a href="/de/a_panziorol" class="btn_tovabb">Weiter</a>
             </div>
             <br class="clearfix" />
         </div>
