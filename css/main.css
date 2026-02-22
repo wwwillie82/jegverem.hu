@@ -1257,6 +1257,9 @@ body.page-ettermunk-kinalata #container #header .holder {
   padding-bottom: 6px;
 }
 
+#container #middle .sidebar.sidebar-home-mini-cards {
+  display: flow-root;
+}
 
 #container #middle .sidebar.sidebar-home-mini-cards .item.home-card-mini {
   width: 100%;
