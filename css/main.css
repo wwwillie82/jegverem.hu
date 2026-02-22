@@ -377,6 +377,9 @@ body {
 #container #middle .box_two .offers .head a:hover.on {
 	background: #c6c6c6;
 	color: #2c2b2b;
+	box-shadow: inset 0 -3px 0 #727272, inset 0 1px 0 #d4d4d4;
+	border-left: 1px solid #b7b7b7;
+	border-right: 0;
 }
 #container #middle .box_two .offers .head a.no,
 #container #middle .box_two .offers .head a:hover.no {
@@ -393,10 +396,10 @@ body {
 #scrollbar1 { width: 298px; margin: 10px 0 0 0; }
 #scrollbar1 .viewport { width: 268px; height: 320px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
-#scrollbar1 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; }
-#scrollbar1 .track { background: transparent url(../images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:13px; position: relative; padding: 0 1px; }
-#scrollbar1 .thumb { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% top; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
-#scrollbar1 .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% bottom; overflow: hidden; height: 5px; width: 25px; }
+#scrollbar1 .scrollbar{ background: #c6c6c6; position: relative; background-position: 0 0; float: right; width: 15px; }
+#scrollbar1 .track { background: #bdbdbd; border: 1px solid #b7b7b7; box-sizing: border-box; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { background: #727272; border: 1px solid #6a6a6a; box-sizing: border-box; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
+#scrollbar1 .thumb .end { background: #727272; overflow: hidden; height: 5px; width: 25px; }
 #scrollbar1 .disable { display: none; }
 
 #container #middle .box_two .offers .holder h3 {

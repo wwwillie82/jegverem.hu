@@ -73,7 +73,7 @@
 
             <div class="offers">
 				<div class="head">
-					<span><a href="#" class="on">Wochenmenü</a></span>
+					<span><a href="/de/heti_menu" class="on">Wochenmenü</a></span>
 					<span><a href="/de/ettermunk_kinalata">Speisekarte</a></span>
 					<span><a href="/de/itallap">Getränke</a></span>
 					<!--<? if($category->length() > 0): ?>

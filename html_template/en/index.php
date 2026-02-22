@@ -74,7 +74,7 @@
 
             <div class="offers">
 				<div class="head">
-					<span><a href="#" class="on">Weekly menu</a></span>
+					<span><a href="/en/heti_menu" class="on">Weekly menu</a></span>
 					<span><a href="/en/ettermunk_kinalata">Menu</a></span>
 					<span><a href="/en/itallap">Drinks</a></span>
 					<!--<? if($category->length() > 0): ?>
