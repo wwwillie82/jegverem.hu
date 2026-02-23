@@ -92,21 +92,13 @@
 			</div>
 			<div class="fix"></div>
 			
-			<div class="item">
-				<div class="img">
-					<a href="/a_panziorol"><img src="../images/img_2.jpg" alt="" /></a>
-				</div>
-
-				<h3>Házhozszállítás</h3>
-
-				<div class="text">
-                    <p><span style="color: red; font-weight: bold;">Minden hétköznap, a nyitvatartási időn belül<br />(11.00-22.00)</span> a Jégverem pincér házhoz megy!</p>
-					<p><b>Fizetési lehetőségek kiszállítás esetén:</b><br />
-					Készpénz, SZÉP Kártya, Étkezési utalvány, Kékfrank, Bankkártya</p>
-                </div>
-
-				<a href="/a_panziorol" class="btn_tovabb">Tovább</a>
-			</div>
+			<div class="sidebar sidebar-home-mini-cards">
+            <?php
+                $lang = 'hu';
+                $order = array('delivery', 'accommodation');
+                include $_SERVER['DOCUMENT_ROOT'] . '/modules/sidebar/html_template/home_mini_cards.php';
+            ?>
+        </div>
 			<br class="clearfix" />
 		</div>
         <br class="clearfix" />
