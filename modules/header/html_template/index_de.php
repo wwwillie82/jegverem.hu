@@ -36,7 +36,7 @@
             <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/heti_menu"): ?>active<? endif; ?>"><a href="/de/heti_menu">Wochenmenü</a></span>
             <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/de/ettermunk_kinalata">Angebote unseres Restaurants</a></span>
             <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/galeria"): ?>active<? endif; ?>"><a href="/de/galeria">Galerie</a></span>
-            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/a_panziorol"): ?>active<? endif; ?>"><a href="/de/a_panziorol">Über uns</a></span>
+            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/a_panziorol"): ?>active<? endif; ?>"><a href="/de/a_panziorol">Über die Pension</a></span>
             <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/de/a_jegverem_tortenete">Geschichte</a></span>
             <span class="nav-item no <? if($_SERVER["REQUEST_URI"] == "/de/kapcsolat"): ?>active<? endif; ?>"><a href="/de/kapcsolat">Kontakte</a></span>
         </div>
