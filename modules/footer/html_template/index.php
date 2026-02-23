@@ -9,7 +9,7 @@
         </div>
 
         <div class="footer-partners" aria-label="Partnereink">
-            <div class="footer-partners-label">Partnereink</div>
+            <div class="footer-partners-label">Partnereink:</div>
             <div class="footer-partners-logos">
                 <a href="https://civitashotel.com/" target="_blank" rel="noopener">
                     <img src="/images/skin_v2/hotel_civitas_sopron_logo.png"

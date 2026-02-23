@@ -990,6 +990,7 @@ body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.35;
+    flex: 0 0 260px;
 }
 
 #container #footer .footer-contact-title {
@@ -1015,19 +1016,24 @@ body {
     align-items: center;
     gap: 14px;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    flex: 1 1 auto;           /* ez nyújtja ki a jobb oldalt */
+    justify-content: flex-start;
 }
 
 #container #footer .footer-partners-label {
     font-weight: 700;
     font-size: 14px;
     opacity: 0.9;
+    white-space: nowrap;      /* ne törjön két sorba */
 }
 
 #container #footer .footer-partners-logos {
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* ez feszíti szét a 3 logót */
     gap: 18px;
+    min-width: 0;
 }
 
 #container #footer .footer-partners-logos a {
@@ -1038,7 +1044,7 @@ body {
 #container #footer .footer-partners-logos img {
     height: 56px;
     width: auto;
-    max-width: 180px;
+    max-width: 170px;
     object-fit: contain;
     display: block;
     opacity: 0.92;
