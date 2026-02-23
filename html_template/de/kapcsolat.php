@@ -75,8 +75,8 @@
 					<li>Dienstag: 12-22</li>
 					<li>Mittwoch: 12-22</li>
 					<li>Donnerstag: 12-22</li>
-					<li>Freitag: 12-24</li>
-					<li>Samstag: 12-24</li>
+					<li>Freitag: 12-22</li>
+					<li>Samstag: 12-22</li>
 					<li>Sonntag: 12-20</li>
                 </ul>
 

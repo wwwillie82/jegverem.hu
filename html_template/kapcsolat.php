@@ -76,8 +76,8 @@
 					<li>Kedd: 12-22</li>
 					<li>Szerda: 12-22</li>
 					<li>Csütörtök: 12-22</li>
-					<li>Péntek: 12-24</li>
-					<li>Szombat: 12-24</li>
+					<li>Péntek: 12-22</li>
+					<li>Szombat: 12-22</li>
 					<li>Vasárnap: 12-20</li>
                 </ul>
 

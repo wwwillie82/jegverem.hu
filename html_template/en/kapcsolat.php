@@ -76,8 +76,8 @@
 					<li>Tuesday: 12-22</li>
 					<li>Wednesday: 12-22</li>
 					<li>Thursday: 12-22</li>
-					<li>Friday: 12-24</li>
-					<li>Saturday: 12-24</li>
+					<li>Friday: 12-22</li>
+					<li>Saturday: 12-22</li>
 					<li>Sunday: 12-20</li>
                 </ul>
 
