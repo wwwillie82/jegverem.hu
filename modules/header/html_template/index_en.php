@@ -24,7 +24,7 @@
     <div class="holder site-width">
         <a class="cta-btn" href="https://mobilpincer.net/hu/jegverem-fogado">Online Ordering</a>
         <a class="cta-btn" href="https://reservation.dish.co/landingPage/hydra-fa60e3c2-9cc8-4282-9212-df64ffb965ee">Table Booking</a>
-        <a class="cta-btn" href="https://nethotelbooking.net/hotels/jegverem/lang=en">Accommodation</a>
+        <a class="cta-btn" href="/en/a_panziorol">Accommodation</a>
         <a class="cta-btn" href="#">Private Events</a>
     </div>
 </div>

@@ -24,7 +24,7 @@
     <div class="holder site-width">
         <a class="cta-btn" href="https://mobilpincer.net/hu/jegverem-fogado">Online Ételrendelés</a>
         <a class="cta-btn" href="https://reservation.dish.co/landingPage/hydra-fa60e3c2-9cc8-4282-9212-df64ffb965ee">Asztalfoglalás</a>
-        <a class="cta-btn" href="https://nethotelbooking.net/hotels/jegverem/lang=hu">Szállás</a>
+        <a class="cta-btn" href="/a_panziorol">Szállás</a>
         <a class="cta-btn" href="#">Zártkörű rendezvények</a>
     </div>
 </div>
