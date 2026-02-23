@@ -966,7 +966,8 @@ body {
     padding: 0 10px;
 }
 #container #footer.footer-simple {
-    width: 968px;
+    width: 100%;
+    max-width: 968px;
     margin: 0 auto;
     padding: 48px 20px 28px;
     box-sizing: border-box;
@@ -976,16 +977,65 @@ body {
     line-height: 1.5;
 }
 
-#container #footer .footer-partners {
+#container #footer .footer-partners-row {
     display: flex;
-    gap: 22px;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
     margin-bottom: 28px;
 }
 
-#container #footer .footer-partners img {
+#container #footer .footer-contact {
+    text-align: left;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+#container #footer .footer-contact-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+#container #footer .footer-contact-line {
+    margin: 2px 0;
+}
+
+#container #footer .footer-contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#container #footer .footer-contact a:hover {
+    text-decoration: underline;
+}
+
+#container #footer .footer-partners {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#container #footer .footer-partners-label {
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#container #footer .footer-partners-logos {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#container #footer .footer-partners-logos a {
+    display: inline-flex;
+    align-items: center;
+}
+
+#container #footer .footer-partners-logos img {
     height: 56px;
     width: auto;
     max-width: 180px;
@@ -1030,16 +1080,27 @@ body {
     opacity: 0.95;
 }
 
+@media (max-width: 768px) {
+    #container #footer .footer-partners-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #container #footer .footer-partners {
+        justify-content: flex-start;
+    }
+}
+
 @media (max-width: 640px) {
     #container #footer.footer-simple {
         padding: 40px 14px 24px;
     }
 
-    #container #footer .footer-partners {
+    #container #footer .footer-partners-logos {
         gap: 18px;
     }
 
-    #container #footer .footer-partners img {
+    #container #footer .footer-partners-logos img {
         height: 48px;
     }
 
