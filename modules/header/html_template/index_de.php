@@ -6,7 +6,7 @@
         <div class="top-links">
             <?php
                 // aktuális URI (pl. /a_panziorol vagy /en/a_panziorol)
-                $uri = $_SERVER['REQUEST_URI'] ?? '/';
+                $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
 
                 // csak a path kell (query nélkül)
                 $path = parse_url($uri, PHP_URL_PATH);
