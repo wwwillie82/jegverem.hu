@@ -4,10 +4,62 @@
         <h1><a href="/index">Jégverem Fogadó</a></h1>
 
         <div class="top-links">
+            <?php
+                // aktuális URI (pl. /a_panziorol vagy /en/a_panziorol)
+                $uri = $_SERVER['REQUEST_URI'] ?? '/';
+
+                // csak a path kell (query nélkül)
+                $path = parse_url($uri, PHP_URL_PATH);
+
+                // ha üres vagy csak / → kezeljük indexként
+                if ($path === '' || $path === '/') {
+                    $basePath = '/index';
+                    $currentLang = 'hu';
+                } else {
+
+                    // EN prefix
+                    if (strpos($path, '/en/') === 0) {
+                        $basePath = substr($path, 3); // levágjuk az /en részt
+                        $currentLang = 'en';
+                    }
+                    elseif ($path === '/en') {
+                        $basePath = '/index';
+                        $currentLang = 'en';
+                    }
+
+                    // DE prefix
+                    elseif (strpos($path, '/de/') === 0) {
+                        $basePath = substr($path, 3);
+                        $currentLang = 'de';
+                    }
+                    elseif ($path === '/de') {
+                        $basePath = '/index';
+                        $currentLang = 'de';
+                    }
+
+                    // HU (nincs prefix)
+                    else {
+                        $basePath = $path;
+                        $currentLang = 'hu';
+                    }
+                }
+
+                // index speciális kezelés
+                if ($basePath === '/index') {
+                    $huUrl = '/index';
+                    $enUrl = '/en';
+                    $deUrl = '/de';
+                } else {
+                    $huUrl = $basePath;
+                    $enUrl = '/en' . $basePath;
+                    $deUrl = '/de' . $basePath;
+                }
+            ?>
+
             <div class="languages">
-                <a href="/index" class="on">HU</a>
-                <a href="/de">DE</a>
-                <a href="/en">EN</a>
+                <a href="<?= $huUrl ?>" class="<?= $currentLang === 'hu' ? 'on' : '' ?>">HU</a>
+                <a href="<?= $deUrl ?>" class="<?= $currentLang === 'de' ? 'on' : '' ?>">DE</a>
+                <a href="<?= $enUrl ?>" class="<?= $currentLang === 'en' ? 'on' : '' ?>">EN</a>
             </div>
 
             <div class="social-icons">
