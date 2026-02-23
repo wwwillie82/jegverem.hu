@@ -128,7 +128,13 @@
             <div class="bottom"></div>
         </div>
 
-        <?= $sidebar ?>
+        <div class="sidebar sidebar-home-mini-cards">
+            <?php
+                $lang = 'de';
+                $order = array('menu', 'delivery');
+                include $_SERVER['DOCUMENT_ROOT'] . '/modules/sidebar/html_template/home_mini_cards.php';
+            ?>
+        </div>
         <br class="clearfix" />
     </div>
 
