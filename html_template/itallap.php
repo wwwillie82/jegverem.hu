@@ -55,19 +55,15 @@
             <div class="sidebar_full">
                <div class="navigation">				<? foreach($categories as $cat): ?>				<a href="<?= URI::MakeURL("itallap", array("filter" => $cat->permalink), true) ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?= $cat->title ?></a>				<? endforeach; ?>			</div>
                <div class="fix"></div>
-               <div class="item">
-                  <div class="img">					<a href="/a_panziorol"><img src="../images/img_2.jpg" alt="" /></a>				</div>
-                  <h3>Házhozszállítás</h3>
-                  <div class="text">
-                     <span style="color: red; font-weight: bold;">Minden hétköznap, a nyitvatartási időn belül<br />(11.00-22.00)</span> a Jégverem pincér házhoz megy!
-                     <p><b>Fizetési lehetőségek kiszállítás esetén:</b><br />
-                        Készpénz, SZÉP Kártya, Étkezési utalvány, Kékfrank, Bankkártya
-                     </p>
-                  </div>
-                  <a href="/a_panziorol" class="btn_tovabb">Tovább</a>			
-               </div>
-               <br class="clearfix" />		
-            </div>
+               <div class="sidebar sidebar-home-mini-cards">
+            <?php
+                $lang = 'hu';
+                $order = array('delivery', 'accommodation');
+                include $_SERVER['DOCUMENT_ROOT'] . '/modules/sidebar/html_template/home_mini_cards.php';
+            ?>
+        </div>
+			<br class="clearfix" />
+		</div>
             <br class="clearfix" />    
          </div>
          <?= $banner ?>

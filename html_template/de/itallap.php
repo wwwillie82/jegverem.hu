@@ -64,22 +64,15 @@
 						<? foreach($categories as $cat): ?> <a href="<?= URI::MakeURL("de/itallap", array("filter" => $cat->permalink), true) ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?= $cat->title ?></a> <? endforeach; ?>
 					</div>
 					<div class="fix"></div>
-					<div class="item">
-        <div class="img">
-            <a href="/de/a_panziorol"><img src="/images/img_2.jpg" alt="" /></a>
+					<div class="sidebar sidebar-home-mini-cards">
+            <?php
+                $lang = 'de';
+                $order = array('delivery', 'accommodation');
+                include $_SERVER['DOCUMENT_ROOT'] . '/modules/sidebar/html_template/home_mini_cards.php';
+            ?>
         </div>
-
-        <h3>Der Jégverem Kellner</h3>
-
-        <div class="text">
-			<p>Der Jégverem  Kellner  liefert  zu  Ihnen  nach Haus <span style="color: red; font-weight: bold;">von Montag bis Freitag zwischen 11.00-22.00 Uhr!</span></p>
-			<p>Sie  können  zahlen  mit  Bargeld,  Essen  Bon,  SZÉP Karte, Kékfrank, Bankkarte.</p>
+			<br class="clearfix" />
 		</div>
-
-        <a href="/de/kapcsolat" class="btn_tovabb">Weiter</a>
-    </div>
-					<br class="clearfix" />
-				</div>
 				<br class="clearfix" />
 			</div>
 			<?= $footer ?>
