@@ -42,7 +42,8 @@
 		})();
 	</script>
 </head>
-<body>
+<? $__pageBodyClass = "page-a_panziorol"; if (isset($body_class) && trim($body_class) != "") { $__pageBodyClass = trim($body_class . " " . $__pageBodyClass); } ?>
+<body class="<?= $__pageBodyClass ?>">
 
 <!-- container -->
 <div id="container">
@@ -53,77 +54,75 @@
         <div class="main">
             <div class="top"></div>
             <div class="content">
-                <h2><span>Über die Pension</span></h2>
+                <h1>Unterkunft</h1>
+
+                <div class="panel-box">
+                    <p><strong>Unterkunft im Gasthof Jégverem</strong><br />
+                    Das Gebäude des ehemaligen städtischen Eiskellers wurde als Gasthof neu geboren, wobei die traditionellen Merkmale der Holzkonstruktion bewahrt wurden. Die Innenräume und der Gartenbereich schaffen eine besondere Atmosphäre, während im Zentrum des Restaurants der alte Eiskeller bis heute besichtigt werden kann. In der Pension erwarten 6 Zimmer im authentischen Stil, ausgestattet mit modernem Komfort, die Gäste. Diese Unterkunft ist ein idealer Ausgangspunkt für die Entdeckung von Ödenburg (Sopron), da sie sich in unmittelbarer Nähe der historischen Altstadt, im alten Poncichter-Viertel, befindet.</p>
+                </div>
+
+                <div class="booking-cta">
+                    <a href="https://nethotelbooking.net/hotels/jegverem/lang=de" target="_blank" rel="noopener noreferrer" title="Zimmer buchen">
+                        <img src="/images/skin_v2/gomb_foglalas_de.png" alt="Zimmer buchen" />
+                    </a>
+                </div>
 
                 <div class="covers">
                     <? $i=1; foreach($covers as $cover): ?>
-					<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
-					<div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
-						<div class="navigation">
-							<h4><?= nl2br($cover->description) ?></h4>
+                    <? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
+                    <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
+                        <div class="navigation">
+                            <h4><?= nl2br($cover->description) ?></h4>
 
-							<div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
+                            <div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
 
-							<a href="" class="prev SlideShowControlPrev">Előző</a>
-							<a href="" class="next SlideShowControlNext">Következő</a>
-						</div>
-					</div>
-					<? $i++; endforeach; ?>
+                            <a href="" class="prev SlideShowControlPrev">Előző</a>
+                            <a href="" class="next SlideShowControlNext">Következő</a>
+                        </div>
+                    </div>
+                    <? $i++; endforeach; ?>
                 </div>
 
-                <p>Im 250 Jahre alte Holz-Fachwerk Gasthaus, erwarten wir unsere Lieben Gäste mit TV, Bad, 2 und 4 Betten geschmackvoll eingerichtete Komfortzimmer. Die Pension liegt im poncicher-Viertel in unmittelbare Nähe zur historischen Innenstadt und hat daher eine Ideale Lage als Ausgangspunkt für Stadtbesichtigungen.
-				Das Liszt Ferenc Konferenz- und Kulturzentrum und andere Einrichtungen der Innenstadt sind innerhalb 10 Minuten zu Fuß zu erreichen. Wir erwarten Sie mit renovierten Zimmern und der Kategorie entsprechenden, besten Preise.</p>
+                <div class="panel-box">
+                    <p>Unser Gasthof erwartet seine Gäste mit vier unterschiedlich gestalteten Zimmern: ein Doppelzimmer mit Galerie, ein Vierbettzimmer mit Galerie sowie ein Standard-Doppelzimmer und ein Standard-Vierbettzimmer.</p>
+                    <p>Das reichhaltige Angebot unseres Restaurants bietet eine große Auswahl für Mittag- und Abendessen. Unsere Hotelgäste erhalten 10% Rabatt auf alle Speisen.</p>
 
-				<object type ="application/x-shockwave-flash" data="http://www.forogj.hu/panorama/jegverem_fogado_sopron/1.swf" width="100%" height="100%">
-				<param name ="movie" value ="http://www.forogj.hu/panorama/jegverem_fogado_sopron/1.swf" />
-				<param name ="quality" value ="high" />
-				<param name ="bgcolor" value ="#AAAAAA" />
-				</object>
-				<br /><br />
-				
-				<h3>Unsere Dienstleistungen</h3>
-				
-                <ul>
-                    <li>Decken auf Anfrage erhältlich</li>
-					<li>Fernseher</li>
-					<li>Gepäckaufbewahrung</li>
-					<li>Haartrockner auf Anfrage erhältlich</li>
-					<li>Halbpension</li>
-					<li>Handy ist auf Anfrage verfügbar</li>
-					<li>Herstellung des Kinder- oder Gästebetts</li>
-					<li>Herstellung im Badezimmer (Schaumbad oder Duschgel)</li>
-					<li>Hochgeschwindige Wi-Fi Anlage</li>
-					<li>Kissen auf Anfrage erhältlich</li>
-					<li>Klimaanlage</li>
-					<li>Radio</li>
-					<li>Rezeption Dienst</li>
-					<li>Terrasse</li>
-					<li>Tierfreundliche Pension (Wir willkommen gegen Sonderzahlung auch die Haustiere)</li>
-					<li>Zahlungsmittel: Kreditkarte, Bargeld, SZÉP Karte (OTP, K&H und MKB Karte)</li>
-					<li>Zentraler Safe an der Rezeption</li>
-					<li>
-        				<a href="/images/Jegverem_TV_channels.pdf" target="_blank">Fernsehkanäle >></a>
-    				</li>
-					<li>
-        				<a href="/images/DE_JV_A-Z.pdf" target="_blank">Unsere zusätzlichen Dienstleistungen von A bis Z >></a>
-    				</li>
-                </ul>
-				
-				
-				<ul>
-                    <li>Rufnummer für Zimmer Buchung: (+36) 99/510-113</li>
-                    <li>e-mail: szallas@jegverem.hu</li>
-                </ul>
-				
-                <h3>Zimmerpreise</h3>
+                    <h3>Zimmerausstattung:</h3>
+                    <ul>
+                        <li>Klimaanlage</li>
+                        <li>Flachbild-TV</li>
+                        <li>WLAN</li>
+                        <li>Doppelbett (2 fest zusammengeschobene Betten, je 90x200 cm)</li>
+                        <li>Handtücher</li>
+                        <li>Kofferablage</li>
+                        <li>Schreibtisch</li>
+                        <li>Safe</li>
+                        <li>Kleiderschrank mit Kleiderbügeln</li>
+                        <li>Badezimmer mit begehbarer Dusche und WC</li>
+                    </ul>
 
-                
-					<p class="bold">Über Zimmerpreise sehen Sie die "Online Buchung"!<p>
-				<p>Die Preise beinhalten nicht die Kurtaxe: 800 HUF/Person/Nacht.</p>
+                    <h3>Nützliche Informationen:</h3>
+                    <ul>
+                        <li>Check-in: zwischen 14:00 und 18:00 Uhr</li>
+                        <li>Check-out: zwischen 09:00 und 10:00 Uhr</li>
+                        <li><a href="/images/skin_v2/Jegverem_TV_channels.pdf" target="_blank" rel="noopener noreferrer">TV-Kanalliste (PDF)</a></li>
+                        <li><a href="/images/skin_v2/DE_JV_A-Z.pdf" target="_blank" rel="noopener noreferrer">Weitere Dienstleistungen von A bis Z (PDF)</a></li>
+                    </ul>
+                </div>
 
-                
-                <p class="bold">Familien aufgepasst! Für Kinder unter 6 Jahren berechnen wir keine Kosten für die Übernachtung, wenn sie mit ihren Eltern in der Pension übernachten.</p>
-				
+                <div class="booking-cta booking-cta-bottom">
+                    <a href="https://nethotelbooking.net/hotels/jegverem/lang=de" target="_blank" rel="noopener noreferrer" title="Zimmer buchen">
+                        <img src="/images/skin_v2/gomb_foglalas_de.png" alt="Zimmer buchen" />
+                    </a>
+                </div>
+
+                <div class="panel-box panel-box-contact">
+                    <p>Telefon: (+36) 99 510 113<br />
+                    E-Mail: szallas@jegverem.hu</p>
+
+                    <p>Buchen Sie direkt über unsere Website für die besten Preise! Wir freuen uns darauf, Sie in unserem Gasthof begrüßen zu dürfen!</p>
+                </div>
+
             </div>
             <div class="bottom"></div>
         </div>

@@ -42,7 +42,8 @@
 		})();
 	</script>
 </head>
-<body>
+<? $__pageBodyClass = "page-a_panziorol"; if (isset($body_class) && trim($body_class) != "") { $__pageBodyClass = trim($body_class . " " . $__pageBodyClass); } ?>
+<body class="<?= $__pageBodyClass ?>">
 
 
 <!-- container -->
@@ -54,79 +55,76 @@
         <div class="main">
             <div class="top"></div>
             <div class="content">
-                <h2><span>A panzióról</span></h2>
+                <h1>Szállás</h1>
+
+                <div class="panel-box">
+                    <p><strong>Szállás a Jégverem Fogadóban</strong><br />
+                    A hajdani városi jégverem épülete fogadóként született újjá, megtartva a fagerendázatú építmény hagyományos vonásait. Belső terei és kerthelyisége különleges atmoszférát teremtenek, miközben az étterem közepén a mai napig megtekinthető a régi jégverem. A panzióban 6 autentikus stílusú, modern felszereltséggel ellátott szoba várja a vendégeket. Ez a szálláshely ideális kiindulópont Sopron felfedezéséhez, hiszen a történelmi belváros közvetlen szomszédságában, a régi poncichter-negyedben található.</p>
+                </div>
+
+                <div class="booking-cta">
+                    <a href="https://nethotelbooking.net/hotels/jegverem/lang=hu" target="_blank" rel="noopener noreferrer" title="Szobafoglalás">
+                        <img src="/images/skin_v2/gomb_foglalas_hu.png" alt="Szobafoglalás" />
+                    </a>
+                </div>
 
                 <div class="covers">
                     <? $i=1; foreach($covers as $cover): ?>
-					<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
-					<div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
-						<div class="navigation">
-							<h4><?= nl2br($cover->description) ?></h4>
+                    <? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
+                    <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
+                        <div class="navigation">
+                            <h4><?= nl2br($cover->description) ?></h4>
 
-							<div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
+                            <div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
 
-							<a href="" class="prev SlideShowControlPrev">Előző</a>
-							<a href="" class="next SlideShowControlNext">Következő</a>
-						</div>
-					</div>
-					<? $i++; endforeach; ?>
+                            <a href="" class="prev SlideShowControlPrev">Előző</a>
+                            <a href="" class="next SlideShowControlNext">Következő</a>
+                        </div>
+                    </div>
+                    <? $i++; endforeach; ?>
                 </div>
 
-                <p>A 250 esztendős, fagerendázatú fogadóban összkomfortos, TV-vel, fürdővel felszerelt 2 és 4 ágyas szobák, várják a pihenni vágyókat. A panzió ideális kiindulópont Sopron felfedezéséhez, hiszen a történelmi belváros közvetlen szomszédságában, a régi poncichter-negyedben található. A Liszt Ferenc Konferenciaközpont és más belvárosi intézmények gyalogosan 10 perc alatt elérhetők. Felújított szobákkal, a kategóriában a legkedvezőbb árakkal várjuk! Panziónkban ingyenes Wi-fi elérhetőség áll vendégeink rendelkezésére.</p>
+                <div class="panel-box">
+                    <p>Fogadónk négy különböző kialakítású szobával várja vendégeit: egy galériás franciaágyas, egy galériás négyágyas, valamint egy franciaágyas és egy négyágyas szobával.</p>
+                    <p>Éttermünk gazdag kínálata ebédre és vacsorára egyaránt bőséges választékot kínál. Szállóvendégeink számára az ételfogyasztás árából 10% kedvezményt biztosítunk.</p>
 
-				<object type ="application/x-shockwave-flash" data="http://www.forogj.hu/panorama/jegverem_fogado_sopron/1.swf" width="100%" height="100%">
-				<param name ="movie" value ="http://www.forogj.hu/panorama/jegverem_fogado_sopron/1.swf" />
-				<param name ="quality" value ="high" />
-				<param name ="bgcolor" value ="#AAAAAA" />
-				</object>
-				<br /><br />
-				
-				<h3>Szolgáltatásaink</h3>
-				
-				<p>Panziónk az alábbi alapszolgáltatásokkal áll vendégeink rendelkezésére</p>
-                <ul>
-                    <li>Állatbarát panzió (felár ellenében szívesen látjuk házikedvencét)</li>
-					<li>Babaágy- vagy pótágy bekészítés</li>
-					<li>Csomag- és értékmegőrzés</li>
-					<li>Fizetőeszköz: bankkártya, készpénz, SZÉP kártya (OTP, MKB, és K&H SZÉP)</li>
-					<li>Fürdőszobai bekészítés (habfürdő vagy tusfürdő gél)</li>
-					<li>Hajszárító</li>
-					<li>Igényelhető hajszárító</li>
-					<li>Igényelhető tartalékpárna</li>
-					<li>Kérésre plusz takaró</li>
-					<li>Központi széf a recepción</li>
-					<li>Légkondicionálás</li>
-					<li>Rádió</li>
-					<li>Recepció szolgálat</li>
-					<li>Szélessávú internet-hozzáférés</li>
-					<li>Szobához igényelhető (mobil) telefon</li>
-					<li>Televízió</li>
-					<li>Terasz</li>
-					<li>
-        				<a href="/images/Jegverem_TV_channels.pdf" target="_blank">TV csatornakiosztás >></a>
-    				</li>
-					<li>
-        				<a href="/images/HU_JV_A-Z.pdf" target="_blank">További szolgáltatásaink A-Z-ig >></a>
-    				</li>
-                </ul>
-				
-                <h3>Sí-szezon</h3>
+                    <h3>A szobák felszereltsége:</h3>
+                    <ul>
+                        <li>légkondicionáló</li>
+                        <li>síkképernyős TV</li>
+                        <li>WIFI</li>
+                        <li>franciaágy (2 fixen összetolt 90x200cm-es ágy)</li>
+                        <li>törölköző</li>
+                        <li>bőröndtartó</li>
+                        <li>íróasztal</li>
+                        <li>széf</li>
+                        <li>ruhásszekrény, vállfával</li>
+                        <li>épített zuhanyzós fürdőszoba, WC-vel</li>
+                    </ul>
 
-                <p>A szomszédos Ausztria kitűnő sípályái, (pl. Semmering) autóval egy-másfél óra alatt elérhetőek Sopronból, így panziónk kiváló szálláshely a síelni vágyók számára is.</p>
+                    <h3>Hasznos információk:</h3>
+                    <ul>
+                        <li>Bejelentkezés: 14:00 és 18:00 között</li>
+                        <li>Kijelentkezés: 9:00 és 10:00 között</li>
+                        <li><a href="/images/skin_v2/Jegverem_TV_csatornak.pdf" target="_blank" rel="noopener noreferrer">TV csatornakiosztás (PDF)</a></li>
+                        <li><a href="/images/skin_v2/HU_JV_A-Z.pdf" target="_blank" rel="noopener noreferrer">További szolgáltatásaink A-Z-ig (PDF)</a></li>
+                    </ul>
+                </div>
 
-                <p>Panziónk dolgozói örömmel állnak rendelkezésére. Vegye igénybe szolgáltatásainkat!</p>
-                <ul>
-                    <li>Szállásfoglalás telefonon: (+36) 99/510-113</li>
-                    <li>E-mailben: szallas@jegverem.hu</li>
-                </ul>
+                <div class="booking-cta booking-cta-bottom">
+                    <a href="https://nethotelbooking.net/hotels/jegverem/lang=hu" target="_blank" rel="noopener noreferrer" title="Szobafoglalás">
+                        <img src="/images/skin_v2/gomb_foglalas_hu.png" alt="Szobafoglalás" />
+                    </a>
+                </div>
 
-                <h3>Szobaáraink</h3>
+                <div class="panel-box panel-box-contact">
+                    <p>Telefon: (+36) 99 510 113<br />
+                    E-mail: szallas@jegverem.hu</p>
 
-				<p><b>Árainkról a "Szobafoglalás" menüpont alatt tájékozódhat!</b></p>
-				
-				<p>Az árak nem tartalmazzák az idegenforgalmi adó mértékét. IFA: 800Ft/fő/éj</p>
+                    <p>Foglaljon közvetlenül weboldalunkon a legkedvezőbb árakért!<br />
+                    Várjuk szeretettel fogadónkban!</p>
+                </div>
 
-                <p>Családok figyelmébe! Hat éves korukig a gyerekeknek nem számítunk fel szállásdíjat, amennyiben a szülőkkel <b>egy szobában</b> szállnak meg panziónkban!</p>
             </div>
             <div class="bottom"></div>
         </div>
