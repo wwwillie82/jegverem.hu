@@ -1025,6 +1025,7 @@ body {
     font-size: 14px;
     opacity: 0.9;
     white-space: nowrap;      /* ne törjön két sorba */
+    margin-left: -6px; /* állítsd 4–10px között ízlés szerint */
 }
 
 #container #footer .footer-partners-logos {
