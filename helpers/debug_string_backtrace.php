@@ -1,5 +1,11 @@
 <?php
 function debug_string_backtrace() {
+   global $config;
+
+   // Keep backtrace logging opt-in to avoid noisy logs in normal runtime.
+   if (!isset($config) || !is_array($config) || empty($config["enable_helper_backtrace_debug"])) {
+      return null;
+   }
 
 	ob_start();
    debug_print_backtrace();

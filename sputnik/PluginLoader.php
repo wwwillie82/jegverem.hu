@@ -38,10 +38,22 @@ class PluginLoader {
 		// állítsuk be a hívónak az objektumait
 		if ($o != false) {
 			$vars = get_object_vars($o);
+			$pluginObject = PluginLoader::$pluginsList[$name];
+			$pluginClass = get_class($pluginObject);
+			$supportsDynamicProperties = PHP_VERSION_ID < 80200 || method_exists($pluginObject, "__set");
+			if (!$supportsDynamicProperties && method_exists("ReflectionClass", "getAttributes")) {
+				$reflection = new ReflectionClass($pluginClass);
+				$supportsDynamicProperties = count($reflection->getAttributes("AllowDynamicProperties")) > 0;
+			}
+
 			foreach($vars as $var_key => $var_value) {
-				if (!isset(PluginLoader::$pluginsList[$name]->$var_key)) {
-					PluginLoader::$pluginsList[$name]->$var_key = null;
-					PluginLoader::$pluginsList[$name]->$var_key = &$vars[$var_key];
+				if (property_exists($pluginObject, $var_key)) {
+					$pluginObject->$var_key = &$vars[$var_key];
+					continue;
+				}
+
+				if ($supportsDynamicProperties && !isset($pluginObject->$var_key)) {
+					$pluginObject->$var_key = &$vars[$var_key];
 				}
 			}
 		}
