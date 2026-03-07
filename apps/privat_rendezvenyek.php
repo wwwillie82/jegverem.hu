@@ -1,4 +1,4 @@
-<?
+<?php
 	class Privat_rendezvenyek extends Controller {
 		function main() {
 			$this->view->header = Loader::Factory("header/index")->Execute();

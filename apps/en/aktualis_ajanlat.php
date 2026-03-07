@@ -1,4 +1,4 @@
-<?
+<?php
 	class Aktualis_ajanlat extends Controller {
 		function main() {
 			$this->view->header = Loader::Factory("header/index_en")->Execute();
@@ -8,7 +8,7 @@
 			$qb = QueryBuilder::QueryBuilder()->Select()->From("categories")->Where("parent_id='71'")->OrderBy("sort_order");
 			$this->view->categories = $this->db->Query($qb);
 
-			// aktuális ajánlat 119
+			// aktuÃ¡lis ajÃ¡nlat 119
 			$current_date = date("Y-m-d");
 			$category_id = $this->db->Query("SELECT * FROM categories WHERE parent_id='119' AND from_date<='$current_date' AND to_date>='$current_date' LIMIT 0,1")->id;
 			

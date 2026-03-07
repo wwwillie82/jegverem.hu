@@ -1,4 +1,4 @@
-<?
+<?php
 	class Heti_menu extends Controller {
 		function main() {
 			$this->view->header = Loader::Factory("header/index_en")->Execute();

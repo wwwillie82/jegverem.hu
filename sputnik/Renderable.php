@@ -156,7 +156,7 @@ class Renderable {
 			foreach($vars as $var_key => $var_value) {
 				if (!isset($this->$var_key)) {
 					$this->$var_key = null;
-					$this->set($var_key, &$vars[$var_key]);
+					$this->set($var_key, $vars[$var_key]);
 				}
 			}
 		}
