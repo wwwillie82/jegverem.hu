@@ -97,6 +97,21 @@ class URI {
 	}
 
 	private static function GetRequestPath() {
+		$route_from_query = null;
+		if(self::IsNoRewriteModeEnabled() && isset($_GET["route"])) {
+			if(is_array($_GET["route"])) {
+				$route_from_query = "";
+			} else {
+				$route_from_query = trim((string)$_GET["route"]);
+			}
+		}
+
+		if($route_from_query !== null) {
+			$route_from_query = trim($route_from_query, "/");
+			if($route_from_query === "") return "/";
+			return "/" . $route_from_query;
+		}
+
 		$uri = isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : "/";
 		$path = parse_url($uri, PHP_URL_PATH);
 		if($path === null || $path === false || $path === "") $path = "/";
@@ -119,9 +134,22 @@ class URI {
 
 	public static function RoutePath($uri = "", $extend_named=array(), $force_own_params=false) {
 		$uri = trim($uri, "/");
-		$path = self::IsNoRewriteModeEnabled() ? "/index.php" : "";
+		$named_path = self::BuildNamedParamsPath($extend_named, $force_own_params);
+
+		if(self::IsNoRewriteModeEnabled()) {
+			$route = $uri;
+			if($named_path !== "") {
+				$route .= ($route !== "" ? "/" : "") . ltrim($named_path, "/");
+			}
+
+			if($route === "") return "/index.php";
+			$encoded_route = str_replace("%2F", "/", rawurlencode($route));
+			return "/index.php?route=" . $encoded_route;
+		}
+
+		$path = "";
 		if($uri !== "") $path .= "/" . $uri;
-		$path .= self::BuildNamedParamsPath($extend_named, $force_own_params);
+		$path .= $named_path;
 		if($path === "") return "/";
 		return $path;
 	}
@@ -146,7 +174,29 @@ class URI {
 
 	private static function PrefixRoutePath($path) {
 		if(!self::ShouldPrefixRoute($path)) return $path;
-		return "/index.php" . $path;
+
+		$clean_path = parse_url($path, PHP_URL_PATH);
+		if($clean_path === null || $clean_path === false) return $path;
+
+		$route = trim($clean_path, "/");
+		if($route === "") {
+			$rewritten = "/index.php";
+		} else {
+			$encoded_route = str_replace("%2F", "/", rawurlencode($route));
+			$rewritten = "/index.php?route=" . $encoded_route;
+		}
+
+		$query = parse_url($path, PHP_URL_QUERY);
+		if($query !== null && $query !== false && $query !== "") {
+			$rewritten .= (strpos($rewritten, "?") === false ? "?" : "&") . $query;
+		}
+
+		$fragment = parse_url($path, PHP_URL_FRAGMENT);
+		if($fragment !== null && $fragment !== false && $fragment !== "") {
+			$rewritten .= "#" . $fragment;
+		}
+
+		return $rewritten;
 	}
 
 	public static function ShouldRewriteOutputLinks($html) {
