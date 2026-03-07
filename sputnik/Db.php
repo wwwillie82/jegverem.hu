@@ -111,7 +111,7 @@ class Db {
 	 * @return boolean
 	 */
 	public function IsConnected() {
-		return is_resource($this->conn);
+		return ($this->conn instanceof mysqli);
 	}
 
 
@@ -177,7 +177,7 @@ class Db {
 			}
 		}
 
-		$result = $this->db_adapter->Query($query, $this->conn) or
+		$result = $this->db_adapter->Query($query) or
 			   trigger_error("SQL Hiba: " . $this->db_adapter->GetError() . "<br /><b>" . $query . "</b>", E_USER_ERROR);
 
 		$this->count_query++;
@@ -287,7 +287,7 @@ class Db {
 		$count = 0;
 		foreach($row as $key => $value) {
 			if (get_magic_quotes_gpc()) $value = stripslashes($value);
-			$value = mysql_escape_string($value);
+			$value = $this->db_adapter->EscapeString($value);
 			if ($count > 0) {
 				$set_list .= ", `$key`='$value'";
 			} else {

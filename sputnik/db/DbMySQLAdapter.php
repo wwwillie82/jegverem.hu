@@ -10,7 +10,7 @@ class DbMySQLAdapter implements IDbAdapter {
 	 * @return string
 	 */
 	public function Info() {
-		return mysql_get_server_info($this->connection);
+		return mysqli_get_server_info($this->connection);
 	}
 
 	/**
@@ -18,7 +18,7 @@ class DbMySQLAdapter implements IDbAdapter {
 	 * @return string
 	 */
 	public function EscapeString($string) {
-		return mysql_real_escape_string($string);
+		return mysqli_real_escape_string($this->connection, $string);
 	}
 
 	/**
@@ -26,7 +26,7 @@ class DbMySQLAdapter implements IDbAdapter {
 	 * @return resource
 	 */
 	public function Query($query_string) {
-		return mysql_query($query_string, $this->connection);
+		return mysqli_query($this->connection, $query_string);
 	}
 
 	/**
@@ -34,7 +34,7 @@ class DbMySQLAdapter implements IDbAdapter {
 	 * @return void
 	 */
 	public function SwitchDb($db) {
-		mysql_select_db($db, $this->connection);
+		mysqli_select_db($this->connection, $db);
 	}
 
 	/**
@@ -42,7 +42,7 @@ class DbMySQLAdapter implements IDbAdapter {
 	 */
 	public function Disconnect() {
 		if($this->connection)
-			mysql_close($this->connection);
+			mysqli_close($this->connection);
 	}
 
 	/**
@@ -52,7 +52,7 @@ class DbMySQLAdapter implements IDbAdapter {
 	 * @return resource the connection
 	 */
 	public function Connect($server, $username, $password) {
-		$this->connection = mysql_connect($server, $username, $password);
+		$this->connection = mysqli_connect($server, $username, $password);
 		return $this->connection;
 	}
 
@@ -61,14 +61,14 @@ class DbMySQLAdapter implements IDbAdapter {
 	 */
 	public function GetAffectedRows() {
 
-		return mysql_affected_rows($this->connection);
+		return mysqli_affected_rows($this->connection);
 	}
 
 	/**
 	 * @return int
 	 */
 	public function GetInsertedId() {
-		return mysql_insert_id($this->connection);
+		return mysqli_insert_id($this->connection);
 	}
 
 	/**
@@ -76,6 +76,6 @@ class DbMySQLAdapter implements IDbAdapter {
 	 * @return string
 	 */
 	public function GetError() {
-		return mysql_error($this->connection);
+		return mysqli_error($this->connection);
 	}
 }

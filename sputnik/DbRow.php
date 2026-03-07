@@ -30,25 +30,30 @@ class DbRow implements Iterator {
 		return $this->fields;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function rewind() {
 		reset($this->fields);
 	}
 
+	#[\ReturnTypeWillChange]
 	public function current() {
 		$row = current($this->fields);
 		return $row;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function key() {
 		$key = key($this->fields);
 		return $key;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function next() {
 		$next = next($this->fields);
 		return $next;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function valid() {
 		$var = $this->current() !== false;
 		return $var;

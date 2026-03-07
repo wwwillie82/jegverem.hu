@@ -29,7 +29,7 @@ class RssPlugin {
 	var $items;
 	var $tags;
 	
-	private $baseObj;
+	private $baseObject;
 
 	function __construct()
 	{
