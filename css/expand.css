@@ -1,0 +1,12 @@
+.expandbox_select_holder {
+	float: left;
+	width: 200px;
+	margin: 0 0 10px 0;
+	font-size: 11px;
+}
+
+.expandbox_select_holder select {
+	width: 185px;
+	height: 150px;
+	font-size: 11px;
+}

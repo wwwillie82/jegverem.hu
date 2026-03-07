@@ -1,0 +1,168 @@
+body.page-ettermunk-kinalata #container #middle .main_full .content .menu-accordion {
+    display: none;
+}
+
+body.page-itallap #container #middle .main_full .content .menu-accordion {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    body.page-ettermunk-kinalata #container #middle .tabs {
+        display: none !important;
+    }
+
+    body.page-itallap #container #middle .tabs {
+        display: none !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .desktop-menu {
+        display: none !important;
+    }
+
+    body.page-itallap #container #middle .main_full .content .desktop-menu {
+        display: none !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .sidebar_full {
+        display: none !important;
+    }
+
+    body.page-itallap #container #middle .sidebar_full {
+        display: none !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full,
+    body.page-ettermunk-kinalata #container #middle .main_full .content,
+    body.page-itallap #container #middle .main_full,
+    body.page-itallap #container #middle .main_full .content {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle,
+    body.page-ettermunk-kinalata #container #middle .main_full,
+    body.page-ettermunk-kinalata #container #middle .main_full .content,
+    body.page-itallap #container #middle,
+    body.page-itallap #container #middle .main_full,
+    body.page-itallap #container #middle .main_full .content {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-accordion,
+    body.page-itallap #container #middle .main_full .content .menu-accordion {
+        display: block !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content,
+    body.page-itallap #container #middle .main_full .content {
+        padding-bottom: 0 !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .bottom,
+    body.page-itallap #container #middle .main_full .content .bottom {
+        display: none !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-accordion__item,
+    body.page-itallap #container #middle .main_full .content .menu-accordion__item {
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-accordion__toggle,
+    body.page-itallap #container #middle .main_full .content .menu-accordion__toggle {
+        position: relative;
+        width: 100%;
+        border: 0;
+        background: #f8f8f8;
+        color: #141414;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 14px 42px 14px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-accordion__toggle::after,
+    body.page-itallap #container #middle .main_full .content .menu-accordion__toggle::after {
+        content: "⌄";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        transform-origin: center;
+        transition: transform .25s ease;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-accordion__item.open .menu-accordion__toggle::after,
+    body.page-itallap #container #middle .main_full .content .menu-accordion__item.open .menu-accordion__toggle::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-accordion__panel,
+    body.page-itallap #container #middle .main_full .content .menu-accordion__panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .25s ease;
+        padding: 0;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-mitem,
+    body.page-itallap #container #middle .main_full .content .menu-mitem {
+        padding: 10px 16px;
+        border-top: 1px solid #efefef;
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-mitem__row,
+    body.page-itallap #container #middle .main_full .content .menu-mitem__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-mitem__name,
+    body.page-itallap #container #middle .main_full .content .menu-mitem__name {
+        flex: 1 1 auto;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-mitem__name small,
+    body.page-itallap #container #middle .main_full .content .menu-mitem__name small {
+        display: block;
+        margin-top: 4px;
+        color: #666;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-mitem__price,
+    body.page-itallap #container #middle .main_full .content .menu-mitem__price {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-weight: 700;
+        text-align: right;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-mitem__img,
+    body.page-itallap #container #middle .main_full .content .menu-mitem__img {
+        margin-top: 10px;
+        height: auto !important;
+    }
+
+    body.page-ettermunk-kinalata #container #middle .main_full .content .menu-mitem__img img,
+    body.page-itallap #container #middle .main_full .content .menu-mitem__img img {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: auto !important;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}

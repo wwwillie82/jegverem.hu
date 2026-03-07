@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+$requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$currentLang = 'hu';
+
+if (preg_match('#^/en(?:/|$)#', $requestPath)) {
+    $currentLang = 'en';
+} elseif (preg_match('#^/de(?:/|$)#', $requestPath)) {
+    $currentLang = 'de';
+}
+
+$mobileTiles = array(
+    'menu' => array(
+        'hu' => array(
+            'title' => 'Heti Menü',
+            'description' => 'Válassz napi ajánlatunkból minden hétköznap 12:00 és 15:00 között!',
+            'cta' => 'Heti Menü >>',
+        ),
+        'en' => array(
+            'title' => 'Weekly menu',
+            'description' => 'Enjoy our daily specials every weekday from 12:00 PM to 3:00 PM!',
+            'cta' => 'Weekly menu >>',
+        ),
+        'de' => array(
+            'title' => 'Wochenmenü',
+            'description' => 'Wählen Sie aus unserem Mittagsangebot an jedem Werktag zwischen 12:00 und 15:00 Uhr!',
+            'cta' => 'Wochenmenü >>',
+        ),
+    ),
+    'events' => array(
+        'hu' => array(
+            'title' => 'Privát rendezvény Sopronban',
+            'description' => 'Ha születésnapi, baráti, üzleti, családi összejövetel, vagy akár egy zártkörű osztálytalálkozó tökéletes helyszínét keresed, a legjobb helyen jársz!',
+            'cta' => 'Privát rendezvény Sopronban >>',
+        ),
+        'en' => array(
+            'title' => 'Private events in Sopron',
+            'description' => 'If you’re looking for the perfect venue for a birthday, a gathering with friends, a business or family event, or even a private class reunion, you’ve come to the right place!',
+            'cta' => 'Private events in Sopron >>',
+        ),
+        'de' => array(
+            'title' => 'Private Veranstaltungen in Ödenburg',
+            'description' => 'Wenn Sie den perfekten Ort für eine Geburtstagsfeier, ein Treffen mit Freunden, ein Geschäfts- oder Familienereignis oder sogar ein privates Klassentreffen suchen, sind Sie bei uns genau richtig!',
+            'cta' => 'Private Veranstaltungen in Ödenburg >>',
+        ),
+    ),
+);
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- written by Voov (www.voov.hu), copyright 2011 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jégverem Fogadó</title>
+	<meta name="title" content="Jégverem Fogadó" />
+	<meta name="Keywords" lang="HU" content="" />
+	<meta name="Description" lang="HU" content="" />
+	<meta http-equiv="Content-Language" content="hu-hu" />
+    <meta name="Page-Topic" content="all, alle" />
+    <meta name="Distribution" content="global" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="Robots" content="index,follow" />
+	<meta http-equiv="Imagetoolbar" content="no" />
+	<meta name="Owner" content="Jégverem Fogadó (www.jegverem.hu)" />
+	<meta name="Copyright" content="Copyright (c) 2011 Jégverem Fogadó, All Rights Reserved" />
+	<meta name="Author" content="Voov Kft. (www.jegverem.hu)" />
+	<meta name="Designer" content="Voov Kft. (www.jegverem.hu)" />
+	
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+	<link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
+	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/jquery.tinyscrollbar.min.js"></script>
+    <script src="/js/voov.slideshow.js" type="text/javascript"></script>
+    <script src="/js/jegverem.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#scrollbar1').tinyscrollbar();
+		});
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-11988214-3']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+<body>
+
+
+<!-- container -->
+
+
+
+<div id="container">
+    <?= $header ?>
+<script defer async src='https://cdn.trustindex.io/loader.js?132e8ed65625479a84db43c2e'></script>
+    <div id="middle">
+
+        <div class="box_two">
+            <div class="covers">
+				<? $i=1; foreach($covers as $cover): ?>
+				<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
+                <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
+                    <div class="navigation">
+                        <h2><?= nl2br($cover->description) ?></h2>
+
+                        <div class="num"><span><?= $i ?></span>/<?= $covers->length() ?></div>
+
+                        <button type="button" class="prev SlideShowControlPrev" aria-label="Előző kép">Előző</button>
+                        <button type="button" class="next SlideShowControlNext" aria-label="Következő kép">Következő</button>
+                    </div>
+                </div>
+				<? $i++; endforeach; ?>
+            </div>
+
+            <div class="offers">
+				<div class="head">
+					<span><a href="/heti_menu" class="on">Heti menü</a></span>
+					<span><a href="/ettermunk_kinalata">Étlap</a></span>
+					<span><a href="/itallap">Itallap</a></span>
+					<? if($category->length() > 0): ?>
+					<span><a href="/aktualis_ajanlat" class="no">Aktuális ajánlat</a></span>
+					<? endif; ?>
+				</div>
+			
+				<div class="holder" id="block_1">
+					<div id="scrollbar1">
+						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+						<div class="viewport">
+							 <div class="overview">
+								<? if($menus->length() > 0): ?>
+									<h3 style="line-height: 22px;">Ezen a héten (<?= $menus->week ?>. hét)<br /> Csomagolás: 250 Ft/menü </h3>
+
+									<? 
+									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
+									foreach($menus as $menu):
+									?>
+									<h5><span><?= $days[$menu->day] ?></span></h5>
+									<div class="food">
+										<?= nl2br($menu->offer_text) ?>
+									</div>
+									<? endforeach; ?>
+								<? endif; ?>
+
+								<? if($next_menus->length() > 0): ?>
+									<h3 style="line-height: 22px;">Következő a héten (<?= $next_menus->week ?>. hét)</h3>
+
+									<? 
+									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
+									foreach($next_menus as $menu):
+									?>
+									<h5><span><?= $days[$menu->day] ?></span></h5>
+									<div class="food">
+										<?= nl2br($menu->offer_text) ?>
+									</div>
+									<? endforeach; ?>
+								<? endif; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+            <br class="clearfix" />
+        </div>
+
+    <div class="mobile-home-tiles">
+        <div class="home-tile item home-card-mini">
+            <div class="home-card-mini-media"><img src="/images/skin_v2/heti_menu.jpg" alt="Heti Menü" /></div>
+            <div class="home-tile-body home-card-mini-body">
+                <p class="home-tile-title home-card-mini-title"><?= $mobileTiles['menu'][$currentLang]['title'] ?></p>
+                <p><?= $mobileTiles['menu'][$currentLang]['description'] ?></p>
+                <a href="/heti_menu" class="home-tile-cta home-card-mini-btn"><?= $mobileTiles['menu'][$currentLang]['cta'] ?></a>
+            </div>
+        </div>
+
+        <div class="home-tile item home-card-mini">
+            <div class="home-card-mini-media"><img src="/images/skin_v2/privat_rendezvenyek_jegverem_sopron.jpeg" alt="Privát rendezvény" /></div>
+            <div class="home-tile-body home-card-mini-body">
+                <p class="home-tile-title home-card-mini-title"><?= $mobileTiles['events'][$currentLang]['title'] ?></p>
+                <p><?= $mobileTiles['events'][$currentLang]['description'] ?></p>
+                <a href="/privat_rendezvenyek" class="home-tile-cta home-card-mini-btn"><?= $mobileTiles['events'][$currentLang]['cta'] ?></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box_three">
+            <div class="item home-card-mini home-card-menu-mini">
+                <div class="home-card-mini-media">
+                    <a href="/ettermunk_kinalata"><img src="/images/skin_v2/jegverem_fogado_sopron_ettermunk_kinalata.png" alt="Éttermünk kínálata" /></a>
+                </div>
+
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Éttermünk kínálata</h3>
+
+                    <p class="home-card-mini-text">Étlapunk a hagyományos magyar ízekből merít inspirációt, amelyeket kreatívan újragondolt klasszikusok és a nemzetközi konyhaművészet izgalmas fogásai egészítenek ki. Kínálatunk a minőségi alapanyagokra és a harmonikus ízélményre épül.</p>
+
+                    <a href="/ettermunk_kinalata" class="home-card-mini-btn">Étlapunk >></a>
+                </div>
+            </div>
+
+            <div class="item home-card-mini home-card-delivery-mini">
+                <div class="home-card-mini-media">
+                    <a href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer"><img src="/images/skin_v2/jegverem_fogado_sopron_kiszallitas_web.png" alt="Házhozszállítás" /></a>
+                </div>
+
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title">Házhozszállítás</h3>
+
+                    <p class="home-card-mini-text">Minden hétköznap 11.00-21.00 között a Jégverem pincér házhoz megy!</p>
+
+                    <a class="home-card-mini-btn" href="https://mobilpincer.net/hu/jegverem-fogado" target="_blank" rel="noopener noreferrer">Online Ételrendelés >></a>
+                </div>
+            </div>
+
+            <div class="item home-card-mini home-card-accommodation-mini">
+                <div class="home-card-mini-media">
+                    <a href="/a_panziorol"><img src="/images/skin_v2/jegverem_fogado_sopron_panzio_szallas.png" alt="Szállás" /></a>
+                </div>
+
+                <div class="home-card-mini-body">
+                    <h3 class="home-card-mini-title"><a href="/a_panziorol">Szállás</a></h3>
+
+                    <p class="home-card-mini-text">A panzióban 6 autentikus stílusú, modern felszereltséggel ellátott szoba várja a vendégeket. Ez a szálláshely ideális kiindulópont Sopron felfedezéséhez, hiszen a történelmi belváros közvetlen szomszédságában, a régi poncichter-negyedben található.</p>
+
+                    <a href="/a_panziorol" class="home-card-mini-btn">A panzióról >></a>
+                </div>
+            </div>
+            <br class="clearfix" />
+        </div>
+    </div>
+	
+	<?= $banner ?>
+    <?= $footer ?>
+</div>
+<!-- eof container -->
+
+</body>
+</html>

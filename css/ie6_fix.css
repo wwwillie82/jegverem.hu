@@ -1,0 +1,28 @@
+/*#container #header #menu ul li#menu_1 { width: 60px; }*/
+#container #header #menu ul li#menu_2 { width: 48px; }
+#container #header #menu ul li#menu_3 { width: 53px; }
+#container #header #menu ul li#menu_4 { width: 57px; }
+#container #header #menu ul li#menu_5 { width: 60px; }
+#container #header #menu ul li#menu_6 { width: 60px; }
+#container #header #menu ul li#menu_7 { width: 60px; }
+#container #header #menu ul li#menu_8 { width: 56px; }
+#container #header #menu ul li#menu_9 { width: 57px; }
+#container #header #menu ul li#menu_10 { width: 60px; }
+#container #header #menu ul li#menu_11 { width: 60px; }
+#container #header #menu ul li#menu_12 { width: 44px; }
+#container #header #menu ul li#menu_13 { width: 60px; }
+#container #header #menu ul li#menu_14 { width: 43px; }
+
+/*#container #header { background: url(../images/header.gif) left top no-repeat; }
+#container #middle { background: url(../images/middle.gif) left top repeat-y; }
+#container #footer { background: url(../images/footer.gif) left top repeat-y; }
+#container #bottom { background: url(../images/bottom.gif) left top no-repeat; }*/
+
+#container #header #search .tabs a#tab_1 { width: 60px; }
+#container #header #search .tabs a#tab_2 { width: 33px; }
+#container #header #search .tabs a#tab_3 { width: 70px; }
+
+#container #position #header h1,
+#container #position #header_login h1 {
+	background-image: url(../images_admin/logo.gif);
+}

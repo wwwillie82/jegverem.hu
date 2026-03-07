@@ -1,0 +1,6 @@
+/* Admin-specific CSS overrides loaded after uniform.admin.css */
+#container #position #middle .content .main .data .filter div.selector select option,
+#container #position #middle .content .main .data .filter div.selector select optgroup {
+  background-color: #fff;
+  color: #111;
+}

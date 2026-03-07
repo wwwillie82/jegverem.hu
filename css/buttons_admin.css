@@ -1,0 +1,220 @@
+a.btn_logo,
+a.btn_logo:hover {
+	width: 77px;
+	height: 76px;
+	display: block;
+	text-indent: -9999px;
+	background: url(../images_admin/logo.png) left top no-repeat;
+	position: absolute;
+	top: 10px;
+	left: 2px;
+}
+a.btn_view_site,
+a.btn_view_site:hover {
+	width: 123px;
+	height: 18px;
+	display: block;
+	background: url(../images_admin/buttons/btn_view_site.gif) left top no-repeat;
+	float: left;
+	font-size: 9px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	padding: 2px 0 0 7px;
+	margin: 30px 0 0 0;
+}
+a.btn_view_site:hover {
+	background-position: left bottom;
+}
+a.btn_refresh,
+a.btn_refresh:hover {
+	width: 16px;
+	height: 16px;
+	display: block;
+	text-indent: -9999px;
+	background: url(../images_admin/buttons/btn_refresh.gif) left top no-repeat;
+	position: absolute;
+	top: 11px;
+	left: 7px;
+}
+a.btn_refresh:hover {
+	background-position: left bottom;
+}
+a.btn_hibajelentes,
+a.btn_hibajelentes:hover {
+	width: auto;
+	height: 18px;
+	padding: 3px 27px 0 0;
+	display: block;
+	text-align: right;
+	color: #737373;
+	font-size: 11px;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: url(../images_admin/buttons/arrow.gif) right top no-repeat;
+	position: absolute;
+	top: 32px;
+	right: 25px;
+}
+a.btn_hibajelentes:hover {
+	background-position: right bottom;
+}
+
+
+a.btn_szerkeszt,
+a.btn_szerkeszt:hover,
+a.btn_masol,
+a.btn_masol:hover,
+a.btn_torol,
+a.btn_torol:hover,
+a.btn_felcserel,
+a.btn_felcserel:hover {
+	width: auto;
+	height: 17px;
+	padding: 4px 0 0 26px;
+	margin: 0 15px 0 0;
+	display: block;
+	color: #83a60a;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: "Segoe Ui", Arial, Tahoma;
+	text-decoration: none;
+	text-transform: none;
+	float: left;
+	background: url(../images_admin/buttons/btn_szerkeszt.gif) left top no-repeat;
+}
+a.btn_masol,
+a.btn_masol:hover {
+	color: #f19500;
+	background: url(../images_admin/buttons/btn_masol.gif) left top no-repeat;
+}
+a.btn_torol,
+a.btn_torol:hover {
+	color: #da1c46;
+	background: url(../images_admin/buttons/btn_torol.gif) left top no-repeat;
+}
+a.btn_felcserel,
+a.btn_felcserel:hover {
+	color: #7779b5;
+	background: url(../images_admin/buttons/btn_felcserel.gif) left top no-repeat;
+}
+a.btn_szerkeszt:hover,
+a.btn_masol:hover,
+a.btn_torol:hover,
+a.btn_felcserel:hover {
+	color: #333;
+}
+
+a.btn_prev,
+a.btn_prev:hover {
+	width: auto;
+	height: 17px;
+	padding: 4px 0 0 28px;
+	margin: 0 0 0 10px;
+	display: block;
+	color: #7c879c;
+	font-size: 10px;
+	font-family: "Segoe Ui", Arial, Tahoma;
+	text-decoration: none;
+	float: left;
+	background: url(../images_admin/buttons/btn_left.gif) left top no-repeat;
+}
+a.btn_prev:hover {
+	color: #333;
+	background-position: left bottom;
+}
+
+a.btn_next,
+a.btn_next:hover {
+	width: auto;
+	height: 17px;
+	padding: 4px 28px 0 0;
+	margin: 0 10px 0 0;
+	display: block;
+	color: #7c879c;
+	font-size: 10px;
+	font-family: "Segoe Ui", Arial, Tahoma;
+	text-decoration: none;
+	text-align: right;
+	float: right;
+	background: url(../images_admin/buttons/btn_right.gif) right top no-repeat;
+}
+a.btn_next:hover {
+	color: #333;
+	background-position: right bottom;
+}
+
+.btn_search,
+.btn_search:hover {
+	width: 41px;
+	height: 31px;
+	padding: 0;
+	margin: 0;
+	display: block;
+	text-indent: -9999px;
+	border: 0;
+	float: right;
+	background: url(../images_admin/buttons/btn_search.gif) left top no-repeat;
+}
+.btn_search:hover {
+	cursor: pointer;
+	background-position: left bottom;
+}
+
+a.btn_delete_tag,
+a.btn_delete_tag:hover {
+	width: 17px;
+	height: 22px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	display: block;
+	text-indent: -9999px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url(../images_admin/buttons/btn_delete_tag.gif) left top no-repeat;
+}
+
+.submit,
+.submit:hover {
+	width: 130px;
+	height: 29px;
+	display: block;
+	border: 0;
+	margin: 0 0 0 0;
+	padding: 0 0 2px 10px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: left;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Segoe UI", Arial;
+	text-transform: uppercase;
+	background: url(../images_admin/buttons/submit.gif) left top no-repeat;
+}
+.submit:hover {
+	cursor: pointer;
+	background-position: left bottom;
+}
+
+a.btn_edit,
+a:hover.btn_edit,
+a.btn_delete,
+a:hover.btn_delete {
+	width: 120px;
+	height: 22px;
+	display: block;
+	margin: 0 10px 0 0;
+	padding: 7px 0 0 10px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #fff;
+	text-decoration: none;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "Segoe UI", Arial;
+	text-transform: uppercase;
+	background: url(../images_admin/buttons/submit.gif) left top no-repeat;
+	float: left;
+}
+a.btn_delete,
+a:hover.btn_delete {
+	background: url(../images_admin/buttons/submit.gif) left bottom no-repeat;
+}

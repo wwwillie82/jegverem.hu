@@ -1,0 +1,33 @@
+body.mobile-v2 .mobile-menu-group {
+    margin-top: 16px;
+}
+
+body.mobile-v2 .mobile-menu-group:first-of-type {
+    margin-top: 12px;
+}
+
+body.mobile-v2 .mobile-menu-section-title {
+    display: block;
+    margin: 0;
+    padding: 10px 14px;
+    border-left: 3px solid #b68b2f;
+    border-radius: 6px;
+    background: #f6f3eb;
+    font: 700 20px/1.2 'Roboto', Arial, sans-serif;
+    color: #1f1f1f;
+    text-decoration: none;
+}
+
+body.mobile-v2 .mobile-menu-sub {
+    margin-top: 4px;
+}
+
+body.mobile-v2 .mobile-menu-sub a {
+    display: block;
+    padding: 11px 0 11px 22px;
+    border-bottom: 1px solid #ececec;
+    font: 500 16px/1.3 'Roboto', Arial, sans-serif;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
