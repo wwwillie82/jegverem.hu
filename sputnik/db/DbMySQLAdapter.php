@@ -53,6 +53,9 @@ class DbMySQLAdapter implements IDbAdapter {
 	 */
 	public function Connect($server, $username, $password) {
 		$this->connection = mysqli_connect($server, $username, $password);
+		if($this->connection) {
+			mysqli_set_charset($this->connection, "utf8mb4");
+		}
 		return $this->connection;
 	}
 

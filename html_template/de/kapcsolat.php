@@ -56,7 +56,7 @@
 
                 <div class="covers">
                     <div class="item">
-                        <iframe width="590" height="329" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=hu&amp;geocode=&amp;q=9400+Sopron,+J%C3%A9gverem+u.+1.&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.59616,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=9400+Sopron,+J%C3%A9gverem,+Magyarorsz%C3%A1g&amp;t=m&amp;ll=47.68833,16.593819&amp;spn=0.019009,0.050554&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                        <iframe width="590" height="329" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=hu&amp;geocode=&amp;q=9400+Sopron,+J%C3%A9gverem+u.+1.&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.59616,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=9400+Sopron,+J%C3%A9gverem,+Magyarorsz%C3%A1g&amp;t=m&amp;ll=47.68833,16.593819&amp;spn=0.019009,0.050554&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
                     </div>
                 </div>
 
