@@ -65,7 +65,7 @@
 				</div>
 				<img id="cropper" src="/<?= $product->pic_path ?>" alt="" />
 				<input type="hidden" name="picture_filename" value="<?= $product->pic_path ?>" />
-				<? $crop = unserialize($product->pic_data); ?>
+				<?php $crop = unserialize($product->pic_data); ?>
 				<input type="hidden" name="crop_x" value="<?= $crop[0] ?>" />
 				<input type="hidden" name="crop_y" value="<?= $crop[1] ?>" />
 				<input type="hidden" name="crop_w" value="<?= $crop[2] ?>" />
@@ -81,11 +81,11 @@
 		<script type="text/javascript" src="/js/loadjcrop.js?v=20210112"></script>
 		<script type="text/javascript">
 			$(window).load(function() {
-                <? if($product->pic_path != ""): ?>
+                <?php if($product->pic_path != ""): ?>
 				LoadJCrop(189 / 104, '<?= implode("','", $crop) ?>');
-                <? else: ?>
+                <?php else: ?>
                 LoadJCrop(189 / 104);
-                <? endif; ?>
+                <?php endif; ?>
 			});
 		</script>
 

@@ -28,7 +28,7 @@
 	<link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
 	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="/js/voov.slideshow.js" type="text/javascript"></script>
     <script src="/js/jegverem.js" type="text/javascript"></script>
 	
@@ -44,7 +44,7 @@
 		})();
 	</script>
 </head>
-<? $__pageBodyClass = "page-a_panziorol"; if (isset($body_class) && trim($body_class) != "") { $__pageBodyClass = trim($body_class . " " . $__pageBodyClass); } ?>
+<?php $__pageBodyClass = "page-a_panziorol"; if (isset($body_class) && trim($body_class) != "") { $__pageBodyClass = trim($body_class . " " . $__pageBodyClass); } ?>
 <body class="<?= $__pageBodyClass ?>">
 
 <!-- container -->
@@ -70,8 +70,8 @@
                 </div>
 
                 <div class="covers">
-                    <? $i=1; foreach($covers as $cover): ?>
-                    <? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
+                    <?php $i=1; foreach($covers as $cover): ?>
+                    <?php $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
                     <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
                         <div class="navigation">
                             <h4><?= nl2br($cover->description) ?></h4>
@@ -82,7 +82,7 @@
                             <a href="" class="next SlideShowControlNext">Következő</a>
                         </div>
                     </div>
-                    <? $i++; endforeach; ?>
+                    <?php $i++; endforeach; ?>
                 </div>
 
                 <div class="panel-box">

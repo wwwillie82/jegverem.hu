@@ -5,9 +5,9 @@
 		<div class="item">
 			<label><span>*</span> <?= Localization::_("Oldal") ?></label>
 			<select name="columns_id">
-				<? foreach($columns as $column): ?>
+				<?php foreach($columns as $column): ?>
 				<option value="<?= $column->id ?>"><?= $column->name ?></option>
-				<? endforeach; ?>
+				<?php endforeach; ?>
 			</select>
 			<br class="clearfix"/>
 		</div>

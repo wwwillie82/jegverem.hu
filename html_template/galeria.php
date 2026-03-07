@@ -28,7 +28,7 @@
 	<link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
 	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="/js/voov.slideshow.js" type="text/javascript"></script>
     <script src="/js/jegverem.js" type="text/javascript"></script>
 	
@@ -55,8 +55,8 @@
             <div class="content">
                 <h2><span>Galéria</span></h2>
 
-				<? foreach($albums as $album): ?>
-                <div class="album <? if($albums->IsOdd()): ?>right<? endif; ?>">
+				<?php foreach($albums as $album): ?>
+                <div class="album <?php if($albums->IsOdd()): ?>right<?php endif; ?>">
                     <div class="img">
                         <a href="<?= URI::MakeURL("galeria/kepek", array("permalink" => $album->permalink), true) ?>"><img src="/<?= $this->ImageCache($album->pic_path)->Crop($album->pic_data)->ResizeImage(287,287) ?>" alt="<?= $album->title ?>" /></a>
                     </div>
@@ -64,12 +64,12 @@
                     <h4><?= $album->title ?></h4>
                 </div>
 				
-				<? if($albums->IsOdd() && !$albums->IsLast()): ?>
+				<?php if($albums->IsOdd() && !$albums->IsLast()): ?>
 				<br class="clearfix" />
                 <div class="line"></div>
-				<? endif; ?>
+				<?php endif; ?>
 				
-				<? endforeach; ?>
+				<?php endforeach; ?>
 
                 <br class="clearfix" />
                 <div class="line_big"></div>

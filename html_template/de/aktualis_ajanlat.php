@@ -28,7 +28,7 @@
 	<link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
 	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="/js/voov.slideshow.js" type="text/javascript"></script>
     <script src="/js/jegverem.js" type="text/javascript"></script>
 	
@@ -59,15 +59,15 @@
             <div class="content">
 				<h3><?= $products->cat_title ?></h3>
 				
-				<? foreach($products as $product): ?>
+				<?php foreach($products as $product): ?>
 				<div class="item">
 					<div class="txt_full">
 						<h4><?= $product->name ?></h4>
 						<p><?= $product->description ?></p>
-						<? if($product->price > 0): ?><div class="price"><span><?= $product->attribute ?></span> <?= $product->price ?>,-</div><? endif; ?>
+						<?php if($product->price > 0): ?><div class="price"><span><?= $product->attribute ?></span> <?= $product->price ?>,-</div><?php endif; ?>
 					</div>
 				</div>
-				<? endforeach; ?>
+				<?php endforeach; ?>
 			</div>
 
 			<div class="bottom"></div>

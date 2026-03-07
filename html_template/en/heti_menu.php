@@ -28,7 +28,7 @@
 	<link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
 	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="/js/voov.slideshow.js" type="text/javascript"></script>
     <script src="/js/jegverem.js" type="text/javascript"></script>
 	
@@ -56,10 +56,10 @@
                 <h2 class="nobg"><span>Weekly menu</span></h2>
 				<div class="icon_price"></div>
 
-				<? if($menus->length() > 0): ?>
+				<?php if($menus->length() > 0): ?>
 					<h3>Ezen a héten (<?= $menus->week ?>. hét)</h3>
 
-					<? 
+					<?php 
 					$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 					foreach($menus as $menu):
 					?>
@@ -67,13 +67,13 @@
 					<div class="food">
 						<?= nl2br($menu->offer_text) ?>
 					</div>
-					<? endforeach; ?>
-				<? endif; ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
 
-				<? if($next_menus->length() > 0): ?>
+				<?php if($next_menus->length() > 0): ?>
 					<h3>Következő héten (<?= $next_menus->week ?>. hét)</h3>
 
-					<? 
+					<?php 
 					$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 					foreach($next_menus as $menu):
 					?>
@@ -81,8 +81,8 @@
 					<div class="food">
 						<?= nl2br($menu->offer_text) ?>
 					</div>
-					<? endforeach; ?>
-				<? endif; ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
 
             </div>
             <div class="bottom"></div>

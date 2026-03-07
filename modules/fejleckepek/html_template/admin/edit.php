@@ -5,9 +5,9 @@
 		<div class="item">
 			<label><span>*</span> <?= Localization::_("Oldal") ?></label>
 			<select name="columns_id">
-				<? foreach($columns as $column): ?>
-				<option value="<?= $column->id ?>" <? if($column->id == $cover->columns_id): ?>selected="selected"<? endif; ?>><?= $column->name ?></option>
-				<? endforeach; ?>
+				<?php foreach($columns as $column): ?>
+				<option value="<?= $column->id ?>" <?php if($column->id == $cover->columns_id): ?>selected="selected"<?php endif; ?>><?= $column->name ?></option>
+				<?php endforeach; ?>
 			</select>
 			<br class="clearfix"/>
 		</div>
@@ -35,7 +35,7 @@
 				</div>
 				<img id="cropper" src="/<?= $cover->pic_path ?>" alt="" />
 				<input type="hidden" name="picture_filename" value="<?= $cover->pic_path ?>" />
-				<? $crop = unserialize($cover->pic_data); ?>
+				<?php $crop = unserialize($cover->pic_data); ?>
 				<input type="hidden" name="crop_x" value="<?= $crop[0] ?>" />
 				<input type="hidden" name="crop_y" value="<?= $crop[1] ?>" />
 				<input type="hidden" name="crop_w" value="<?= $crop[2] ?>" />

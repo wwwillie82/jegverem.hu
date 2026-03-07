@@ -7,7 +7,7 @@
 		       onblur="if(this.value==''){this.value='<?= Localization::_("Keresés...") ?>'}" class="input"/>
 		<input type="submit" name="submit" value="" class="btn_search"/>
 		<br class="clearfix"/>
-		<? Form::EndForm() ?>
+		<?php Form::EndForm() ?>
 	</div>
 	<br class="clearfix"/>
 </div>
@@ -25,14 +25,14 @@
 </thead>
 
 <tbody>
-<? foreach($menus as $menu): ?>
-<tr <? if($menus->IsOdd()): ?>class="dark"<? endif; ?> >
+<?php foreach($menus as $menu): ?>
+<tr <?php if($menus->IsOdd()): ?>class="dark"<?php endif; ?> >
 	<td align="center" valign="middle"><?= $menu->id ?></td>
 	<td align="left" valign="middle"><?= $menu->week ?></td>
 	<td align="center" valign="middle"><a href="<?= ModuleHelper::GetFunctionLink("admin/edit_menu", array("week" => $menu->week, "companies_id" => $menu->companies_id)) ?>"><img src="/images_admin/icons/icon_edit.png" alt="Menük"/></a></td>
 	<td align="center" valign="middle"><a href="<?= ModuleHelper::GetFunctionLink("admin/menu/delete", array("week" => $menu->week, "companies_id" => $menu->companies_id)) ?>"><img src="/images_admin/icons/icon_delete.png" alt="Szerkeszt"/></a></td>
 </tr>
-<? endforeach; ?>
+<?php endforeach; ?>
 </tbody>
 </table>
 
@@ -40,9 +40,9 @@
 	<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => max(1, URI::GetNamedParam("page", 1)-1))) ?>" class="btn_prev">Előző oldal</a>
 
 	<div class="pager">
-		<? for($i=1; $i<=$num_pages; $i++): ?>
-		<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => $i)) ?>" <?if($i==URI::GetNamedParam("page", 1)): ?> class="on" <? endif; ?>><?= $i ?></a>
-		<? endfor; ?>
+		<?php for($i=1; $i<=$num_pages; $i++): ?>
+		<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => $i)) ?>" <?php if($i==URI::GetNamedParam("page", 1)): ?> class="on" <?php endif; ?>><?= $i ?></a>
+		<?php endfor; ?>
 	</div>
 
 	<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => min($num_pages, URI::GetNamedParam("page", 1)+1))) ?>" class="btn_next">Következő oldal</a>

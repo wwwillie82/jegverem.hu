@@ -7,9 +7,9 @@
 
 			<div class="checkboxes">
 				<select name="year">
-					<? for($i=date("Y");$i<=date("Y")+1;$i++): ?>
+					<?php for($i=date("Y");$i<=date("Y")+1;$i++): ?>
 						<?= HtmlBuilder::HtmlBuilder("option")->value($i, date("Y"))->html($i) ?>
-					<? endfor; ?>
+					<?php endfor; ?>
 				</select>
 			</div>
 			<br class="clearfix"/>
@@ -20,9 +20,9 @@
 
 			<div class="checkboxes">
 				<select name="week">
-					<? for($i=1;$i<=53;$i++): ?>
+					<?php for($i=1;$i<=53;$i++): ?>
 						<?= HtmlBuilder::HtmlBuilder("option")->value($i, date("W"))->html($i) ?>
-					<? endfor; ?>
+					<?php endfor; ?>
 				</select>
 			</div>
 			<br class="clearfix"/>
