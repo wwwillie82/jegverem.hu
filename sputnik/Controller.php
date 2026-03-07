@@ -76,7 +76,11 @@ abstract class Controller {
 	}
 
 	public function OutputBuffer() {
-		echo $this->output_contents;
+		$output = $this->output_contents;
+		if(URI::ShouldRewriteOutputLinks($output)) {
+			$output = URI::RewriteOutputLinks($output);
+		}
+		echo $output;
 	}
 
 	public function __get($var) {
