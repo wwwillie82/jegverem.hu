@@ -127,9 +127,9 @@
 		<script src="/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 		<!-- images -->
 		<div class="images">
-			<? foreach($pictures as $picture): ?>
+			<?php foreach($pictures as $picture): ?>
 			<!-- box -->
-			<div class="box <? if($pictures->IsNth(4)): ?>no<? endif; ?>">
+			<div class="box <?php if($pictures->IsNth(4)): ?>no<?php endif; ?>">
 				<div class="pic">
 					<table cellpadding="0" cellspacing="0">
 						<tr>
@@ -139,16 +139,16 @@
 						</tr>
 					</table>
 					<div class="zoom"></div>
-					<? if($picture->embed_code != ""): ?>
+					<?php if($picture->embed_code != ""): ?>
 						<div id="embed_preview" style="display:none;"><?= $picture->embed_code ?></div>
 						<a href="#embed_preview" rel="prettyPhoto[gallery]" title="Ez a kép címe">Zoom</a>
-					<? else: ?>
+					<?php else: ?>
 						<a href="/<?=  $this->ImageCache($picture->pic_path)->Crop($picture->pic_data) ?>" rel="prettyPhoto[gallery]" title="Ez a kép címe">Zoom</a>
-					<? endif ?>
+					<?php endif ?>
 				</div>
 
 				<div class="txt">
-					<?= $picture->title ?> <? if($picture->embed_code != ""): ?> VIDEÓ <? endif; ?>
+					<?= $picture->title ?> <?php if($picture->embed_code != ""): ?> VIDEÓ <?php endif; ?>
 					<span><?= $picture->entry_date ?></span>
 					<span>Sorszám: <b><?= $picture->sort ?></b></span>
 				</div>
@@ -169,7 +169,7 @@
 				</div>
 			</div>
 			<!-- box -->
-			<? endforeach; ?>
+			<?php endforeach; ?>
 			<br class="clearfix" />
 		</div>
 		<!-- images -->

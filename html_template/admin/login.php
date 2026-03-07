@@ -32,7 +32,7 @@
     <link href="/css/ie6_fix.css" rel="stylesheet" type="text/css" media="screen"/>
     <![endif]-->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="/js/cufon-yui.js" type="text/javascript"></script>
     <script src="/js/breuer-headline.js" type="text/javascript"></script>
     <script src="/js/breuer-text.js" type="text/javascript"></script>

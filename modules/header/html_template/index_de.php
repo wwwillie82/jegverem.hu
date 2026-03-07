@@ -128,13 +128,13 @@
 <div id="main-nav">
     <div class="holder site-width">
         <div id="menu">
-            <span class="nav-item <? if($path == "/de/index" || $path == "/de"): ?>active<? endif; ?>"><a href="/de/index">Startseite</a></span>
-            <span class="nav-item <? if($path == "/de/heti_menu"): ?>active<? endif; ?>"><a href="/de/heti_menu">Wochenmenü</a></span>
-            <span class="nav-item <? if($path == "/de/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/de/ettermunk_kinalata">Angebote unseres Restaurants</a></span>
-            <span class="nav-item <? if($path == "/de/galeria"): ?>active<? endif; ?>"><a href="/de/galeria">Galerie</a></span>
-            <span class="nav-item <? if($path == "/de/a_panziorol"): ?>active<? endif; ?>"><a href="/de/a_panziorol">Über die Pension</a></span>
-            <span class="nav-item <? if($path == "/de/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/de/a_jegverem_tortenete">Geschichte</a></span>
-            <span class="nav-item no <? if($path == "/de/kapcsolat"): ?>active<? endif; ?>"><a href="/de/kapcsolat">Kontakte</a></span>
+            <span class="nav-item <?php if($path == "/de/index" || $path == "/de"): ?>active<?php endif; ?>"><a href="/de/index">Startseite</a></span>
+            <span class="nav-item <?php if($path == "/de/heti_menu"): ?>active<?php endif; ?>"><a href="/de/heti_menu">Wochenmenü</a></span>
+            <span class="nav-item <?php if($path == "/de/ettermunk_kinalata"): ?>active<?php endif; ?>"><a href="/de/ettermunk_kinalata">Angebote unseres Restaurants</a></span>
+            <span class="nav-item <?php if($path == "/de/galeria"): ?>active<?php endif; ?>"><a href="/de/galeria">Galerie</a></span>
+            <span class="nav-item <?php if($path == "/de/a_panziorol"): ?>active<?php endif; ?>"><a href="/de/a_panziorol">Über die Pension</a></span>
+            <span class="nav-item <?php if($path == "/de/a_jegverem_tortenete"): ?>active<?php endif; ?>"><a href="/de/a_jegverem_tortenete">Geschichte</a></span>
+            <span class="nav-item no <?php if($path == "/de/kapcsolat"): ?>active<?php endif; ?>"><a href="/de/kapcsolat">Kontakte</a></span>
         </div>
     </div>
 </div>

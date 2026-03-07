@@ -139,14 +139,14 @@
 <div id="main-nav">
     <div class="holder site-width">
         <div id="menu">
-            <span class="nav-item <? if($path == "/index" || $path == "/"): ?>active<? endif; ?>"><a href="/index">Kezdőlap</a></span>
-            <span class="nav-item <? if($path == "/heti_menu"): ?>active<? endif; ?>"><a href="/heti_menu">Heti menü</a></span>
-            <span class="nav-item <? if($path == "/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/ettermunk_kinalata">Éttermünk kínálata</a></span>
-            <span class="nav-item <? if($path == "/galeria"): ?>active<? endif; ?>"><a href="/galeria">Galéria</a></span>
-            <span class="nav-item <? if($path == "/a_panziorol"): ?>active<? endif; ?>"><a href="/a_panziorol">A panzióról</a></span>
-            <span class="nav-item <? if($path == "/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/a_jegverem_tortenete">Jégverem története</a></span>
-            <span class="nav-item <? if($path == "/projektek"): ?>active<? endif; ?>"><a href="/projektek">Projektek</a></span>
-            <span class="nav-item no <? if($path == "/kapcsolat"): ?>active<? endif; ?>"><a href="/kapcsolat">Kapcsolat</a></span>
+            <span class="nav-item <?php if($path == "/index" || $path == "/"): ?>active<?php endif; ?>"><a href="/index">Kezdőlap</a></span>
+            <span class="nav-item <?php if($path == "/heti_menu"): ?>active<?php endif; ?>"><a href="/heti_menu">Heti menü</a></span>
+            <span class="nav-item <?php if($path == "/ettermunk_kinalata"): ?>active<?php endif; ?>"><a href="/ettermunk_kinalata">Éttermünk kínálata</a></span>
+            <span class="nav-item <?php if($path == "/galeria"): ?>active<?php endif; ?>"><a href="/galeria">Galéria</a></span>
+            <span class="nav-item <?php if($path == "/a_panziorol"): ?>active<?php endif; ?>"><a href="/a_panziorol">A panzióról</a></span>
+            <span class="nav-item <?php if($path == "/a_jegverem_tortenete"): ?>active<?php endif; ?>"><a href="/a_jegverem_tortenete">Jégverem története</a></span>
+            <span class="nav-item <?php if($path == "/projektek"): ?>active<?php endif; ?>"><a href="/projektek">Projektek</a></span>
+            <span class="nav-item no <?php if($path == "/kapcsolat"): ?>active<?php endif; ?>"><a href="/kapcsolat">Kapcsolat</a></span>
         </div>
     </div>
 </div>

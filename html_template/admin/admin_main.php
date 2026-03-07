@@ -34,7 +34,7 @@
     <link href="/css/ie6_fix.css" rel="stylesheet" type="text/css" media="screen"/>
     <![endif]-->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
 
 	<script src="/ckeditor/ckeditor.js" type="text/javascript"></script>
@@ -104,9 +104,9 @@
 					<?= Localization::_("Szerkesztett nyelv") ?>
 					<div class="select">
 						<select onchange="GoToURL(this, '/admin/changelanguage/');">
-							<? foreach($lang_select as $lang): ?>
-							<option value="<?= $lang->id ?>" <? if($lang->selected == true): ?> selected="selected" <? endif; ?>><?= $lang->name ?></option>
-							<? endforeach; ?>
+							<?php foreach($lang_select as $lang): ?>
+							<option value="<?= $lang->id ?>" <?php if($lang->selected == true): ?> selected="selected" <?php endif; ?>><?= $lang->name ?></option>
+							<?php endforeach; ?>
 						</select>
 					</div>
 				</div>
@@ -118,16 +118,16 @@
 				<div class="sidebar">
 					<div class="menu">
 						<ul>
-							<? foreach($root_menu->GetMenuItems() as $MenuItem): ?>
-								<? if($MenuItem->IsActive()): ?>
+							<?php foreach($root_menu->GetMenuItems() as $MenuItem): ?>
+								<?php if($MenuItem->IsActive()): ?>
 									<li><a href="<?= $MenuItem->GetLink() ?>" class="on"><?= $MenuItem->GetName() ?></a>
 									
-									<? if(count($MenuItem->GetMenuItems()) > 0):
+									<?php if(count($MenuItem->GetMenuItems()) > 0):
 											$submenuCounter=0;
 											?>
 										<ul>
-											<? foreach($MenuItem->GetMenuItems() as $SubMenuItem): ?>
-											<?
+											<?php foreach($MenuItem->GetMenuItems() as $SubMenuItem): ?>
+											<?php
 
 												$class =  array();
 												if($SubMenuItem->IsActive()) $class[] = "on";
@@ -136,14 +136,14 @@
 											?>
 
 											<li><a href="<?= $SubMenuItem->GetLink() ?>" class="<?= implode(" ", $class) ?>"><?= $SubMenuItem->GetName() ?></a></li>
-											<? endforeach; ?>
+											<?php endforeach; ?>
 										</ul>
-									<? endif; ?>
+									<?php endif; ?>
 									</li>
-								<? else: ?>
+								<?php else: ?>
 									<li><a href="<?= $MenuItem->GetLink() ?>"><?= $MenuItem->GetName() ?></a></li>
-								<? endif; ?>
-							<? endforeach; ?>
+								<?php endif; ?>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 
@@ -165,9 +165,9 @@
 
 				<!-- main -->
 				<div class="main">
-					<? if(Sessions::GetInstance()->GetFlashdata("acl_error")): ?>
+					<?php if(Sessions::GetInstance()->GetFlashdata("acl_error")): ?>
 					<div class="status warning"><?= Sessions::GetInstance()->GetFlashdata("acl_error") ?></div>
-					<? endif; ?>
+					<?php endif; ?>
 
 					<?= $load ?>
 				</div>

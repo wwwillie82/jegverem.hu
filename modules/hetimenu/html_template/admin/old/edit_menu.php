@@ -7,9 +7,9 @@
 
 			<div class="checkboxes">
 				<!--<select name="year">
-					<? for($i=date("Y");$i<=date("Y")+1;$i++): ?>
+					<?php for($i=date("Y");$i<=date("Y")+1;$i++): ?>
 						<?= HtmlBuilder::HtmlBuilder("option")->value($i, $menus->year)->html($i) ?>
-					<? endfor; ?>
+					<?php endfor; ?>
 			</select>-->
 				<?= $menus->year ?>
 				<input type="hidden" name="year" value="<?= $menus->year ?>" />
@@ -22,9 +22,9 @@
 
 			<div class="checkboxes">
 				<!--<select name="week">
-					<? for($i=1;$i<=42;$i++): ?>
+					<?php for($i=1;$i<=42;$i++): ?>
 						<?= HtmlBuilder::HtmlBuilder("option")->value($i, $menus->week)->html($i) ?>
-					<? endfor; ?>
+					<?php endfor; ?>
 			</select>-->
 			<?= $menus->week ?>
 			<input type="hidden" name="week" value="<?= $menus->week ?>" />
@@ -32,25 +32,25 @@
 			<br class="clearfix"/>
 		</div>
 		
-		<? $days = array("Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"); ?>
+		<?php $days = array("Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"); ?>
 		
-		<? $i=1; foreach($menus as $menu): ?>
+		<?php $i=1; foreach($menus as $menu): ?>
 		<div class="item">
 			<label><?= $days[$menu->day] ?></label>
 			<textarea name="days[<?= $menu->day ?>]" class="textfield_small"><?= $menu->offer_text ?></textarea>
 			<br class="clearfix"/>
 		</div>
-		<? $i++; endforeach; ?>
+		<?php $i++; endforeach; ?>
 		
-		<? if($i < 7): ?>
-		<? for($i;$i<=7;$i++): ?>
+		<?php if($i < 7): ?>
+		<?php for($i;$i<=7;$i++): ?>
 		<div class="item">
 			<label><?= $days[$i-1] ?></label>
 			<textarea name="days[<?= $i-1 ?>]" class="textfield_small"></textarea>
 			<br class="clearfix"/>
 		</div>
-		<? endfor; ?>
-		<? endif; ?>
+		<?php endfor; ?>
+		<?php endif; ?>
 
 		<div class="item">
 			<label><span class="required">* <?= Localization::_("Kötelező") ?></span></label>

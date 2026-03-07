@@ -28,7 +28,7 @@
 	<link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
 	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/js/jquery.tinyscrollbar.min.js"></script>
     <script src="/js/voov.slideshow.js" type="text/javascript"></script>
     <script src="/js/jegverem.js" type="text/javascript"></script>
@@ -58,8 +58,8 @@
     <div id="middle">
         <div class="box_two">
             <div class="covers">
-				<? $i=1; foreach($covers as $cover): ?>
-				<? $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
+				<?php $i=1; foreach($covers as $cover): ?>
+				<?php $url = $this->ImageCache($cover->pic_path)->Crop($cover->pic_data)->ResizeImage(631,631); ?>
                 <div class="item SlideShow" style="background-image: url(http://<?= $_SERVER["HTTP_HOST"] ?>/<?= $url ?>);">
                     <div class="navigation">
                         <h2><?= nl2br($cover->description) ?></h2>
@@ -70,7 +70,7 @@
 						<button type="button" class="next SlideShowControlNext" aria-label="Nächstes Bild">Weiter</button>
                     </div>
                 </div>
-				<? $i++; endforeach; ?>
+				<?php $i++; endforeach; ?>
             </div>
 
             <div class="offers">
@@ -78,9 +78,9 @@
 					<span><a href="/de/heti_menu" class="on">Wochenmenü</a></span>
 					<span><a href="/de/ettermunk_kinalata">Speisekarte</a></span>
 					<span><a href="/de/itallap">Getränke</a></span>
-					<? if($category->length() > 0): ?>
+					<?php if($category->length() > 0): ?>
 					<span><a href="/de/aktualis_ajanlat" class="no">Aktuelle Angebote</a></span>
-					<? endif; ?>
+					<?php endif; ?>
 				</div>
 			
 				<div class="holder" id="block_1">
@@ -88,10 +88,10 @@
 						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
 						<div class="viewport">
 							 <div class="overview">
-								<? if($menus->length() > 0): ?>
+								<?php if($menus->length() > 0): ?>
 									<h3 style="line-height: 22px;">Diese Woche (<?= $menus->week ?>. Woche)<br />Verpackung: 250 HUF/Stück </h3>
 
-									<? 
+									<?php 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($menus as $menu):
 									?>
@@ -99,13 +99,13 @@
 									<div class="food">
 										<?= nl2br($menu->offer_text) ?>
 									</div>
-									<? endforeach; ?>
-								<? endif; ?>
+									<?php endforeach; ?>
+								<?php endif; ?>
 
-								<? if($next_menus->length() > 0): ?>
+								<?php if($next_menus->length() > 0): ?>
 									<h3 style="line-height: 22px;">Nachste Woche (<?= $next_menus->week ?>. Woche)</h3>
 
-									<? 
+									<?php 
 									$days = array("Extra menü", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat");
 									foreach($next_menus as $menu):
 									?>
@@ -113,8 +113,8 @@
 									<div class="food">
 										<?= nl2br($menu->offer_text) ?>
 									</div>
-									<? endforeach; ?>
-								<? endif; ?>
+									<?php endforeach; ?>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>

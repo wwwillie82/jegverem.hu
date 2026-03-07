@@ -14,11 +14,11 @@
 	<link href="/css/main.css?v=20260221" rel="stylesheet" type="text/css" media="screen" />
 	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
     <script src="/js/voov.slideshow.js" type="text/javascript"></script>
     <script src="/js/jegverem.js" type="text/javascript"></script>
 </head>
-<? $__pageBodyClass = "page-private-events"; if (isset($body_class) && trim($body_class) != "") { $__pageBodyClass = trim($body_class . " " . $__pageBodyClass); } ?>
+<?php $__pageBodyClass = "page-private-events"; if (isset($body_class) && trim($body_class) != "") { $__pageBodyClass = trim($body_class . " " . $__pageBodyClass); } ?>
 <body class="<?= $__pageBodyClass ?>">
 
 <div id="container">

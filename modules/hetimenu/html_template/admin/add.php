@@ -9,9 +9,9 @@
 
 			<div class="checkboxes">
 				<select name="columns_id">
-					<? foreach($columns as $column): ?>
+					<?php foreach($columns as $column): ?>
 						<?= HtmlBuilder::HtmlBuilder("option")->value($column->id, -1)->html($column->name) ?>
-					<? endforeach; ?>
+					<?php endforeach; ?>
 				</select>
 			</div>
 			<br class="clearfix"/>

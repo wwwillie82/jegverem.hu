@@ -54,9 +54,9 @@
 		<div class="tabs">
 			<span><a href="/de/ettermunk_kinalata" class="on">Speisekarte</a></span>
 			<span class="drinks-tab"><a href="/de/itallap">Getränke</a></span>
-			<? if($aktualis->length() > 0): ?>
+			<?php if($aktualis->length() > 0): ?>
 			<span><a href="/de/aktualis_ajanlat">Aktuelle Angebot</a></span>
-			<? endif; ?>
+			<?php endif; ?>
 		</div>
 	
         <div class="main_full">
@@ -64,46 +64,46 @@
 				<div class="desktop-menu">
 					<h3><?= $products->cat_title ?></h3>
 					
-					<? foreach($products as $product): ?>
+					<?php foreach($products as $product): ?>
 					<div class="item">
 						<div class="img">
-							<? if($product->pic_path != ""): ?>
+							<?php if($product->pic_path != ""): ?>
 							<img src="/<?= $this->ImageCache($product->pic_path)->Crop($product->pic_data)->ResizeImage(189,189) ?>" alt="<?= $product->name ?>" />
-							<? endif; ?>
+							<?php endif; ?>
 						</div>
 						
 						<div class="txt">
 							<h4><?= $product->name ?></h4>
 							<p><?= $product->description ?></p>
-							<div class="price"><?= $product->price ?>,- <? if($product->price_small > 0): ?>/ <?= $product->price_small ?>,- <? endif; ?></div>
+							<div class="price"><?= $product->price ?>,- <?php if($product->price_small > 0): ?>/ <?= $product->price_small ?>,- <?php endif; ?></div>
 						</div>
 						<br class="clearfix" />
 					</div>
-					<? endforeach; ?>
+					<?php endforeach; ?>
 				</div>
 
 				<div class="menu-accordion" data-menu-accordion="1">
-					<? foreach($categories as $cat): ?>
-					<div class="menu-accordion__item <? if($cat->id == $products->categories_id): ?>open<? endif; ?>">
-						<button type="button" class="menu-accordion__toggle" aria-expanded="<? if($cat->id == $products->categories_id): ?>true<? else: ?>false<? endif; ?>"><?= $cat->title ?></button>
+					<?php foreach($categories as $cat): ?>
+					<div class="menu-accordion__item <?php if($cat->id == $products->categories_id): ?>open<?php endif; ?>">
+						<button type="button" class="menu-accordion__toggle" aria-expanded="<?php if($cat->id == $products->categories_id): ?>true<?php else: ?>false<?php endif; ?>"><?= $cat->title ?></button>
 						<div class="menu-accordion__panel">
-							<? $items = isset($productsByCat[$cat->id]) ? $productsByCat[$cat->id] : array(); ?>
-							<? foreach($items as $menu_product): ?>
+							<?php $items = isset($productsByCat[$cat->id]) ? $productsByCat[$cat->id] : array(); ?>
+							<?php foreach($items as $menu_product): ?>
 							<div class="menu-mitem">
 								<div class="menu-mitem__row">
 									<span class="menu-mitem__name"><?= $menu_product->name ?></span>
-									<span class="menu-mitem__price"><?= $menu_product->price ?>,-<? if($menu_product->price_small > 0): ?> / <?= $menu_product->price_small ?>,-<? endif; ?></span>
+									<span class="menu-mitem__price"><?= $menu_product->price ?>,-<?php if($menu_product->price_small > 0): ?> / <?= $menu_product->price_small ?>,-<?php endif; ?></span>
 								</div>
-								<? if($menu_product->pic_path != ""): ?>
+								<?php if($menu_product->pic_path != ""): ?>
 								<div class="menu-mitem__img">
 									<img src="/<?= $this->ImageCache($menu_product->pic_path)->Crop($menu_product->pic_data)->ResizeImage(640,640) ?>" alt="<?= $menu_product->name ?>" />
 								</div>
-								<? endif; ?>
+								<?php endif; ?>
 							</div>
-							<? endforeach; ?>
+							<?php endforeach; ?>
 						</div>
 					</div>
-					<? endforeach; ?>
+					<?php endforeach; ?>
 				</div>
 			</div>
 			
@@ -112,9 +112,9 @@
 
         <div class="sidebar_full">
 			<div class="navigation">
-				<? foreach($categories as $cat): ?>
-				<a href="<?= URI::MakeURL("de/ettermunk_kinalata", array("filter" => $cat->permalink), true) ?>" <? if($cat->id == $products->categories_id): ?>class="on"<? endif; ?>><?= $cat->title ?></a>
-				<? endforeach; ?>
+				<?php foreach($categories as $cat): ?>
+				<a href="<?= URI::MakeURL("de/ettermunk_kinalata", array("filter" => $cat->permalink), true) ?>" <?php if($cat->id == $products->categories_id): ?>class="on"<?php endif; ?>><?= $cat->title ?></a>
+				<?php endforeach; ?>
 			</div>
 			<div class="fix"></div>
 			

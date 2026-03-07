@@ -8,7 +8,7 @@
 		       onblur="if(this.value==''){this.value='<?= Localization::_("Keresés...") ?>'}" class="input"/>
 		<input type="submit" name="submit" value="" class="btn_search"/>
 		<br class="clearfix"/>
-		<? Form::EndForm() ?>
+		<?php Form::EndForm() ?>
 	</div>
 	<br class="clearfix"/>
 </div>
@@ -29,15 +29,15 @@
 </thead>
 
 <tbody>
-<? foreach($galeriak as $galeria): ?>
-<tr <? if($galeriak->IsOdd()): ?>class="dark"<? endif; ?> >
+<?php foreach($galeriak as $galeria): ?>
+<tr <?php if($galeriak->IsOdd()): ?>class="dark"<?php endif; ?> >
 
 	<td align="center" valign="middle"><?= $galeria->id ?></td>
 	<td align="center" valign="middle">
 		<div class="album_image">
-			<? if($galeria->pic_path != ""): ?>
+			<?php if($galeria->pic_path != ""): ?>
 			<img src="/<?= $this->ImageCache($galeria->pic_path)->Crop($galeria->pic_data)->ResizeImage(100, 100)->CropCenter(56) ?>" alt="" />
-			<? endif; ?>
+			<?php endif; ?>
 		</div>
 	</td>
 	<td align="center" valign="middle" width="65"><?= $galeria->entry_date ?></td>
@@ -47,17 +47,17 @@
 		(<?= $galeria->count ?>)
 	</td>
 	<td align="center" valign="middle">
-		<? if($galeria->active == '0'): ?>
+		<?php if($galeria->active == '0'): ?>
 			<a href="<?= ModuleHelper::GetFunctionLink("admin/index/change_active", array("id" => $galeria->id, "active" => 1)) ?>"><img src="/images_admin/buttons/state_off.gif" alt="" /></a>
-		<? else: ?>
+		<?php else: ?>
 			<a href="<?= ModuleHelper::GetFunctionLink("admin/index/change_active", array("id" => $galeria->id, "active" => 0)) ?>"><img src="/images_admin/buttons/state_on.gif" alt="" /></a>
-		<? endif; ?>
+		<?php endif; ?>
 	</td>
 
 	<td align="center" valign="middle"><a href="<?= ModuleHelper::GetFunctionLink("admin/edit", array("id" => $galeria->id)) ?>"><img src="/images_admin/icons/icon_edit.png" alt="Szerkeszt"/></a></td>
 	<td align="center" valign="middle" class="last"><a onclick="return DeleteRow();" href="<?= ModuleHelper::GetFunctionLink("admin/index/delete", array("id" => $galeria->id)) ?>"><img src="/images_admin/icons/icon_delete.png" alt="Szerkeszt"/></a></td>
 </tr>
-<? endforeach; ?>
+<?php endforeach; ?>
 </tbody>
 </table>
 
@@ -65,9 +65,9 @@
 	<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => max(1, URI::GetNamedParam("page", 1)-1))) ?>" class="btn_prev">Előző oldal</a>
 
 	<div class="pager">
-		<? for($i=1; $i<=$num_pages; $i++): ?>
-		<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => $i)) ?>" <?if($i==URI::GetNamedParam("page", 1)): ?> class="on" <? endif; ?>><?= $i ?></a>
-		<? endfor; ?>
+		<?php for($i=1; $i<=$num_pages; $i++): ?>
+		<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => $i)) ?>" <?php if($i==URI::GetNamedParam("page", 1)): ?> class="on" <?php endif; ?>><?= $i ?></a>
+		<?php endfor; ?>
 	</div>
 
 	<a href="<?= ModuleHelper::GetFunctionLink("admin/index", array("page" => min($num_pages, URI::GetNamedParam("page", 1)+1))) ?>" class="btn_next">Következő oldal</a>
