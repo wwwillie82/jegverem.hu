@@ -143,7 +143,9 @@ class Form {
     }
 
 	public static function OnSubmit($name, $func) {
-		if($_POST[":input_name"] != $name || $_POST[":input_token"] != Sessions::GetInstance()->input_token) {
+		$input_name = isset($_POST[":input_name"]) ? $_POST[":input_name"] : null;
+		$input_token = isset($_POST[":input_token"]) ? $_POST[":input_token"] : null;
+		if($input_name != $name || $input_token != Sessions::GetInstance()->input_token) {
 			return;
 		}
 

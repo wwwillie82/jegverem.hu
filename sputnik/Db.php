@@ -186,8 +186,8 @@ class Db {
 			$this->is_prepared = false;
 		}
 		if (count($tokens) > 0) {
+			$insert = false;
 			if (!in_array(trim($tokens[0]), array('update', 'delete', 'insert', 'replace'))) {
-				//$insert = true;
 				$result = new DbResult($result, $this->conn, $insert, $uselimit);
 				if($config["db_is_cached"] && $query_can_cache) {
 					// $cache is already defined

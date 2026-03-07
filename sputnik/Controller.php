@@ -43,7 +43,7 @@ spl_autoload_register(function ($className) {
 abstract class Controller {
 
 	public $view = null;
-	//public $db = null;
+	public $db = null;
 	public $session = null;
 	public $uri_helper;
     public $form = null;
@@ -196,7 +196,11 @@ abstract class Controller {
 
         if(method_exists($this, "_authenticate")) {
             // authentikáció szükséges
-            $ret = $this->_authenticate($_POST[$config["form_username"]], $_POST[$config["form_password"]], $action);
+            $username_key = isset($config["form_username"]) ? $config["form_username"] : "";
+            $password_key = isset($config["form_password"]) ? $config["form_password"] : "";
+            $username = ($username_key !== "" && isset($_POST[$username_key])) ? $_POST[$username_key] : null;
+            $password = ($password_key !== "" && isset($_POST[$password_key])) ? $_POST[$password_key] : null;
+            $ret = $this->_authenticate($username, $password, $action);
             if($ret == false) {
                 // addig ne engedjük tovább, amíg nem jelentkezett be
                 return;
