@@ -30,9 +30,9 @@ if($config["enable_imagecache"] == true) {
 	require_once 'ImageCache.php';
 }
 
-function __autoload($className) {
+spl_autoload_register(function ($className) {
 	require_once("sputnik/" . $className . ".php");
-}
+});
 
 /**
  *
