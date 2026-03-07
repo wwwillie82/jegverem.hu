@@ -105,7 +105,10 @@ abstract class Controller {
 
 		if(count($this->uri_helper->uri_array) < ($this->uri_helper->path_length+$index)-1)
 			return false;
-		return $this->uri_helper->uri_array[$this->uri_helper->path_length+$index];
+		$uri_index = $this->uri_helper->path_length + $index;
+		if (!isset($this->uri_helper->uri_array[$uri_index]))
+			return false;
+		return $this->uri_helper->uri_array[$uri_index];
 	}
 
 
