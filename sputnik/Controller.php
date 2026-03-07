@@ -31,7 +31,10 @@ if($config["enable_imagecache"] == true) {
 }
 
 spl_autoload_register(function ($className) {
-	require_once __DIR__ . "/" . $className . ".php";
+	$classFile = __DIR__ . "/" . $className . ".php";
+	if (is_file($classFile)) {
+		require_once $classFile;
+	}
 });
 
 /**
