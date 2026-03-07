@@ -1,4 +1,4 @@
-<?
+<?php
 	class Kapcsolat extends Controller {
 		function main() {
 			$this->view->header = Loader::Factory("header/index")->Execute();

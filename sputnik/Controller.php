@@ -294,7 +294,8 @@ class Sputnik {
 			Helper::GI()->error_404();
 		}
 		error_log(microtime() . " --> " . var_export($_POST, true));
-		error_log(Helper::GI()->debug_string_backtrace());
+		$debugBacktrace = Helper::GI()->debug_string_backtrace();
+		error_log($debugBacktrace !== null ? $debugBacktrace : '');
 		
 		require_once $class_filename;
 		$controller = new $this->uri_helper->class_name();

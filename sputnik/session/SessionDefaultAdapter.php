@@ -32,7 +32,7 @@ class SessionDefaultAdapter implements ISessionAdapter {
     }
 
 	function Get($var) {
-		return $_SESSION[$var];
+		return isset($_SESSION[$var]) ? $_SESSION[$var] : null;
 	}
 
 	function Set($var, $value, $ttl=0) {
