@@ -297,9 +297,13 @@ class Sputnik {
 			//die("Not class '$class_filename'"); // Error 404
 			Helper::GI()->error_404();
 		}
-		error_log(microtime() . " --> " . var_export($_POST, true));
-		$debugBacktrace = Helper::GI()->debug_string_backtrace();
-		error_log($debugBacktrace !== null ? $debugBacktrace : '');
+		if (!empty($config["enable_helper_backtrace_debug"])) {
+			error_log(microtime() . " --> " . var_export($_POST, true));
+			$debugBacktrace = Helper::GI()->debug_string_backtrace();
+			if (!empty($debugBacktrace)) {
+				error_log($debugBacktrace);
+			}
+		}
 		
 		require_once $class_filename;
 		$controller = new $this->uri_helper->class_name();

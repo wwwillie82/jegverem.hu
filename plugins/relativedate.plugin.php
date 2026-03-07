@@ -2,12 +2,12 @@
 
 class RelativeDatePlugin implements IPlugin {
 	
-	private $baseObj;
+	private $baseObject;
 	private $dateTime;
-	private $config;
+	private $config = array();
 
 	function __construct() {
-		$config = array(
+		$this->config = array(
 			"MINUTE_TO" => "perc múlva",
 			"MINUTE_AGO" => "perce",
 			"HOUR_TO" => "óra múlva",
