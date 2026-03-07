@@ -54,8 +54,8 @@ abstract class Controller {
 
 	function __construct($basepath="", $viewpath="") {
 
-		// Get singletons
-		//$this->db = Db::GetInstance();
+		// Get singletons eagerly so declared properties stay initialized on PHP 8+.
+		$this->db = Db::GetInstance();
 		$this->session = Sessions::GetInstance();
 	
 		// Get new instances
@@ -84,13 +84,8 @@ abstract class Controller {
 	}
 
 	public function __get($var) {
-		if(isset($this->$var)) return $this->$var; 	
-		switch($var) {
-			case "db": $this->$var = Db::GetInstance(); break;
-			case "session": $this->$var = Sessions::GetInstance(); break;
-			//case "form": $this->$var = Form::Factory(); break;
-		}
-		return $this->$var;
+		if(isset($this->$var)) return $this->$var;
+		return $this->$var ?? null;
 	}
 
 
