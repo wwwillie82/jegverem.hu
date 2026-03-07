@@ -123,7 +123,7 @@ class Db {
 	private function ReplaceCallback($groups) {
 		//print_r($groups);
 		$val = $this->prep_vars[$groups[1]];
-		if (get_magic_quotes_gpc()) $val = stripslashes($val);
+		if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) $val = stripslashes($val);
 		$val = $this->db_adapter->EscapeString($val);
 		if (empty($val)) $val = "";
 		return "'". $val ."'";
@@ -138,7 +138,7 @@ class Db {
 		
 		if ($this->is_prepared == false) return $query;
 		$func_string = '';
-		$result = preg_replace_callback('/\{([a-zA-Z0-9_]+?)\}/', array($this, ReplaceCallback), $query);
+		$result = preg_replace_callback('/\{([a-zA-Z0-9_]+?)\}/', array($this, 'ReplaceCallback'), $query);
 		return $result;
 	}
 
@@ -229,7 +229,7 @@ class Db {
 		$value_list = "";
 		$count = 0;
 		foreach($row as $key => $field) {
-			if (get_magic_quotes_gpc()) $value = stripslashes($value);
+			if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) $value = stripslashes($value);
 			$value = $this->db_adapter->EscapeString($value);
 			if ($count > 0) {
 				$field_list .= ", `$key`";
@@ -257,7 +257,7 @@ class Db {
 		$value_list = "";
 		$count = 0;
 		foreach($row as $key => $field) {
-			if (get_magic_quotes_gpc()) $value = stripslashes($value);
+			if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) $value = stripslashes($value);
 			$value = $this->db_adapter->EscapeString($value);
 			if ($count > 0) {
 				$field_list .= ", `$key`";
@@ -286,7 +286,7 @@ class Db {
 		$set_list = "";
 		$count = 0;
 		foreach($row as $key => $value) {
-			if (get_magic_quotes_gpc()) $value = stripslashes($value);
+			if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) $value = stripslashes($value);
 			$value = $this->db_adapter->EscapeString($value);
 			if ($count > 0) {
 				$set_list .= ", `$key`='$value'";
