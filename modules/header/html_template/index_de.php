@@ -1,7 +1,6 @@
 <div id="site-header">
 <?php
-    $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
-    $path = parse_url($uri, PHP_URL_PATH);
+    $path = URI::GetCurrentRoutePath();
 
     if ($path === '/de') {
         $basePath = '/index';
@@ -129,13 +128,13 @@
 <div id="main-nav">
     <div class="holder site-width">
         <div id="menu">
-            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/index" || $_SERVER["REQUEST_URI"] == "/de"): ?>active<? endif; ?>"><a href="/de/index">Startseite</a></span>
-            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/heti_menu"): ?>active<? endif; ?>"><a href="/de/heti_menu">Wochenmenü</a></span>
-            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/de/ettermunk_kinalata">Angebote unseres Restaurants</a></span>
-            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/galeria"): ?>active<? endif; ?>"><a href="/de/galeria">Galerie</a></span>
-            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/a_panziorol"): ?>active<? endif; ?>"><a href="/de/a_panziorol">Über die Pension</a></span>
-            <span class="nav-item <? if($_SERVER["REQUEST_URI"] == "/de/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/de/a_jegverem_tortenete">Geschichte</a></span>
-            <span class="nav-item no <? if($_SERVER["REQUEST_URI"] == "/de/kapcsolat"): ?>active<? endif; ?>"><a href="/de/kapcsolat">Kontakte</a></span>
+            <span class="nav-item <? if($path == "/de/index" || $path == "/de"): ?>active<? endif; ?>"><a href="/de/index">Startseite</a></span>
+            <span class="nav-item <? if($path == "/de/heti_menu"): ?>active<? endif; ?>"><a href="/de/heti_menu">Wochenmenü</a></span>
+            <span class="nav-item <? if($path == "/de/ettermunk_kinalata"): ?>active<? endif; ?>"><a href="/de/ettermunk_kinalata">Angebote unseres Restaurants</a></span>
+            <span class="nav-item <? if($path == "/de/galeria"): ?>active<? endif; ?>"><a href="/de/galeria">Galerie</a></span>
+            <span class="nav-item <? if($path == "/de/a_panziorol"): ?>active<? endif; ?>"><a href="/de/a_panziorol">Über die Pension</a></span>
+            <span class="nav-item <? if($path == "/de/a_jegverem_tortenete"): ?>active<? endif; ?>"><a href="/de/a_jegverem_tortenete">Geschichte</a></span>
+            <span class="nav-item no <? if($path == "/de/kapcsolat"): ?>active<? endif; ?>"><a href="/de/kapcsolat">Kontakte</a></span>
         </div>
     </div>
 </div>

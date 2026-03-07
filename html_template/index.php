@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <?php
-$requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$requestPath = URI::GetCurrentRoutePath();
 $currentLang = 'hu';
 
 if (preg_match('#^/en(?:/|$)#', $requestPath)) {
