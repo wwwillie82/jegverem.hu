@@ -11,7 +11,11 @@ class URIHelper {
 	function  __construct($basepath="") {
 
 		global $config;
-		if($basepath == "") $basepath = $_SERVER["REQUEST_URI"];
+		if($basepath == "") {
+			$basepath = URI::GetCurrentRoutePath();
+		}
+		$basepath = parse_url($basepath, PHP_URL_PATH);
+		if($basepath === null || $basepath === false) $basepath = "/";
 
 		$uri_filtered = array_filter(explode("/", $basepath), array($this, "find_namedparams"));
 		$uri_filtered = array_filter($uri_filtered, array($this, "remove_index"));
