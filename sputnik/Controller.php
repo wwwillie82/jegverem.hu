@@ -6,10 +6,10 @@
  * @copyright VOOV Ltd.
  */
 
-require_once("config/config.php");
-require_once("config/localization.php");
-require_once("config/uri_mappings.php");
-require_once("config/autoload.php");
+require_once __DIR__ . "/../config/config.php";
+require_once __DIR__ . "/../config/localization.php";
+require_once __DIR__ . "/../config/uri_mappings.php";
+require_once __DIR__ . "/../config/autoload.php";
 //require_once("sputnik/Auth.php");
 
 /*
@@ -27,11 +27,11 @@ require_once("Loader.php");
 */
 
 if($config["enable_imagecache"] == true) {
-	require_once 'ImageCache.php';
+	require_once __DIR__ . '/ImageCache.php';
 }
 
 spl_autoload_register(function ($className) {
-	require_once("sputnik/" . $className . ".php");
+	require_once __DIR__ . "/" . $className . ".php";
 });
 
 /**
