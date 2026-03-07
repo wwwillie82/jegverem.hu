@@ -58,7 +58,8 @@ class Hooks {
 			// $hook_point[1]
 			$last_result = call_user_func_array($hook_point[0], $func_param);
 		}
-		if (count($last_result) == 0) return false;
+		if ($last_result === false || $last_result === null) return false;
+		if (is_countable($last_result) && count($last_result) == 0) return false;
 		return $last_result;
 	}
 
