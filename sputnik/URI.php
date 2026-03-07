@@ -90,10 +90,23 @@ class URI {
 
 	static function GetNamedParam($name, $default_value=false) {
 		$name = html_entity_decode($name, ENT_COMPAT, "UTF-8");
+		if(!array_key_exists($name, self::$named_params)) return $default_value;
 		if(is_array(self::$named_params[$name])) $buffer = self::$named_params[$name];
-		else $buffer = html_entity_decode(self::$named_params[$name], ENT_COMPAT, "UTF-8");
+		else $buffer = html_entity_decode((string)self::$named_params[$name], ENT_COMPAT, "UTF-8");
 		if(empty($buffer)) return $default_value;
 		return $buffer;
+	}
+
+	private static function NormalizeRouteFromQuery($route) {
+		$route = trim((string)$route);
+		if($route === "") return "";
+
+		$decoded = rawurldecode($route);
+		if($decoded !== false) $route = $decoded;
+
+		$route = trim($route, "/");
+		$route = preg_replace('/\/+/', '/', $route);
+		return $route;
 	}
 
 	private static function GetRequestPath() {
@@ -107,7 +120,7 @@ class URI {
 		}
 
 		if($route_from_query !== null) {
-			$route_from_query = trim($route_from_query, "/");
+			$route_from_query = self::NormalizeRouteFromQuery($route_from_query);
 			if($route_from_query === "") return "/";
 			return "/" . $route_from_query;
 		}
