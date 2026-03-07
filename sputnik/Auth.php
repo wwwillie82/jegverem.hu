@@ -99,8 +99,8 @@ class Auth {
 		$username = $data["username"];
 		$password = md5($data["password"]);
 		
-		$username = mysql_real_escape_string($username);
-		$password = mysql_real_escape_string($password);
+		$username = Db::GetInstance()->Escape($username);
+		$password = Db::GetInstance()->Escape($password);
 		
 		$session = Sessions::GetInstance();
 		$successful = false;

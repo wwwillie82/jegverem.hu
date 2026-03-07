@@ -1,32 +1,47 @@
 <?php
 
-require_once "../IDbAdapter.php";
+require_once __DIR__ . "/../IDbAdapter.php";
  
 class DbMySQLAdapter implements IDbAdapter {
 
+	private $connection = null;
 
 	public function Info() {
-		// TODO: Implement Info() method.
+		return mysqli_get_server_info($this->connection);
 	}
 
 	public function EscapeString($string) {
-		// TODO: Implement EscapeString() method.
-		return mysql_real_escape_string($string);
+		return mysqli_real_escape_string($this->connection, $string);
 	}
 
 	public function Query($query_string) {
-		// TODO: Implement Query() method.
+		return mysqli_query($this->connection, $query_string);
 	}
 
 	public function SwitchDb($db) {
-		// TODO: Implement SwitchDb() method.
+		mysqli_select_db($this->connection, $db);
 	}
 
 	public function Disconnect() {
-		// TODO: Implement Disconnect() method.
+		if ($this->connection) {
+			mysqli_close($this->connection);
+		}
 	}
 
 	public function Connect($server, $username, $password) {
-		return mysql_connect($server, $username, $password);
+		$this->connection = mysqli_connect($server, $username, $password);
+		return $this->connection;
+	}
+
+	public function GetInsertedId() {
+		return mysqli_insert_id($this->connection);
+	}
+
+	public function GetAffectedRows() {
+		return mysqli_affected_rows($this->connection);
+	}
+
+	public function GetError() {
+		return mysqli_error($this->connection);
 	}
 }

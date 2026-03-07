@@ -31,6 +31,11 @@ class DbResult implements Iterator {
 	 */
 	private $result;
 	/**
+	 * Active database connection
+	 * @var mysqli
+	 */
+	private $conn;
+	/**
 	 * DbRow Row
 	 * resultset
 	 * @var array row
@@ -67,18 +72,18 @@ class DbResult implements Iterator {
 		$this->result = $result;
 		$this->conn = $conn;
 
-		if ((@mysql_num_rows($this->result) >= 0 && $this->result !== false) || $insert) {
+		if ((@mysqli_num_rows($this->result) >= 0 && $this->result !== false) || $insert) {
 			if ($uselimit == true) {
-				$found_rows_q = mysql_query("SELECT FOUND_ROWS()");
-				$found_rows_ret = mysql_fetch_array($found_rows_q);
+				$found_rows_q = mysqli_query($this->conn, "SELECT FOUND_ROWS()");
+				$found_rows_ret = mysqli_fetch_array($found_rows_q);
 				$this->found_rows = $found_rows_ret[0];
 			}
 
-			$this->length = (int) @mysql_num_rows($this->result);
-			$this->affectedRows = mysql_affected_rows($conn);
+			$this->length = (int) @mysqli_num_rows($this->result);
+			$this->affectedRows = mysqli_affected_rows($conn);
 			if ($insert == false) {
 				/* kérdezzük le az összes sort */
-				while($row = mysql_fetch_assoc($this->result)) {
+				while($row = mysqli_fetch_assoc($this->result)) {
 					$row_ob = new DbRow();
 					$row_ob->SetFields($row);
 					$this->rows[] = $row_ob;
@@ -217,27 +222,32 @@ class DbResult implements Iterator {
 	}
 
 
+	#[\ReturnTypeWillChange]
 	public function rewind() {
 		$this->position = 0;
 		reset($this->rows);
 	}
 
+	#[\ReturnTypeWillChange]
 	public function current() {
 		$row = current($this->rows);
 		return $row;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function key() {
 		$key = key($this->rows);
 		return $key;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function next() {
 		$this->position++;
 		$next = next($this->rows);
 		return $next;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function valid() {
 		$var = $this->current() !== false;
 		return $var;
