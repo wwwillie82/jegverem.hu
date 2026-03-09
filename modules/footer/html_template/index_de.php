@@ -31,8 +31,8 @@
 
     <div class="footer-legal">
         <span class="footer-copy">© 2026 Palatinus Group. Alle Rechte vorbehalten.</span>
-        <a class="footer-legal-link" href="#" onclick="return false;">Impressum</a>
-        <a class="footer-legal-link" href="#" onclick="return false;">Datenschutzerklärung</a>
+        <a class="footer-legal-link" href="/images/skin_v2/Jogi_nyilatkozat_BW_DE.pdf">Impressum</a>
+        <a class="footer-legal-link" href="/images/skin_v2/adatkezelesi_tajekoztato_BW_DE.pdf">Datenschutzerklärung</a>
     </div>
 </div>
 <script src="/js/header_sticky.js" type="text/javascript"></script>
