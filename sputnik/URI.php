@@ -10,7 +10,7 @@
 
 class URI {
 	static $named_params = array();
-	private static $static_path_prefixes = array("css", "js", "images", "images_admin", "ckeditor", "jcrop", "favicon.ico", "apple-touch-icon.png", "robots.txt", "sitemap.xml", "modules", "html_template", "sputnik", "plugins");
+	private static $static_path_prefixes = array("css", "js", "images", "images_uploaded", "images_admin", "ckeditor", "jcrop", "favicon.ico", "apple-touch-icon.png", "robots.txt", "sitemap.xml", "modules", "html_template", "sputnik", "plugins");
 
 	private static function GetConfigValue($key, $default=false) {
 		global $config;
