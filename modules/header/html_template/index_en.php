@@ -1,30 +1,25 @@
 <div id="site-header">
 <?php
-    $path = URI::GetCurrentRoutePath();
+    $path = isset($path) ? $path : URI::GetCurrentRoutePath();
+    $currentLang = isset($currentLang) ? $currentLang : 'hu';
+    $langPrefix = isset($langPrefix) ? $langPrefix : ($currentLang === 'hu' ? '' : '/' . $currentLang);
+    $homeUrl = isset($homeUrl) ? $homeUrl : ($currentLang === 'hu' ? '/index' : '/' . $currentLang);
 
-    if ($path === '/en') {
-        $basePath = '/index';
-        $currentLang = 'en';
-    } elseif (strpos($path, '/en/') === 0) {
-        $basePath = substr($path, 3);
-        $currentLang = 'en';
-    } else {
-        $basePath = $path === '' || $path === '/' ? '/index' : $path;
-        $currentLang = 'hu';
-    }
+    if (!isset($huUrl) || !isset($enUrl) || !isset($deUrl)) {
+        $basePath = isset($basePath) ? $basePath : $path;
+        if ($basePath === '' || $basePath === '/') {
+            $basePath = '/index';
+        }
 
-    $langPrefix = $currentLang === 'hu' ? '' : '/' . $currentLang;
-
-    $homeUrl = $currentLang === 'hu' ? '/index' : '/' . $currentLang;
-
-    if ($basePath === '/index') {
-        $huUrl = '/index';
-        $enUrl = '/en';
-        $deUrl = '/de';
-    } else {
-        $huUrl = $basePath;
-        $enUrl = '/en' . $basePath;
-        $deUrl = '/de' . $basePath;
+        if ($basePath === '/index') {
+            $huUrl = '/index';
+            $enUrl = '/en';
+            $deUrl = '/de';
+        } else {
+            $huUrl = $basePath;
+            $enUrl = '/en' . $basePath;
+            $deUrl = '/de' . $basePath;
+        }
     }
 ?>
 
