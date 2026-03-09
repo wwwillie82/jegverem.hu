@@ -1,5 +1,29 @@
 <?php
 	class Ettermunk_kinalata extends Controller {
+		private function resolveCategoryId($filter, $rootParentId) {
+			$defaultCategory = $this->db->Query("SELECT * FROM categories WHERE parent_id='$rootParentId' ORDER BY sort_order LIMIT 0,1");
+			if(!$filter) {
+				return $defaultCategory ? $defaultCategory->id : 0;
+			}
+
+			$currentLangCategory = $this->db->Query("SELECT * FROM categories WHERE parent_id='$rootParentId' AND permalink='$filter' LIMIT 0,1");
+			if($currentLangCategory) {
+				return $currentLangCategory->id;
+			}
+
+			$sourceCategory = $this->db->Query("SELECT * FROM categories
+				WHERE categories.permalink='$filter' AND categories.parent_id IN ('61','145','105')
+				ORDER BY categories.parent_id, categories.sort_order LIMIT 0,1");
+			if($sourceCategory) {
+				$mappedCategory = $this->db->Query("SELECT * FROM categories WHERE parent_id='$rootParentId' AND sort_order='$sourceCategory->sort_order' LIMIT 0,1");
+				if($mappedCategory) {
+					return $mappedCategory->id;
+				}
+			}
+
+			return $defaultCategory ? $defaultCategory->id : 0;
+		}
+
 		function main() {
 			$this->view->header = Loader::Factory("header/index_de")->Execute();
             $this->view->sidebar = Loader::Factory("sidebar/index_de")->Execute();
@@ -21,11 +45,7 @@
 			$this->view->categories = $this->db->Query($qb);
 			
 			$filter = URI::GetNamedParam("filter");
-			if($filter) {
-				$category_id = $this->db->Query("SELECT * FROM categories WHERE permalink='$filter'")->id;
-			} else {
-				$category_id = $this->db->Query("SELECT * FROM categories WHERE parent_id='105' ORDER BY sort_order LIMIT 0,1")->id;
-			}
+			$category_id = $this->resolveCategoryId($filter, 105);
 			
 			$this->view->products = $this->db->Query("SELECT products.*, categories.title cat_title FROM products 
 													  INNER JOIN categories ON categories.id = products.categories_id
