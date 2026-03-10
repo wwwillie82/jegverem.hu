@@ -28,8 +28,8 @@
 	<?php include $_SERVER['DOCUMENT_ROOT'] . '/html_template/shared/mobile_menu_css.php'; ?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript"></script>
-    <script src="/js/voov.slideshow.js" type="text/javascript"></script>
-    <script src="/js/jegverem.js" type="text/javascript"></script>
+    <script src="../js/voov.slideshow.js" type="text/javascript"></script>
+    <script src="../js/jegverem.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -119,13 +119,7 @@
             <div class="bottom"></div>
         </div>
 
-        <div class="sidebar sidebar-home-mini-cards">
-            <?php
-                $lang = 'hu';
-                $order = array('accommodation', 'menu', 'delivery');
-                include $_SERVER['DOCUMENT_ROOT'] . '/modules/sidebar/html_template/home_mini_cards.php';
-            ?>
-        </div>
+        <?= $sidebar ?>
         <br class="clearfix" />
     </div>
 
