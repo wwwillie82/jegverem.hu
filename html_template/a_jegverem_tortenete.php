@@ -70,7 +70,7 @@
 					<?php $i++; endforeach; ?>
                 </div>
 
-                <p>A hajdani városi jégverem létezéséről sokáig csak
+                <p>A hajdani városi jégverem létezéséről sokáig csak és kizárólag
                 a szájhagyomány tudósított.<br />A városi számadáskönyvek szerint 1749-óta adott el a város jeget.
                 Az egykori városi jégverem fölé később mészárszéket
                 és tűzoltószertárt építettek. Az egyszerű ház 1837-ben porrá égett. Az épületet még ugyanabban az évben Hasenauer Márton tervei alapján újjáépítették.
