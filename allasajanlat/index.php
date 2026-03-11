@@ -1,3 +1,4 @@
 <?php
-$_GET['route'] = 'allasajanlat';
-require_once dirname(__DIR__) . '/index.php';
+$projectRoot = dirname(__DIR__);
+chdir($projectRoot);
+require_once $projectRoot . '/index.php';
