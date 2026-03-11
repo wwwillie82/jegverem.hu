@@ -61,6 +61,24 @@ server {
 }
 ```
 
+## /allasajanlat közvetlen URL és könyvtár-ütközés
+
+Ha a szerveren marad (vagy újra létrejön) egy fizikai `allasajanlat/` könyvtár, akkor a klasszikus `try_files $uri $uri/ /index.php?...` minta a meglévő könyvtárnál megállhat, és nem jutunk el a gyökér front controllerhez.
+
+Ezért az ilyen "foglaltnak" tekintett slugokra célszerű explicit, exact-match átadást adni:
+
+```nginx
+location = /allasajanlat {
+    try_files /index.php =404;
+}
+
+location = /allasajanlat/ {
+    try_files /index.php =404;
+}
+```
+
+Ezzel a kérés továbbra is a gyökér `index.php`-n fut le (nem alkönyvtári entrypointból), és a route-feldolgozást változatlanul a Sputnik végzi.
+
 ## Várt eredmény
 
 Ezzel a beállítással:
@@ -72,3 +90,12 @@ Ezzel a beállítással:
 ## Projektkód módosítás szükséges?
 
 Normál esetben **nem**. A gyökérok szerverkonfigurációs (nginx rewrite/fallback hiány), nem template vagy controller hiba.
+
+
+## Repo snippet az éles nginx vhosthoz
+
+A futó vhostba beemelhető minimális snippet a repóban:
+
+- `ops/nginx/allasajanlat-frontcontroller.conf`
+
+Ezt **az aktív server blokkba** kell include-olni vagy bemásolni; önmagában a dokumentáció nem runtime javítás.
