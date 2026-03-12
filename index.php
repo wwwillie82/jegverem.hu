@@ -1,4 +1,15 @@
 <?php
+if (php_sapi_name() !== 'cli') {
+	if (
+		(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') &&
+		(!isset($_SERVER['HTTP_X_FORWARDED_PROTO']) || $_SERVER['HTTP_X_FORWARDED_PROTO'] !== 'https')
+	) {
+		$redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		header('Location: ' . $redirect, true, 301);
+		exit;
+	}
+}
+
 define("SPUTNIK_VERSION", "3.1.0");
 define("USE_SUBSITES", false); //set this to false if you want to disable subsite support
 define("USE_REST", false);
