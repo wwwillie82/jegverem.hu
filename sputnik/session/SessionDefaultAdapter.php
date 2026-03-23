@@ -20,7 +20,14 @@ class SessionDefaultAdapter implements ISessionAdapter {
 			session_start();
 			header("Cache-control: private");
 			// overwrite the cookie's lifetime, so it gets new lifetime in each request
-			setcookie(session_name(),session_id(),time()+$this->lifetime);
+			$cookie_params = session_get_cookie_params();
+			setcookie(
+				session_name(),
+				session_id(),
+				time()+$this->lifetime,
+				isset($cookie_params["path"]) ? $cookie_params["path"] : "/",
+				isset($cookie_params["domain"]) ? $cookie_params["domain"] : ""
+			);
 		} else {
 			// trigger error
 		}
