@@ -1,10 +1,10 @@
 <div class="data">
 <div class="filter">
     <div class="select">
-        <select onchange="GoToURL(this, 'admin/index/module:etlap|admin|index/category:');">
-            <option value="">Összes kategória</option>
+        <select onchange="window.location=this.options[this.selectedIndex].value;">
+            <option value="<?= ModuleHelper::GetFunctionLink("admin/index") ?>">Összes kategória</option>
             <?php foreach($categories as $cat): ?>
-            <option value="<?= $cat->id ?>" <?php if($selected_category == $cat->id): ?>selected="selected"<?php endif; ?>><?= $cat->title ?></option>
+            <option value="<?= ModuleHelper::GetFunctionLink("admin/index", array("category" => $cat->id)) ?>" <?php if($selected_category == $cat->id): ?>selected="selected"<?php endif; ?>><?= $cat->title ?></option>
             <?php endforeach; ?>
         </select>
     </div>
