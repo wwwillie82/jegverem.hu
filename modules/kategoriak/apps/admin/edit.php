@@ -16,6 +16,52 @@ class Kategoriak_edit extends Controller {
 		return $clean;
 	}
 
+	private function RejectInvalidParent() {
+		Sessions::GetInstance()->SetFlashdata("acl_error", Localization::_("Érvénytelen szülő kategória lett kiválasztva."));
+
+		if (!empty($_SERVER["HTTP_REFERER"])) {
+			URI::RedirectToReferer();
+		} else {
+			URI::Redirect(ModuleHelper::GetFunctionLink("admin/edit", array("id" => URI::GetNamedParam("id"))));
+		}
+
+		exit;
+	}
+
+	private function GetCategoryById($id) {
+		$id = (int) $id;
+		if ($id <= 0) return false;
+		return $this->db->Query("SELECT id, parent_id FROM categories WHERE id='$id' LIMIT 0,1");
+	}
+
+	private function IsValidParentSelection($current_id, $parent_id) {
+		$current_id = (int) $current_id;
+		$parent_id = (int) $parent_id;
+
+		if ($parent_id === 0) return true;
+		if ($parent_id === $current_id) return false;
+
+		$parent = $this->GetCategoryById($parent_id);
+		if (!$parent) return false;
+
+		$visited = array();
+		while ($parent) {
+			$walk_id = (int) $parent->id;
+			if (isset($visited[$walk_id])) return false;
+			$visited[$walk_id] = true;
+
+			if ($walk_id === $current_id) return false;
+
+			$next_parent_id = (int) $parent->parent_id;
+			if ($next_parent_id === 0) break;
+
+			$parent = $this->GetCategoryById($next_parent_id);
+			if (!$parent) return false;
+		}
+
+		return true;
+	}
+
     function main() {
         $lang_id = $this->GetSession()->lang_id;
 		ModuleHelper::SetBreadcrumb(array(Localization::_("Kategória"), Localization::_("szerkesztése")));
@@ -40,10 +86,15 @@ class Kategoriak_edit extends Controller {
 
 	function Submit($data) {
         $id = URI::GetNamedParam("id");
+		$parent_id = (isset($data["category_id"]) && $data["category_id"] !== "") ? (int) $data["category_id"] : 0;
+
+		if (!$this->IsValidParentSelection($id, $parent_id)) {
+			$this->RejectInvalidParent();
+		}
 
 		$row = new DbRow();
 		
-		$row->parent_id = $data["category_id"];
+		$row->parent_id = $parent_id;
         $row->title = addslashes($data["title"]);
 		$row->description = $data["description"];
         $row->sort_order = $data["sort_order"];
