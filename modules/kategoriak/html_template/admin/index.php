@@ -1,9 +1,12 @@
 <link href="/css/expand.css" rel="stylesheet" type="text/css" media="screen"/>
 <script type="text/javascript" src="/js/sp-expandbox.js"></script>
 <script type="text/javascript">
+	var editUrlTemplate = '<?= ModuleHelper::GetFunctionLink("admin/edit", array("id" => "__ID__")) ?>';
+	var deleteUrlTemplate = '<?= ModuleHelper::GetFunctionLink("admin/index/delete", array("id" => "__ID__")) ?>';
+
 	function actionEdit() {
 		if (expandbox.last_selected == -1) return false;
-	    window.location = "admin/index/module:kategoriak|admin|edit/id:" + expandbox.last_selected;
+	    window.location = editUrlTemplate.replace("__ID__", expandbox.last_selected);
 		
 		return false;
 	}
@@ -12,7 +15,7 @@
 		if (expandbox.last_selected == -1) return false;
 	    var reallydelete = confirm("Biztos akarod törölni a kijelöltet?");
 	    
-	    if (reallydelete) window.location = "admin/index/module:kategoriak|admin|index|delete/id:" + expandbox.last_selected;
+	    if (reallydelete) window.location = deleteUrlTemplate.replace("__ID__", expandbox.last_selected);
 		return false;
 	}
 
