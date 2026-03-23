@@ -50,8 +50,19 @@ class ImageCache {
 	 */
 	public function Execute() {
 		if(!is_file($this->fname)) return false;
-		$this->im_res = imagecreatefromstring(file_get_contents($this->fname)) or
-				die("Cannot open '$this->fname'");
+
+		$image_data = @file_get_contents($this->fname);
+		if($image_data === false) {
+			error_log("ImageCache could not read image file '" . $this->fname . "'");
+			return false;
+		}
+
+		$this->im_res = @imagecreatefromstring($image_data);
+		if($this->im_res === false) {
+			error_log("ImageCache failed to decode image file '" . $this->fname . "'");
+			return false;
+		}
+
 		foreach($this->callStack as $stack) {
 			// $stack[0] = method, $stack[1] = arguments
 			call_user_func_array(array($this, "IC_" . $stack[0]), $stack[1]);
@@ -59,6 +70,7 @@ class ImageCache {
 		// Save to cache
 		$this->SaveImage();
 		if($this->im_res) imagedestroy($this->im_res);
+		return true;
 	}
 
 	/**
@@ -76,6 +88,7 @@ class ImageCache {
 	 * @return void
 	 */
 	private function OutputImage($quality, $fname=false) {
+		if(!$this->im_res) return false;
 		if($fname == false) $fname = $this->cache_fname;
 		return call_user_func($this->outputMethods[$this->outputType], $this->im_res, $fname, $quality);
 	}
@@ -87,10 +100,13 @@ class ImageCache {
 
 		if(!is_file($this->cache_fname) || $this->cacheable == false) {
 			// There is no cache, generate
-			$this->Execute();
+			if($this->Execute() === false) {
+				$this->cache_fname = false;
+				return false;
+			}
 			return true;
 		}
-		return false;
+		return true;
 	}
 
 	private function ReBuffer($img) {
@@ -204,11 +220,35 @@ class ImageCache {
 	}
 
 	private function IC_Crop($crop_array) {
-		if(!is_array($crop_array)) $crop_array = unserialize($crop_array);
-		$buffer = imagecreatetruecolor($crop_array[2], $crop_array[3]);
-		imagecopy($buffer, $this->im_res, 0, 0, $crop_array[0], $crop_array[1], $crop_array[2], $crop_array[3]);
+		if(!is_array($crop_array)) $crop_array = @unserialize($crop_array);
+		if(!is_array($crop_array) || count($crop_array) < 4) {
+			error_log("ImageCache received invalid crop payload for '" . $this->fname . "'");
+			return $this;
+		}
+
+		$crop_values = array_slice(array_values($crop_array), 0, 4);
+		foreach($crop_values as $index => $value) {
+			if(is_string($value) && strcasecmp(trim($value), "nan") === 0) {
+				error_log("ImageCache received NaN crop payload for '" . $this->fname . "'");
+				return $this;
+			}
+			if(!is_numeric($value)) {
+				error_log("ImageCache received non-numeric crop payload for '" . $this->fname . "'");
+				return $this;
+			}
+			$crop_values[$index] = (int) round($value);
+		}
+
+		if($crop_values[0] < 0 || $crop_values[1] < 0 || $crop_values[2] <= 0 || $crop_values[3] <= 0) {
+			error_log("ImageCache received out-of-range crop payload for '" . $this->fname . "'");
+			return $this;
+		}
+
+		$buffer = imagecreatetruecolor($crop_values[2], $crop_values[3]);
+		imagecopy($buffer, $this->im_res, 0, 0, $crop_values[0], $crop_values[1], $crop_values[2], $crop_values[3]);
 
 		$this->ReBuffer($buffer);
+		return $this;
 	}
 
 	private function IC_CropToRatio($ratioX, $ratioY) {
@@ -270,12 +310,15 @@ class ImageCache {
 	}
 
 	public function GetFilename() {
-		$this->GenerateCache();
+		if($this->GenerateCache() === false && $this->cache_fname == false) {
+			return $this->fname;
+		}
 		return $this->cache_fname;
 	}
 
 	public function __toString() {
-		return $this->GetFilename();
+		$filename = $this->GetFilename();
+		return $filename ? $filename : "";
 	}
 
 
