@@ -146,6 +146,7 @@
 
 	ExpandBox.fn.setListboxSelection = function(selectboxName, id) {
 		var obj = document.getElementsByName(selectboxName)[0];
+		if (!obj) return;
 
 		for(var i=0; i<obj.options.length; i++) {
 			if (obj.options[i].value == id) obj.selectedIndex = i;
@@ -156,17 +157,30 @@
 	ExpandBox.fn.setSelected = function(id, selectLastElem) {
 		var pos = this.returnElement(id),
 		i = pos,
-		buffer = new Array();
+		buffer = new Array(),
+		visited = new Object(),
+		max_steps = this.elements.length + 1,
+		steps = 0;
+		if (pos == -1) return;
 		while (this.elements[i]) {
-			var obj = {id: this.elements[i].id, depth: this.elements[i].depth};
+			var current = this.elements[i];
+			if (current.depth == undefined) break;
+			if (visited[current.id] == true) break;
+			visited[current.id] = true;
+
+			var obj = {id: current.id, depth: current.depth};
 			buffer.splice(0, 0, obj);
-			i = this.returnElement(this.elements[i].parentid);
+			if (current.parentid == current.id) break;
+			i = this.returnElement(current.parentid);
+			steps++;
+			if (steps >= max_steps) break;
 		}
 		if (selectLastElem == false) buffer = buffer.slice(0, buffer.length-1);
 
 		for(var j in buffer) {
 			this.clickHandler(buffer[j].id);
-			this.setListboxSelection("expandbox-list-" + buffer[j].depth, buffer[j].id);
+			if (buffer[j].depth != undefined)
+				this.setListboxSelection("expandbox-list-" + buffer[j].depth, buffer[j].id);
 		}
 	};
 
