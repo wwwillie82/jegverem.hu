@@ -46,17 +46,17 @@
 
                 <div class="private-event-cards">
                     <div class="private-event-card">
-                        <a href="http://www.jegverem.hu/galeria/kepek/permalink:emeleti-privat-terem-2026-01-01" title="Emelet"><img src="/images/skin_v2/emelet_jegverem_fogado_privat_rendezveny.png" alt="Emelet" /></a>
+                        <a href="/galeria/kepek/permalink:emeleti-privat-terem-2026-01-01" title="Emelet"><img src="/images/skin_v2/emelet_jegverem_fogado_privat_rendezveny.png" alt="Emelet" /></a>
                         <h4>Emelet</h4>
                         <p>Max. 35 fő</p>
                     </div>
                     <div class="private-event-card">
-                        <a href="http://www.jegverem.hu/galeria/kepek/permalink:a-terasz-2026-01-01" title="Terasz"><img src="/images/skin_v2/terasz_jegverem_fogado_privat_rendezveny.png" alt="Terasz" /></a>
+                        <a href="/galeria/kepek/permalink:a-terasz-2026-01-01" title="Terasz"><img src="/images/skin_v2/terasz_jegverem_fogado_privat_rendezveny.png" alt="Terasz" /></a>
                         <h4>Terasz</h4>
                         <p>Max. 40 fő</p>
                     </div>
                     <div class="private-event-card">
-                        <a href="http://www.jegverem.hu/galeria/kepek/permalink:az-etterem-2026-01-01" title="Egész étterem"><img src="/images/skin_v2/etterem_jegverem_fogado_privat_rendezveny.png" alt="Egész étterem" /></a>
+                        <a href="/galeria/kepek/permalink:az-etterem-2026-01-01" title="Egész étterem"><img src="/images/skin_v2/etterem_jegverem_fogado_privat_rendezveny.png" alt="Egész étterem" /></a>
                         <h4>Egész étterem</h4>
                         <p>Max. 100 fő</p>
                     </div>
