@@ -103,9 +103,9 @@
 				<div class="language">
 					<?= Localization::_("Szerkesztett nyelv") ?>
 					<div class="select">
-						<select onchange="GoToURL(this, '/admin/changelanguage/');">
+						<select onchange="window.location=this.options[this.selectedIndex].value;">
 							<?php foreach($lang_select as $lang): ?>
-							<option value="<?= $lang->id ?>" <?php if($lang->selected == true): ?> selected="selected" <?php endif; ?>><?= $lang->name ?></option>
+							<option value="<?= URI::MakeURL("admin/changelanguage", array("id" => $lang->id)) ?>" <?php if($lang->selected == true): ?> selected="selected" <?php endif; ?>><?= $lang->name ?></option>
 							<?php endforeach; ?>
 						</select>
 					</div>
